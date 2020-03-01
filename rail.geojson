@@ -1,0 +1,467 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2020-02-19T05:30:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/213026767",
+        "monorail": "yes",
+        "name": "Sengkang",
+        "name:en": "Sengkang",
+        "name:ta": "செங்காங்",
+        "name:zh": "盛港",
+        "network": "MRT;LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "NE16;STC",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q3234147",
+        "wikipedia": "en:Sengkang MRT/LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8952941,
+          1.3913304
+        ]
+      },
+      "id": "node/213026767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/213085056",
+        "name": "Punggol",
+        "name:en": "Punggol",
+        "name:ta": "பொங்கோல்",
+        "name:zh": "榜鹅",
+        "network": "MRT;LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "NE17;PTC",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q3232625",
+        "wikipedia": "en:Punggol MRT/LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9023302,
+          1.4052585
+        ]
+      },
+      "id": "node/213085056"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/390912052",
+        "layer": "1",
+        "monorail": "yes",
+        "name": "Cheng Lim",
+        "name:zh": "振林",
+        "network": "LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "SW1",
+        "station": "monorail",
+        "wikidata": "Q5091237",
+        "wikipedia": "en:Cheng Lim LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8937904,
+          1.3962917
+        ]
+      },
+      "id": "node/390912052"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/390918399",
+        "monorail": "yes",
+        "name": "Farmway",
+        "name:zh": "农道",
+        "network": "LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "SW2",
+        "station": "monorail",
+        "wikidata": "Q5435951",
+        "wikipedia": "en:Farmway LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8892243,
+          1.3971948
+        ]
+      },
+      "id": "node/390918399"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734575",
+        "monorail": "yes",
+        "name": "Compassvale",
+        "name:zh": "康埔桦",
+        "network": "LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "SE1",
+        "station": "monorail",
+        "wikidata": "Q5156145",
+        "wikipedia": "en:Compassvale LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9004349,
+          1.394518
+        ]
+      },
+      "id": "node/1840734575"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734578",
+        "monorail": "yes",
+        "name": "Coral Edge",
+        "name:zh": "珊瑚边",
+        "network": "LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PE3",
+        "station": "monorail",
+        "wikidata": "Q5169457",
+        "wikipedia": "en:Coral Edge LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9125723,
+          1.3939318
+        ]
+      },
+      "id": "node/1840734578"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734592",
+        "monorail": "yes",
+        "name": "Cove",
+        "name:zh": "海湾",
+        "network": "LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PE1",
+        "station": "monorail",
+        "wikidata": "Q5178930",
+        "wikipedia": "en:Cove LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9058059,
+          1.3994603
+        ]
+      },
+      "id": "node/1840734592"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734593",
+        "monorail": "yes",
+        "name": "Damai",
+        "name:zh": "达迈",
+        "network": "LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PE7",
+        "station": "monorail",
+        "wikidata": "Q5211920",
+        "wikipedia": "en:Damai LRT station (Singapore)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9085982,
+          1.4052523
+        ]
+      },
+      "id": "node/1840734593"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734594",
+        "monorail": "yes",
+        "name": "Kadaloor",
+        "name:zh": "卡达罗",
+        "network": "LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PE5",
+        "station": "monorail",
+        "wikidata": "Q6345023",
+        "wikipedia": "en:Kadaloor LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9164448,
+          1.399601
+        ]
+      },
+      "id": "node/1840734594"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734597",
+        "monorail": "yes",
+        "name": "Meridian",
+        "name:zh": "丽园",
+        "network": "LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PE2",
+        "station": "monorail",
+        "wikidata": "Q6819338",
+        "wikipedia": "en:Meridian LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9088889,
+          1.3969357
+        ]
+      },
+      "id": "node/1840734597"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734598",
+        "monorail": "yes",
+        "name": "Nibong",
+        "name:zh": "尼蒙",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PW5",
+        "station": "monorail",
+        "wikidata": "Q7024230",
+        "wikipedia": "en:Nibong LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9003304,
+          1.4118877
+        ]
+      },
+      "id": "node/1840734598"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734599",
+        "monorail": "yes",
+        "name": "Oasis",
+        "name:zh": "绿洲",
+        "network": "LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PE6",
+        "station": "monorail",
+        "wikidata": "Q7074425",
+        "wikipedia": "en:Oasis LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9127329,
+          1.4022823
+        ]
+      },
+      "id": "node/1840734599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734600",
+        "monorail": "yes",
+        "name": "Punggol Point",
+        "name:zh": "榜鹅坊",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PW3",
+        "station": "monorail",
+        "wikidata": "Q7260161",
+        "wikipedia": "en:Punggol Point LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9066298,
+          1.4168814
+        ]
+      },
+      "id": "node/1840734600"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734604",
+        "monorail": "yes",
+        "name": "Riviera",
+        "name:zh": "里维拉",
+        "network": "LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PE4",
+        "station": "monorail",
+        "wikidata": "Q7338869",
+        "wikipedia": "en:Riviera LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9161538,
+          1.394538
+        ]
+      },
+      "id": "node/1840734604"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734605",
+        "monorail": "yes",
+        "name": "Rumbia",
+        "name:zh": "棕美",
+        "network": "LRT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "SE2",
+        "station": "monorail",
+        "wikidata": "Q7379161",
+        "wikipedia": "en:Rumbia LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9059729,
+          1.3914749
+        ]
+      },
+      "id": "node/1840734605"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734606",
+        "monorail": "yes",
+        "name": "Sam Kee",
+        "name:zh": "三记",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PW1",
+        "station": "monorail",
+        "wikidata": "Q7407731",
+        "wikipedia": "en:Sam Kee LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.904874,
+          1.4097076
+        ]
+      },
+      "id": "node/1840734606"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734607",
+        "disused": "no",
+        "monorail": "yes",
+        "name": "Samudera",
+        "name:ta": "சமுத்திரா",
+        "name:zh": "山姆",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PW4",
+        "station": "monorail",
+        "wikidata": "Q7410678",
+        "wikipedia": "zh:山姆輕軌站"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9021398,
+          1.4159537
+        ]
+      },
+      "id": "node/1840734607"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734608",
+        "monorail": "yes",
+        "name": "Soo Teck",
+        "name:zh": "树德",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PW7",
+        "station": "monorail",
+        "wikidata": "Q7562630",
+        "wikipedia": "en:Soo Teck LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8972748,
+          1.4053014
+        ]
+      },
+      "id": "node/1840734608"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1840734610",
+        "monorail": "yes",
+        "name": "Sumang",
+        "name:zh": "苏芒",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PW6",
+        "station": "monorail",
+        "wikidata": "Q7636947",
+        "wikipedia": "en:Sumang LRT station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8985342,
+          1.4085322
+        ]
+      },
+      "id": "node/1840734610"
+    }
+  ]
+}

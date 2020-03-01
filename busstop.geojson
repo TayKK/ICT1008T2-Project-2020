@@ -1,0 +1,2823 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2020-02-19T04:59:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410459500",
+        "asset_ref": "67351",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Anchorvale Drive",
+        "name": "Blk 321 Carpark",
+        "public_transport": "platform",
+        "route_ref": "372;NR6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8914214,
+          1.3899062
+        ]
+      },
+      "id": "node/410459500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410463797",
+        "asset_ref": "67189",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Compassvale Road",
+        "name": "Opposite Blk 241",
+        "public_transport": "platform",
+        "route_ref": "27;89;102;163;163M;371;965"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8974107,
+          1.3906583
+        ]
+      },
+      "id": "node/410463797"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410463798",
+        "asset_ref": "67241",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Compassvale Road",
+        "name": "Blk 248A",
+        "public_transport": "platform",
+        "route_ref": "27;89;371;965"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8985228,
+          1.3929464
+        ]
+      },
+      "id": "node/410463798"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410463799",
+        "asset_ref": "67249",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Compassvale Road",
+        "name": "Blk 259C",
+        "public_transport": "platform",
+        "route_ref": "27;89;371;965"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8985534,
+          1.3937316
+        ]
+      },
+      "id": "node/410463799"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410463800",
+        "asset_ref": "67181",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Compassvale Road",
+        "name": "Blk 240",
+        "public_transport": "platform",
+        "route_ref": "27;89;102;156;159;372;965"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8978118,
+          1.3909954
+        ]
+      },
+      "id": "node/410463800"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410463806",
+        "asset_ref": "67431",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Compassvale Street",
+        "name": "Opposite Blk 291A",
+        "public_transport": "platform",
+        "route_ref": "83"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8974189,
+          1.3952527
+        ]
+      },
+      "id": "node/410463806"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410463808",
+        "asset_ref": "67439",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Compassvale Street",
+        "name": "Blk 291A",
+        "public_transport": "platform",
+        "route_ref": "83"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8973786,
+          1.3954981
+        ]
+      },
+      "id": "node/410463808"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410463812",
+        "asset_ref": "67259",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Compassvale Street",
+        "name": "Blk 297A",
+        "public_transport": "platform",
+        "route_ref": "27;83;89;371;965"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9004644,
+          1.3946087
+        ]
+      },
+      "id": "node/410463812"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410463819",
+        "asset_ref": "67251",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Compassvale Street",
+        "name": "Blk 253",
+        "public_transport": "platform",
+        "route_ref": "27;83;89;371;965"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9003923,
+          1.3944038
+        ]
+      },
+      "id": "node/410463819"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410464074",
+        "asset_ref": "65249",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Edgefield Plains",
+        "name": "Blk 178",
+        "public_transport": "platform",
+        "route_ref": "136"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9082822,
+          1.3995595
+        ]
+      },
+      "id": "node/410464074"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410464088",
+        "asset_ref": "65241",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Edgefield Plains",
+        "name": "Blk 196C",
+        "public_transport": "platform",
+        "route_ref": "136"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9076522,
+          1.3990941
+        ]
+      },
+      "id": "node/410464088"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472369",
+        "asset_ref": "65279",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Central",
+        "name": "Between Blks 187/188",
+        "public_transport": "platform",
+        "route_ref": "3;6N;83;85"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9109875,
+          1.3993093
+        ]
+      },
+      "id": "node/410472369"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472372",
+        "asset_ref": "65229",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Central",
+        "name": "Blk 298",
+        "public_transport": "platform",
+        "route_ref": "3;6N;34;83;84;85;136;386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9055521,
+          1.4032091
+        ]
+      },
+      "id": "node/410472372"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472373",
+        "asset_ref": "65271",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Central",
+        "name": "Opposite Blk 188",
+        "public_transport": "platform",
+        "route_ref": "3;83;85"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9106464,
+          1.3999807
+        ]
+      },
+      "id": "node/410472373"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472374",
+        "asset_ref": "65289",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Central",
+        "name": "Edgefield Primary School",
+        "public_transport": "platform",
+        "route_ref": "3;6N;83;85;136;386",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.907635,
+          1.401732
+        ]
+      },
+      "id": "node/410472374"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472375",
+        "asset_ref": "65261",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Central",
+        "name": "Blk 649",
+        "public_transport": "platform",
+        "route_ref": "3;83;85"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9146038,
+          1.3971462
+        ]
+      },
+      "id": "node/410472375"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472376",
+        "asset_ref": "65221",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Central",
+        "name": "Blk 303D",
+        "public_transport": "platform",
+        "route_ref": "3;34;34A;83;84;85;136;386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9048174,
+          1.4040774
+        ]
+      },
+      "id": "node/410472376"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472377",
+        "asset_ref": "65281",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Central",
+        "name": "Punggol Secondary School",
+        "public_transport": "platform",
+        "route_ref": "3;83;85;136;386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.907859,
+          1.401923
+        ]
+      },
+      "id": "node/410472377"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472378",
+        "asset_ref": "65269",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Central",
+        "name": "Blk 162B",
+        "public_transport": "platform",
+        "route_ref": "3;6N;83;386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9149239,
+          1.3964771
+        ]
+      },
+      "id": "node/410472378"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472379",
+        "asset_ref": "65231",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol East",
+        "name": "Blk 166A",
+        "public_transport": "platform",
+        "route_ref": "3;6N;50;83;85;386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.915795,
+          1.39429
+        ]
+      },
+      "id": "node/410472379"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472380",
+        "asset_ref": "65239",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol East",
+        "name": "Opposite Blk 166A",
+        "public_transport": "platform",
+        "route_ref": "3;50;83;85"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.916123,
+          1.3942075
+        ]
+      },
+      "id": "node/410472380"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472381",
+        "asset_ref": "65201",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Field",
+        "name": "Opposite Blk 201A",
+        "public_transport": "platform",
+        "route_ref": "6N;62;62A;82"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9035672,
+          1.4008806
+        ]
+      },
+      "id": "node/410472381"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472382",
+        "asset_ref": "65159",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Field",
+        "name": "Blk 101C",
+        "public_transport": "platform",
+        "route_ref": "3;62;83;136"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9061631,
+          1.3990411
+        ]
+      },
+      "id": "node/410472382"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472383",
+        "asset_ref": "65169",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Field",
+        "name": "Blk 108",
+        "public_transport": "platform",
+        "route_ref": "3;62;83"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.910029,
+          1.3958293
+        ]
+      },
+      "id": "node/410472383"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472387",
+        "asset_ref": "65151",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Field",
+        "name": "Blk 196A",
+        "public_transport": "platform",
+        "route_ref": "3;6N;62;62A;83;136"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9065501,
+          1.3991335
+        ]
+      },
+      "id": "node/410472387"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472392",
+        "asset_ref": "65179",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Field",
+        "name": "Blk 126A",
+        "public_transport": "platform",
+        "route_ref": "3;62;83"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9118997,
+          1.3942822
+        ]
+      },
+      "id": "node/410472392"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472393",
+        "asset_ref": "65171",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Field",
+        "name": "Opposite Blk 126A",
+        "public_transport": "platform",
+        "route_ref": "3;6N;62;62A;83;386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9122461,
+          1.3944344
+        ]
+      },
+      "id": "node/410472393"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472394",
+        "asset_ref": "65161",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Field",
+        "name": "Blk 173B",
+        "public_transport": "platform",
+        "route_ref": "3;6N;62;62A;83"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9098666,
+          1.3963978
+        ]
+      },
+      "id": "node/410472394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472395",
+        "asset_ref": "65209",
+        "highway": "bus_stop",
+        "location": "Punggol Field",
+        "name": "After Punggol Road",
+        "route_ref": "62;82"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9038676,
+          1.4003315
+        ]
+      },
+      "id": "node/410472395"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472396",
+        "asset_ref": "65219",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Place",
+        "name": "After Punggol Central",
+        "public_transport": "platform",
+        "route_ref": "6N"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9033256,
+          1.4033115
+        ]
+      },
+      "id": "node/410472396"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472397",
+        "asset_ref": "65211",
+        "highway": "bus_stop",
+        "location": "Punggol Place",
+        "name": "After Punggol Field"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9024931,
+          1.4024963
+        ]
+      },
+      "id": "node/410472397"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472400",
+        "asset_ref": "65069",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Blk 190C",
+        "public_transport": "platform",
+        "route_ref": "27;82;83;86;88;89;136;161;965"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9024116,
+          1.3950153
+        ]
+      },
+      "id": "node/410472400"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472402",
+        "asset_ref": "65071",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Opposite Blk 103A",
+        "public_transport": "platform",
+        "route_ref": "3;6N;34;82;83;136"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9041539,
+          1.3984929
+        ]
+      },
+      "id": "node/410472402"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472407",
+        "asset_ref": "65129",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "After Track 22",
+        "route_ref": "84"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9097571,
+          1.4166266
+        ]
+      },
+      "id": "node/410472407"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472408",
+        "asset_ref": "65121",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Opposite Track 22",
+        "route_ref": "84"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9096173,
+          1.4167908
+        ]
+      },
+      "id": "node/410472408"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472411",
+        "asset_ref": "65061",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Blk 298A",
+        "public_transport": "platform",
+        "route_ref": "6N;27;82;83;86;88;89;136;161;965"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9019551,
+          1.3949235
+        ]
+      },
+      "id": "node/410472411"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472414",
+        "asset_ref": "65081",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Opposite Blk 199C",
+        "route_ref": "34"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9052968,
+          1.4009585
+        ]
+      },
+      "id": "node/410472414"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472422",
+        "asset_ref": "65101",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "After Punggol Drive",
+        "route_ref": "84"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9087263,
+          1.4079321
+        ]
+      },
+      "id": "node/410472422"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472469",
+        "asset_ref": "65079",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Blk 102C",
+        "public_transport": "platform",
+        "route_ref": "3;34;34A;82;83;136"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9047796,
+          1.3988936
+        ]
+      },
+      "id": "node/410472469"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472478",
+        "asset_ref": "65091",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Blk 301A",
+        "route_ref": "84"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9065771,
+          1.4040152
+        ]
+      },
+      "id": "node/410472478"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472511",
+        "asset_ref": "65109",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Before Punggol Drive",
+        "route_ref": "84"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9088633,
+          1.4076358
+        ]
+      },
+      "id": "node/410472511"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410472575",
+        "asset_ref": "65089",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Opposite Blk 296",
+        "public_transport": "platform",
+        "route_ref": "34;34A"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9058481,
+          1.4013487
+        ]
+      },
+      "id": "node/410472575"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410473634",
+        "asset_ref": "67231",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Rivervale Drive",
+        "name": "Rivervale Primary School",
+        "public_transport": "platform",
+        "route_ref": "86;371"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9039489,
+          1.3932664
+        ]
+      },
+      "id": "node/410473634"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410473663",
+        "asset_ref": "67221",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Rivervale Drive",
+        "name": "Blk 153",
+        "public_transport": "platform",
+        "route_ref": "86;371"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9062552,
+          1.3913409
+        ]
+      },
+      "id": "node/410473663"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410473666",
+        "asset_ref": "67239",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Rivervale Drive",
+        "name": "Opposite Rivervale Primary School",
+        "public_transport": "platform",
+        "route_ref": "86;371"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9037592,
+          1.3930419
+        ]
+      },
+      "id": "node/410473666"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410473668",
+        "asset_ref": "67229",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Rivervale Drive",
+        "name": "Blk 146A",
+        "public_transport": "platform",
+        "route_ref": "86"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9061155,
+          1.3910985
+        ]
+      },
+      "id": "node/410473668"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410474348",
+        "asset_ref": "67441",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sengkang East Road",
+        "name": "Sengkang Community Hub",
+        "public_transport": "platform",
+        "route_ref": "43;43M;83;85;109;156;159;161;372;374"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8935043,
+          1.3922935
+        ]
+      },
+      "id": "node/410474348"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410474384",
+        "asset_ref": "67449",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sengkang East Road",
+        "name": "Blk 323B",
+        "public_transport": "platform",
+        "route_ref": "43;43M;83;85;109;156;159;161"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.893101,
+          1.392108
+        ]
+      },
+      "id": "node/410474384"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410474619",
+        "asset_ref": "67419",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sengkang East Road",
+        "name": "Opposite Blk 261",
+        "public_transport": "platform",
+        "route_ref": "43;43M;83;109;119;374"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8938455,
+          1.3944463
+        ]
+      },
+      "id": "node/410474619"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410474760",
+        "asset_ref": "67411",
+        "highway": "bus_stop",
+        "location": "Sengkang East Road",
+        "name": "Blk 261",
+        "route_ref": "43;43M;83;109;119;374"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8943345,
+          1.3948041
+        ]
+      },
+      "id": "node/410474760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410474796",
+        "asset_ref": "67119",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sengkang East Way",
+        "name": "Blk 128",
+        "public_transport": "platform",
+        "route_ref": "50;119;136;NR6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9031094,
+          1.3904816
+        ]
+      },
+      "id": "node/410474796"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410474853",
+        "asset_ref": "67401",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sengkang East Way",
+        "name": "Opposite Sengkang Station/Block 260A",
+        "public_transport": "platform",
+        "route_ref": "50;102;119;156;159;161"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8953082,
+          1.3929399
+        ]
+      },
+      "id": "node/410474853"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410474919",
+        "asset_ref": "67101",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sengkang East Way",
+        "name": "Blk 250A",
+        "public_transport": "platform",
+        "route_ref": "50;119;161;163;163M"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8996087,
+          1.3914089
+        ]
+      },
+      "id": "node/410474919"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410474967",
+        "asset_ref": "67109",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sengkang East Way",
+        "name": "Blk 235",
+        "public_transport": "platform",
+        "route_ref": "50;119;161;163;163M;372;NR6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9000202,
+          1.3909507
+        ]
+      },
+      "id": "node/410474967"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410474989",
+        "asset_ref": "67399",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sengkang East Way",
+        "name": "Blk 325 Carpark",
+        "public_transport": "platform",
+        "route_ref": "50;85;102;372;NR6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8916923,
+          1.3937962
+        ]
+      },
+      "id": "node/410474989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410475011",
+        "amenity": "bus_station",
+        "asset_ref": "67009",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sengkang Square",
+        "name": "Sengkang Interchange",
+        "public_transport": "platform",
+        "route_ref": "80;83;86;87;156;159;163;163M;371;372;965",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8961049,
+          1.3915168
+        ]
+      },
+      "id": "node/410475011"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1847853709",
+        "amenity": "bus_station",
+        "asset_ref": "65009",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Place",
+        "name": "Punggol Temporary Interchange",
+        "public_transport": "platform",
+        "route_ref": "3;34;34A;43;43M;50;62;62A;82;83;84;85;117;118;119;136;382G;382W;386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9025242,
+          1.404107
+        ]
+      },
+      "id": "node/1847853709"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1849631331",
+        "asset_ref": "65141",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Way",
+        "name": "Soo Teck Station",
+        "public_transport": "platform",
+        "route_ref": "43;43M;117;118"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8974167,
+          1.4053356
+        ]
+      },
+      "id": "node/1849631331"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1849631343",
+        "asset_ref": "65149",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Way",
+        "name": "Soo Teck Station",
+        "public_transport": "platform",
+        "route_ref": "43;43M;117;118"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.89706,
+          1.4052507
+        ]
+      },
+      "id": "node/1849631343"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1854311904",
+        "asset_ref": "67391",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sengkang East Way",
+        "name": "Block 333B",
+        "public_transport": "platform",
+        "route_ref": "50;85;102;372"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8914481,
+          1.3942333
+        ]
+      },
+      "id": "node/1854311904"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1854311907",
+        "asset_ref": "67409",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sengkang East Way",
+        "name": "Sengkang Station",
+        "public_transport": "platform",
+        "route_ref": "50;102;119;156;159;161;372;374;NR6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.896108,
+          1.3923548
+        ]
+      },
+      "id": "node/1854311907"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1854311912",
+        "asset_ref": "65059",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Saint Anne's Church",
+        "public_transport": "platform",
+        "route_ref": "82;88;136;161"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9013398,
+          1.3930687
+        ]
+      },
+      "id": "node/1854311912"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1854311926",
+        "asset_ref": "67111",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sengkang East Way",
+        "name": "CHIJ Saint Joseph's Convent",
+        "public_transport": "platform",
+        "route_ref": "50;119;136"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9023686,
+          1.3910779
+        ]
+      },
+      "id": "node/1854311926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1855320985",
+        "asset_ref": "65099",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Blk 604A",
+        "route_ref": "84"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9071851,
+          1.404533
+        ]
+      },
+      "id": "node/1855320985"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1865254880",
+        "asset_ref": "67359",
+        "highway": "bus_stop",
+        "location": "Anchorvale Drive",
+        "name": "Nan Chiau High School",
+        "route_ref": "372"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8904488,
+          1.3900006
+        ]
+      },
+      "id": "node/1865254880"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1907922877",
+        "asset_ref": "N6709",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "null",
+        "name": "Blk 319A",
+        "public_transport": "platform",
+        "route_ref": "NR6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8898184,
+          1.3910219
+        ]
+      },
+      "id": "node/1907922877"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2077636382",
+        "asset_ref": "65359",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Place",
+        "name": "Opposite Punggol View Primary School",
+        "public_transport": "platform",
+        "route_ref": "50;382W"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9043482,
+          1.4055431
+        ]
+      },
+      "id": "node/2077636382"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2077636384",
+        "asset_ref": "65351",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Place",
+        "name": "Punggol View Primary School",
+        "public_transport": "platform",
+        "route_ref": "50;382G"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9048756,
+          1.4059238
+        ]
+      },
+      "id": "node/2077636384"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2085845866",
+        "asset_ref": "65339",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Field",
+        "name": "Blk 268C",
+        "public_transport": "platform",
+        "route_ref": "119;382W"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8981118,
+          1.4031893
+        ]
+      },
+      "id": "node/2085845866"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2085845871",
+        "asset_ref": "65349",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Field",
+        "name": "Blk 272C",
+        "public_transport": "platform",
+        "route_ref": "119;382W"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9006432,
+          1.4022889
+        ]
+      },
+      "id": "node/2085845871"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2085845879",
+        "asset_ref": "65331",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Field",
+        "name": "Opposite Blk 268D",
+        "public_transport": "platform",
+        "route_ref": "119;382G"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8986331,
+          1.4026665
+        ]
+      },
+      "id": "node/2085845879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2085845884",
+        "asset_ref": "65341",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Field",
+        "name": "Opposite Blk 272C",
+        "public_transport": "platform",
+        "route_ref": "119;382G"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.900933,
+          1.4017647
+        ]
+      },
+      "id": "node/2085845884"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2110621964",
+        "asset_ref": "65181",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol East",
+        "name": "Atf Punggol Central",
+        "public_transport": "platform",
+        "route_ref": "50"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.91755,
+          1.3968139
+        ]
+      },
+      "id": "node/2110621964"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2110621969",
+        "asset_ref": "65189",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol East",
+        "name": "Before Punggol Central",
+        "public_transport": "platform",
+        "route_ref": "50"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.91793,
+          1.396827
+        ]
+      },
+      "id": "node/2110621969"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2110621974",
+        "asset_ref": "65301",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Drive",
+        "name": "Blk 612A",
+        "public_transport": "platform",
+        "route_ref": "50"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.909287,
+          1.4045163
+        ]
+      },
+      "id": "node/2110621974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2110621985",
+        "asset_ref": "65321",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Drive",
+        "name": "Kadaloor Station",
+        "public_transport": "platform",
+        "route_ref": "50"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9166662,
+          1.3993112
+        ]
+      },
+      "id": "node/2110621985"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2110621991",
+        "asset_ref": "65329",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Drive",
+        "name": "Kadaloor Station",
+        "public_transport": "platform",
+        "route_ref": "50"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9162493,
+          1.3999112
+        ]
+      },
+      "id": "node/2110621991"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2110621997",
+        "asset_ref": "65311",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Drive",
+        "name": "Oasis Station Exit B/Block 617D",
+        "public_transport": "platform",
+        "route_ref": "50;386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9127005,
+          1.4021461
+        ]
+      },
+      "id": "node/2110621997"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2110622011",
+        "asset_ref": "65319",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Drive",
+        "name": "Oasis Station Exit A",
+        "public_transport": "platform",
+        "route_ref": "50;386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9127387,
+          1.402466
+        ]
+      },
+      "id": "node/2110622011"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2110622025",
+        "asset_ref": "65309",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Drive",
+        "name": "Opposite Blk 612A",
+        "public_transport": "platform",
+        "route_ref": "50"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.909134,
+          1.404944
+        ]
+      },
+      "id": "node/2110622025"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2632231133",
+        "asset_ref": "67671",
+        "highway": "bus_stop",
+        "location": "Rivervale Crescent",
+        "name": "Blk 156A Carpark",
+        "route_ref": "371"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9070973,
+          1.3919417
+        ]
+      },
+      "id": "node/2632231133"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2708140019",
+        "asset_ref": "67311",
+        "highway": "bus_stop",
+        "location": "Anchorvale Street",
+        "name": "Blk 330",
+        "route_ref": "NoServices"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8898313,
+          1.3969571
+        ]
+      },
+      "id": "node/2708140019"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2708140029",
+        "asset_ref": "67429",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Anchorvale Street",
+        "name": "Cheng Lim LRT",
+        "public_transport": "platform",
+        "route_ref": "NoServices"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8937623,
+          1.3964243
+        ]
+      },
+      "id": "node/2708140029"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2708140033",
+        "asset_ref": "67421",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Anchorvale Street",
+        "name": "Opposite Cheng Lim LRT",
+        "public_transport": "platform",
+        "route_ref": "NoServices"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8937158,
+          1.3961984
+        ]
+      },
+      "id": "node/2708140033"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3316956185",
+        "asset_ref": "65399",
+        "highway": "bus_stop",
+        "location": "Edgefield Plains",
+        "name": "Blk 670A",
+        "route_ref": "386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9126284,
+          1.4058029
+        ]
+      },
+      "id": "node/3316956185"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3316956186",
+        "asset_ref": "65391",
+        "highway": "bus_stop",
+        "location": "Edgefield Plains",
+        "name": "Blk 672A",
+        "route_ref": "386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9124459,
+          1.4059501
+        ]
+      },
+      "id": "node/3316956186"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3316956194",
+        "asset_ref": "65389",
+        "highway": "bus_stop",
+        "location": "Edgefield Plains",
+        "name": "Opposite Punggol Secondary School",
+        "route_ref": "386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9101159,
+          1.4022258
+        ]
+      },
+      "id": "node/3316956194"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3316956195",
+        "asset_ref": "65381",
+        "highway": "bus_stop",
+        "location": "Edgefield Plains",
+        "name": "Punggol Secondary School",
+        "route_ref": "386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9097855,
+          1.4021363
+        ]
+      },
+      "id": "node/3316956195"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3553028926",
+        "asset_ref": "65199",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Tampines Expressway",
+        "name": "After Punggol Road",
+        "public_transport": "platform",
+        "route_ref": "3;27;34;34A;39;88;89;109;118;168;858;969"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9055001,
+          1.3959978
+        ]
+      },
+      "id": "node/3553028926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3553028927",
+        "asset_ref": "65191",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Tampines Expressway",
+        "name": "Before Punggol Road",
+        "public_transport": "platform",
+        "route_ref": "3;27;34;39;88;89;109;118;168;858;969"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9051626,
+          1.3952405
+        ]
+      },
+      "id": "node/3553028927"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3737148763",
+        "asset_ref": "65431",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Way",
+        "name": "Twin Waterfalls",
+        "public_transport": "platform",
+        "route_ref": "43;43M;117;118;119",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8967454,
+          1.4024184
+        ]
+      },
+      "id": "node/3737148763"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3737158812",
+        "asset_ref": "65439",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Way",
+        "name": "After Tampines Expressway",
+        "public_transport": "platform",
+        "route_ref": "43;43M;117;118;119",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8963115,
+          1.4017197
+        ]
+      },
+      "id": "node/3737158812"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3865151058",
+        "asset_ref": "65409",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Central",
+        "name": "Before Blk 264",
+        "public_transport": "platform",
+        "route_ref": "43;43M;117;118"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.899574,
+          1.406245
+        ]
+      },
+      "id": "node/3865151058"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3865151063",
+        "asset_ref": "65429",
+        "highway": "bus_stop",
+        "location": "Edgefield Plains",
+        "name": "Greendale Primary School",
+        "route_ref": "386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9120865,
+          1.3967443
+        ]
+      },
+      "id": "node/3865151063"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3865151064",
+        "asset_ref": "65411",
+        "highway": "bus_stop",
+        "location": "Edgefield Plains",
+        "name": "Horizon Primary School",
+        "route_ref": "386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9138187,
+          1.3994654
+        ]
+      },
+      "id": "node/3865151064"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3865151068",
+        "asset_ref": "65401",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Central",
+        "name": "Opposite Blk 264A",
+        "public_transport": "platform",
+        "route_ref": "43;43M;117;118"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.89871,
+          1.4065689
+        ]
+      },
+      "id": "node/3865151068"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3865151071",
+        "asset_ref": "65419",
+        "highway": "bus_stop",
+        "location": "Edgefield Plains",
+        "name": "Opposite Horizon Primary School",
+        "route_ref": "386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9139912,
+          1.3994396
+        ]
+      },
+      "id": "node/3865151071"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3905787876",
+        "asset_ref": "65491",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Walk",
+        "name": "Opposite Blk 259 Carpark",
+        "public_transport": "platform",
+        "route_ref": "382G",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8948119,
+          1.4045728
+        ]
+      },
+      "id": "node/3905787876"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3905787877",
+        "asset_ref": "65499",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Walk",
+        "name": "Blk 259 Carpark",
+        "public_transport": "platform",
+        "route_ref": "382W",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8950751,
+          1.404596
+        ]
+      },
+      "id": "node/3905787877"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3905787878",
+        "asset_ref": "65441",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Walk",
+        "name": "Opposite Blk 315B",
+        "public_transport": "platform",
+        "route_ref": "382G",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8957547,
+          1.4081914
+        ]
+      },
+      "id": "node/3905787878"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3905787879",
+        "asset_ref": "65449",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Walk",
+        "name": "Blk 315B",
+        "public_transport": "platform",
+        "route_ref": "382W"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8959875,
+          1.4080168
+        ]
+      },
+      "id": "node/3905787879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3905803180",
+        "asset_ref": "65451",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Walk",
+        "name": "Blk 322 Carpark",
+        "public_transport": "platform",
+        "route_ref": "382G",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8975557,
+          1.4107318
+        ]
+      },
+      "id": "node/3905803180"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3905803181",
+        "asset_ref": "65459",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Walk",
+        "name": "Opposite Blk 322 Carpark",
+        "public_transport": "platform",
+        "route_ref": "382W",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8977409,
+          1.4105725
+        ]
+      },
+      "id": "node/3905803181"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3905803182",
+        "asset_ref": "65461",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Link",
+        "name": "Blk 312 Carpark",
+        "public_transport": "platform",
+        "route_ref": "382G",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9013404,
+          1.4098921
+        ]
+      },
+      "id": "node/3905803182"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3905803183",
+        "asset_ref": "65469",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Link",
+        "name": "Blk 310B",
+        "public_transport": "platform",
+        "route_ref": "382W",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9009786,
+          1.4098515
+        ]
+      },
+      "id": "node/3905803183"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3905803184",
+        "asset_ref": "65481",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sentul Cresent",
+        "name": "Before Punggol Drive",
+        "public_transport": "platform",
+        "route_ref": "382G",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9062063,
+          1.4088787
+        ]
+      },
+      "id": "node/3905803184"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3905803185",
+        "asset_ref": "65489",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sentul Cresent",
+        "name": "After Punggol Drive",
+        "public_transport": "platform",
+        "route_ref": "382W",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9056944,
+          1.408261
+        ]
+      },
+      "id": "node/3905803185"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4426007101",
+        "asset_ref": "67631",
+        "highway": "bus_stop",
+        "location": "Compassvale Street",
+        "name": "After Anchorvale Crescent",
+        "route_ref": "NoServices"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8920209,
+          1.3966405
+        ]
+      },
+      "id": "node/4426007101"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4426007103",
+        "asset_ref": "65529",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol East",
+        "name": "After Punggol Field",
+        "public_transport": "platform",
+        "route_ref": "50;62;62A;85"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9142797,
+          1.3914883
+        ]
+      },
+      "id": "node/4426007103"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4426007108",
+        "asset_ref": "67639",
+        "highway": "bus_stop",
+        "location": "Compassvale Street",
+        "name": "Before Anchorvale Crescent",
+        "route_ref": "NoServices"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8919487,
+          1.3969629
+        ]
+      },
+      "id": "node/4426007108"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4426007123",
+        "asset_ref": "65371",
+        "highway": "bus_stop",
+        "location": "Edgedale Plains",
+        "name": "Blk 682A",
+        "route_ref": "386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9161895,
+          1.4029162
+        ]
+      },
+      "id": "node/4426007123"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4426007435",
+        "asset_ref": "65521",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol East",
+        "name": "Waterwoods",
+        "public_transport": "platform",
+        "route_ref": "50;62;85"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9128944,
+          1.3903418
+        ]
+      },
+      "id": "node/4426007435"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4664801534",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "After Sumang Lane",
+        "operator": "Go-Ahead Transit",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8910307,
+          1.4035039
+        ]
+      },
+      "id": "node/4664801534"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4664809496",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "Block 226A",
+        "network": "Punggol Feeder Bus",
+        "operator": "Go-Ahead Transit",
+        "shelter": "yes",
+        "source": "https://www.lta.gov.sg/data/apps/news/press/2017/20170111_Route_amendment_service_382.pdf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8935666,
+          1.402367
+        ]
+      },
+      "id": "node/4664809496"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4664810382",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "Block 224A Bus Stop",
+        "operator": "Go-Ahead Transit",
+        "shelter": "yes",
+        "source": "https://www.lta.gov.sg/data/apps/news/press/2017/20170111_Route_amendment_service_382.pdf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.893714,
+          1.4022195
+        ]
+      },
+      "id": "node/4664810382"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4664811415",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "Before Sumang Lane",
+        "operator": "Go-Ahead Transit",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8912351,
+          1.4035469
+        ]
+      },
+      "id": "node/4664811415"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4664814182",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "Opposite Blk 227A",
+        "operator": "Go-Ahead Transit",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8924934,
+          1.4040841
+        ]
+      },
+      "id": "node/4664814182"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4664814528",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "Blk 227A",
+        "operator": "Go-Ahead Transit",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8934202,
+          1.4037635
+        ]
+      },
+      "id": "node/4664814528"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4711162708",
+        "highway": "bus_stop",
+        "name": "Waterway Pri Sch"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9189826,
+          1.3987222
+        ]
+      },
+      "id": "node/4711162708"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4711162709",
+        "highway": "bus_stop",
+        "name": "Opp Waterway Pri Sch"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9192026,
+          1.3986203
+        ]
+      },
+      "id": "node/4711162709"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4928930141",
+        "highway": "bus_stop",
+        "name": "Punggol Stn/Waterway Point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9027777,
+          1.4051328
+        ]
+      },
+      "id": "node/4928930141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4973281146",
+        "asset_ref": "67649",
+        "highway": "bus_stop",
+        "location": "Anchorvale Crescent",
+        "name": "Aft Anchorvale Street",
+        "route_ref": "374"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8933476,
+          1.3980635
+        ]
+      },
+      "id": "node/4973281146"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4973281147",
+        "asset_ref": "67641",
+        "highway": "bus_stop",
+        "location": "Anchorvale Crescent",
+        "name": "Bef Anchorvale Street",
+        "route_ref": "374"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8934609,
+          1.398001
+        ]
+      },
+      "id": "node/4973281147"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4973281148",
+        "asset_ref": "67699",
+        "highway": "bus_stop",
+        "location": "Anchorvale Crescent",
+        "name": "Blk 334A",
+        "route_ref": "374"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8896276,
+          1.3987454
+        ]
+      },
+      "id": "node/4973281148"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5113163861",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "Opposite Block 293D",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8948431,
+          1.3972744
+        ]
+      },
+      "id": "node/5113163861"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5113163863",
+        "highway": "bus_stop",
+        "name": "Block 286B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8953669,
+          1.3978506
+        ]
+      },
+      "id": "node/5113163863"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5841392120",
+        "asset_ref": "65049",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Blk 126A",
+        "public_transport": "platform",
+        "route_ref": "6N;82;88;163;163M;372"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9019336,
+          1.3899044
+        ]
+      },
+      "id": "node/5841392120"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5841392121",
+        "asset_ref": "65041",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Punggol Road",
+        "name": "Blk 231",
+        "public_transport": "platform",
+        "route_ref": "6N;82;88;163;163M;372"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.901599,
+          1.3899493
+        ]
+      },
+      "id": "node/5841392121"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5860554889",
+        "asset_ref": "65469",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Link",
+        "name": "Nibong Stn Exit A",
+        "public_transport": "platform",
+        "route_ref": "382W",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8999711,
+          1.4114906
+        ]
+      },
+      "id": "node/5860554889"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5860554890",
+        "asset_ref": "65469",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Link",
+        "name": "Nibong Stn Exit B",
+        "public_transport": "platform",
+        "route_ref": "382W",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9003431,
+          1.4113545
+        ]
+      },
+      "id": "node/5860554890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5860554891",
+        "asset_ref": "65469",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Link",
+        "name": "Samudera Stn Exit A",
+        "public_transport": "platform",
+        "route_ref": "382W",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9021953,
+          1.416151
+        ]
+      },
+      "id": "node/5860554891"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5860554892",
+        "asset_ref": "65469",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Link",
+        "name": "Samudera Stn Exit B",
+        "public_transport": "platform",
+        "route_ref": "382W",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9024253,
+          1.4159298
+        ]
+      },
+      "id": "node/5860554892"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5860554893",
+        "asset_ref": "65469",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Link",
+        "name": "Bef Punggol Pt Stn",
+        "public_transport": "platform",
+        "route_ref": "382W",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9055751,
+          1.4174695
+        ]
+      },
+      "id": "node/5860554893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5860554894",
+        "asset_ref": "65469",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Link",
+        "name": "Aft Punggol Pt Stn",
+        "public_transport": "platform",
+        "route_ref": "382W",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9055107,
+          1.4172094
+        ]
+      },
+      "id": "node/5860554894"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6780513249",
+        "asset_ref": "65499",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Walk",
+        "name": "Blk 258A",
+        "public_transport": "platform",
+        "route_ref": "382W",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8959034,
+          1.4035623
+        ]
+      },
+      "id": "node/6780513249"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6780513250",
+        "asset_ref": "65499",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "location": "Sumang Walk",
+        "name": "Blk 218",
+        "public_transport": "platform",
+        "route_ref": "382W",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8955797,
+          1.4034253
+        ]
+      },
+      "id": "node/6780513250"
+    }
+  ]
+}
