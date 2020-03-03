@@ -26,17 +26,17 @@ roadGeoJson = fo.GeoJson(e, style_function=lambda x: style_roads, name="road")
 roadGeoJson.add_to(pm)
 
 # Read GeoJson file for bus stop and apply as a new folium layer
-busstop = gpd.read_file("busstop.geojson")
+busstop = gpd.read_file("geojson/busstop.geojson")
 busstopGeoJson = fo.GeoJson(busstop, name="busstop")
 busstopGeoJson.add_to(pm)
 
 # Read GeoJson file for HDB and apply as a new folium layer
-hdb = gpd.read_file("hdb.geojson")
+hdb = gpd.read_file("geojson/hdb.geojson")
 hdbGeoJson = fo.GeoJson(hdb, name="hdb")
 hdbGeoJson.add_to(pm)
 
 # Read GeoJson file for Rail and apply as a new folium layer
-rail = gpd.read_file("rail.geojson")
+rail = gpd.read_file("geojson/rail.geojson")
 railGeoJson = fo.GeoJson(rail, name="rail")
 railGeoJson.add_to(pm)
 
