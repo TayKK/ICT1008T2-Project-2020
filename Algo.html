@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_607937c9f5d8479180be086f4660445e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_607937c9f5d8479180be086f4660445e" ></div>
+        
+</body>
+<script>    
+    
+            var map_607937c9f5d8479180be086f4660445e = L.map(
+                "map_607937c9f5d8479180be086f4660445e",
+                {
+                    center: [1.407937, 103.901702],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    zroutemStart: 15,
+                }
+            );
+            L.control.scale().addTo(map_607937c9f5d8479180be086f4660445e);
+
+            
+
+        
+    
+            var tile_layer_36c6bef039064cfeb15f1d09fd37d75a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_607937c9f5d8479180be086f4660445e);
+        
+    
+            var marker_faa9db3fa74743a09d9b17149b109357 = L.marker(
+                [1.402235, 103.905384],
+                {}
+            ).addTo(map_607937c9f5d8479180be086f4660445e);
+        
+    
+            var marker_d6bdf65d4da5423d8d03dab822e6bca4 = L.marker(
+                [1.392949, 103.912034],
+                {}
+            ).addTo(map_607937c9f5d8479180be086f4660445e);
+        
+    
+        function geo_json_7e0e78e04b224b14bc8ae012b9627b50_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#FF0000", "weight": "3"};
+            }
+        }
+        function geo_json_7e0e78e04b224b14bc8ae012b9627b50_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_607937c9f5d8479180be086f4660445e.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_7e0e78e04b224b14bc8ae012b9627b50 = L.geoJson(null, {
+                onEachFeature: geo_json_7e0e78e04b224b14bc8ae012b9627b50_onEachFeature,
+            
+                style: geo_json_7e0e78e04b224b14bc8ae012b9627b50_styler,
+        });
+        function geo_json_7e0e78e04b224b14bc8ae012b9627b50_add (data) {
+            geo_json_7e0e78e04b224b14bc8ae012b9627b50.addData(data)
+                .addTo(map_607937c9f5d8479180be086f4660445e);
+        }
+            geo_json_7e0e78e04b224b14bc8ae012b9627b50_add({"bbox": [103.9052784, 1.3923194, 103.9135578, 1.4029677], "features": [{"bbox": [103.9056198, 1.4018431, 103.9056428, 1.4019193], "geometry": {"coordinates": [[103.9056428, 1.4019193], [103.9056198, 1.4018431]], "type": "LineString"}, "id": "740", "properties": {"access": null, "bridge": null, "highway": "service", "junction": null, "key": 0, "lanes": null, "length": 8.85, "maxspeed": null, "name": null, "oneway": false, "osmid": 646842844, "service": null, "tunnel": null, "u": 5256475862, "v": 5177257754}, "type": "Feature"}, {"bbox": [103.9056198, 1.4017782, 103.9057738, 1.4018431], "geometry": {"coordinates": [[103.9056198, 1.4018431], [103.9057738, 1.4017782]], "type": "LineString"}, "id": "2659", "properties": {"access": null, "bridge": null, "highway": "service", "junction": null, "key": 0, "lanes": null, "length": 18.578, "maxspeed": null, "name": null, "oneway": false, "osmid": 533685820, "service": null, "tunnel": null, "u": 5177257754, "v": 5177257753}, "type": "Feature"}, {"bbox": [103.9057738, 1.4017782, 103.9060952, 1.4025907], "geometry": {"coordinates": [[103.9057738, 1.4017782], [103.9059341, 1.4022315], [103.9060952, 1.4025907]], "type": "LineString"}, "id": "2658", "properties": {"access": null, "bridge": null, "highway": "secondary", "junction": null, "key": 0, "lanes": ["6", "5"], "length": 97.23400000000001, "maxspeed": "60", "name": "Punggol Road", "oneway": true, "osmid": [620272657, 620272655], "service": null, "tunnel": null, "u": 5177257753, "v": 2274882083}, "type": "Feature"}, {"bbox": [103.9060952, 1.4025907, 103.9062096, 1.4028509], "geometry": {"coordinates": [[103.9060952, 1.4025907], [103.9062096, 1.4028509]], "type": "LineString"}, "id": "338", "properties": {"access": null, "bridge": null, "highway": "secondary", "junction": null, "key": 0, "lanes": "4", "length": 31.604, "maxspeed": "60", "name": "Punggol Road", "oneway": true, "osmid": 582412254, "service": null, "tunnel": null, "u": 2274882083, "v": 368902639}, "type": "Feature"}, {"bbox": [103.9062096, 1.4028509, 103.9062514, 1.4029677], "geometry": {"coordinates": [[103.9062096, 1.4028509], [103.9062514, 1.4029677]], "type": "LineString"}, "id": "309", "properties": {"access": null, "bridge": null, "highway": "secondary", "junction": null, "key": 0, "lanes": "3", "length": 13.794, "maxspeed": "60", "name": "Punggol Road", "oneway": true, "osmid": 74662283, "service": null, "tunnel": null, "u": 368902639, "v": 373096632}, "type": "Feature"}, {"bbox": [103.9062514, 1.4028932, 103.9063671, 1.4029677], "geometry": {"coordinates": [[103.9062514, 1.4029677], [103.9063671, 1.4028932]], "type": "LineString"}, "id": "115", "properties": {"access": null, "bridge": null, "highway": "tertiary", "junction": null, "key": 0, "lanes": "4", "length": 15.298, "maxspeed": "60", "name": "Punggol Central", "oneway": true, "osmid": 74962084, "service": null, "tunnel": null, "u": 373096632, "v": 373096628}, "type": "Feature"}, {"bbox": [103.9063242, 1.4027819, 103.9063671, 1.4028932], "geometry": {"coordinates": [[103.9063671, 1.4028932], [103.9063242, 1.4027819]], "type": "LineString"}, "id": "109", "properties": {"access": null, "bridge": null, "highway": "secondary", "junction": null, "key": 0, "lanes": "3", "length": 13.263, "maxspeed": "60", "name": "Punggol Road", "oneway": true, "osmid": 74662287, "service": null, "tunnel": null, "u": 373096628, "v": 368899634}, "type": "Feature"}, {"bbox": [103.9061699, 1.4024165, 103.9063242, 1.4027819], "geometry": {"coordinates": [[103.9063242, 1.4027819], [103.9061699, 1.4024165]], "type": "LineString"}, "id": "995", "properties": {"access": null, "bridge": null, "highway": "secondary", "junction": null, "key": 0, "lanes": "3", "length": 44.103, "maxspeed": "60", "name": "Punggol Road", "oneway": true, "osmid": 582412255, "service": null, "tunnel": null, "u": 368899634, "v": 2274882073}, "type": "Feature"}, {"bbox": [103.9060055, 1.4020051, 103.9061699, 1.4024165], "geometry": {"coordinates": [[103.9061699, 1.4024165], [103.9060055, 1.4020051]], "type": "LineString"}, "id": "329", "properties": {"access": null, "bridge": null, "highway": "secondary", "junction": null, "key": 0, "lanes": "3", "length": 49.261, "maxspeed": "60", "name": "Punggol Road", "oneway": true, "osmid": 174886183, "service": null, "tunnel": null, "u": 2274882073, "v": 5177330397}, "type": "Feature"}, {"bbox": [103.9057549, 1.401378, 103.9060055, 1.4020051], "geometry": {"coordinates": [[103.9060055, 1.4020051], [103.9057549, 1.401378]], "type": "LineString"}, "id": "1751", "properties": {"access": null, "bridge": null, "highway": "secondary", "junction": null, "key": 0, "lanes": "3", "length": 75.089, "maxspeed": "60", "name": "Punggol Road", "oneway": true, "osmid": 174886183, "service": null, "tunnel": null, "u": 5177330397, "v": 5284866465}, "type": "Feature"}, {"bbox": [103.9055098, 1.4007703, 103.9057549, 1.401378], "geometry": {"coordinates": [[103.9057549, 1.401378], [103.9056944, 1.4012267], [103.9055098, 1.4007703]], "type": "LineString"}, "id": "1528", "properties": {"access": null, "bridge": null, "highway": "secondary", "junction": null, "key": 0, "lanes": "3", "length": 72.859, "maxspeed": "60", "name": "Punggol Road", "oneway": true, "osmid": [476148400, 174886183], "service": null, "tunnel": null, "u": 5284866465, "v": 4697957120}, "type": "Feature"}, {"bbox": [103.9052784, 1.4002649, 103.9055098, 1.4007703], "geometry": {"coordinates": [[103.9055098, 1.4007703], [103.9054296, 1.4005801], [103.9053789, 1.4004672], [103.9052784, 1.4002649]], "type": "LineString"}, "id": "485", "properties": {"access": null, "bridge": null, "highway": "secondary", "junction": null, "key": 0, "lanes": ["4", "5"], "length": 61.829, "maxspeed": "60", "name": "Punggol Road", "oneway": true, "osmid": [476148403, 476148399], "service": null, "tunnel": null, "u": 4697957120, "v": 4427352180}, "type": "Feature"}, {"bbox": [103.9052784, 1.3998295, 103.9054033, 1.4002649], "geometry": {"coordinates": [[103.9052784, 1.4002649], [103.9053067, 1.4000925], [103.9053322, 1.3999826], [103.9054033, 1.3998295]], "type": "LineString"}, "id": "1379", "properties": {"access": null, "bridge": null, "highway": "secondary_link", "junction": null, "key": 0, "lanes": "1", "length": 50.739999999999995, "maxspeed": "50", "name": null, "oneway": true, "osmid": 445283026, "service": null, "tunnel": null, "u": 4427352180, "v": 4427352175}, "type": "Feature"}, {"bbox": [103.9054033, 1.3994584, 103.9060057, 1.3998295], "geometry": {"coordinates": [[103.9054033, 1.3998295], [103.9055986, 1.3997228], [103.905743, 1.3996407], [103.9059382, 1.3995079], [103.9060057, 1.3994584]], "type": "LineString"}, "id": "1370", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": "2", "length": 78.759, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": [708890745, 174886180, 476148405], "service": null, "tunnel": null, "u": 4427352175, "v": 7284008893}, "type": "Feature"}, {"bbox": [103.9060057, 1.3994266, 103.906047, 1.3994584], "geometry": {"coordinates": [[103.9060057, 1.3994584], [103.906047, 1.3994266]], "type": "LineString"}, "id": "1282", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": "2", "length": 5.795, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": 780092335, "service": null, "tunnel": null, "u": 7284008893, "v": 7284008891}, "type": "Feature"}, {"bbox": [103.906047, 1.3990216, 103.9064941, 1.3994266], "geometry": {"coordinates": [[103.906047, 1.3994266], [103.9061025, 1.3993839], [103.9063653, 1.3991216], [103.9064941, 1.3990216]], "type": "LineString"}, "id": "1279", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": "2", "length": 67.194, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": [476148406, 780092334], "service": null, "tunnel": null, "u": 7284008891, "v": 7284008889}, "type": "Feature"}, {"bbox": [103.9064941, 1.3985677, 103.9070557, 1.3990216], "geometry": {"coordinates": [[103.9064941, 1.3990216], [103.9067438, 1.3988277], [103.9069347, 1.3986613], [103.9070557, 1.3985677]], "type": "LineString"}, "id": "1275", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": ["2", "3", "4"], "length": 80.309, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": [780092336, 476148409, 476148407], "service": null, "tunnel": null, "u": 7284008889, "v": 4697957131}, "type": "Feature"}, {"bbox": [103.9070557, 1.3983908, 103.9072434, 1.3985677], "geometry": {"coordinates": [[103.9070557, 1.3985677], [103.9072434, 1.3983908]], "type": "LineString"}, "id": "488", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": "3", "length": 28.675, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": 476148408, "service": null, "tunnel": null, "u": 4697957131, "v": 411679986}, "type": "Feature"}, {"bbox": [103.9072434, 1.3983383, 103.9072954, 1.3983908], "geometry": {"coordinates": [[103.9072434, 1.3983908], [103.9072954, 1.3983383]], "type": "LineString"}, "id": "2200", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": "3", "length": 8.215, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": 75138969, "service": null, "tunnel": null, "u": 411679986, "v": 411679974}, "type": "Feature"}, {"bbox": [103.9072954, 1.3981835, 103.9075169, 1.3983383], "geometry": {"coordinates": [[103.9072954, 1.3983383], [103.9075169, 1.3981835]], "type": "LineString"}, "id": "2174", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": "2", "length": 30.042, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": 476148411, "service": null, "tunnel": null, "u": 411679974, "v": 4698074738}, "type": "Feature"}, {"bbox": [103.9075169, 1.3961306, 103.9100457, 1.3981835], "geometry": {"coordinates": [[103.9075169, 1.3981835], [103.9088727, 1.3970902], [103.9090782, 1.3969215], [103.9099627, 1.3961952], [103.9100457, 1.3961306]], "type": "LineString"}, "id": "2538", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": ["2", "3"], "length": 362.124, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": [512918170, 476149333, 476149334, 476149335], "service": null, "tunnel": null, "u": 4698074738, "v": 6777634249}, "type": "Feature"}, {"bbox": [103.9100457, 1.3955554, 103.9107444, 1.3961306], "geometry": {"coordinates": [[103.9100457, 1.3961306], [103.9101733, 1.3960314], [103.9107444, 1.3955554]], "type": "LineString"}, "id": "2385", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": ["3", "4"], "length": 100.623, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": [649392802, 476149335], "service": null, "tunnel": null, "u": 6777634249, "v": 2274874178}, "type": "Feature"}, {"bbox": [103.9107444, 1.3953768, 103.9109561, 1.3955554], "geometry": {"coordinates": [[103.9107444, 1.3955554], [103.9109561, 1.3953768]], "type": "LineString"}, "id": "525", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": "3", "length": 30.793, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": 476149336, "service": null, "tunnel": null, "u": 2274874178, "v": 368920397}, "type": "Feature"}, {"bbox": [103.9109561, 1.3953097, 103.9110416, 1.3953768], "geometry": {"coordinates": [[103.9109561, 1.3953768], [103.9110416, 1.3953097]], "type": "LineString"}, "id": "1215", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": null, "length": 12.083, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": 534637114, "service": null, "tunnel": null, "u": 368920397, "v": 411683826}, "type": "Feature"}, {"bbox": [103.9110416, 1.3951371, 103.9112474, 1.3953097], "geometry": {"coordinates": [[103.9110416, 1.3953097], [103.9112474, 1.3951371]], "type": "LineString"}, "id": "1956", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": "2", "length": 29.861, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": 476149337, "service": null, "tunnel": null, "u": 411683826, "v": 2274873612}, "type": "Feature"}, {"bbox": [103.9112474, 1.3947438, 103.9117163, 1.3951371], "geometry": {"coordinates": [[103.9112474, 1.3951371], [103.9117163, 1.3947438]], "type": "LineString"}, "id": "195", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": "2", "length": 68.04, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": 383281865, "service": null, "tunnel": null, "u": 2274873612, "v": 6646802858}, "type": "Feature"}, {"bbox": [103.9117163, 1.3932211, 103.9135578, 1.3947438], "geometry": {"coordinates": [[103.9117163, 1.3947438], [103.9125156, 1.3940733], [103.9131276, 1.3935852], [103.9135578, 1.3932211]], "type": "LineString"}, "id": "1535", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": ["2", "3"], "length": 265.67400000000004, "maxspeed": "50", "name": "Punggol Field", "oneway": true, "osmid": [383281865, 476149338, 476149339], "service": null, "tunnel": null, "u": 6646802858, "v": 4697965979}, "type": "Feature"}, {"bbox": [103.9134577, 1.3931018, 103.9135578, 1.3932211], "geometry": {"coordinates": [[103.9135578, 1.3932211], [103.9134577, 1.3931018]], "type": "LineString"}, "id": "909", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": null, "length": 17.315, "maxspeed": "50", "name": "Punggol Field Walk", "oneway": true, "osmid": 476162287, "service": null, "tunnel": null, "u": 4697965979, "v": 5218349048}, "type": "Feature"}, {"bbox": [103.9132952, 1.392869, 103.9134577, 1.3931018], "geometry": {"coordinates": [[103.9134577, 1.3931018], [103.9133509, 1.3929614], [103.9132952, 1.392869]], "type": "LineString"}, "id": "2875", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": "1", "length": 31.609, "maxspeed": "50", "name": "Punggol Field Walk", "oneway": true, "osmid": 539261591, "service": null, "tunnel": null, "u": 5218349048, "v": 5218349044}, "type": "Feature"}, {"bbox": [103.9129346, 1.3923839, 103.9132952, 1.392869], "geometry": {"coordinates": [[103.9132952, 1.392869], [103.9129346, 1.3923839]], "type": "LineString"}, "id": "2873", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": "2", "length": 67.204, "maxspeed": "50", "name": "Punggol Field Walk", "oneway": true, "osmid": 620514573, "service": null, "tunnel": null, "u": 5218349044, "v": 5218349049}, "type": "Feature"}, {"bbox": [103.9128657, 1.3923839, 103.9129346, 1.3924287], "geometry": {"coordinates": [[103.9129346, 1.3923839], [103.9128657, 1.3924287]], "type": "LineString"}, "id": "2876", "properties": {"access": null, "bridge": null, "highway": "service", "junction": null, "key": 0, "lanes": null, "length": 9.137, "maxspeed": null, "name": null, "oneway": false, "osmid": 452362560, "service": null, "tunnel": null, "u": 5218349049, "v": 4491725462}, "type": "Feature"}, {"bbox": [103.9127512, 1.3924287, 103.9128657, 1.3925326], "geometry": {"coordinates": [[103.9128657, 1.3924287], [103.9127512, 1.3925326]], "type": "LineString"}, "id": "1707", "properties": {"access": null, "bridge": null, "highway": "service", "junction": null, "key": 0, "lanes": "2", "length": 17.19, "maxspeed": null, "name": null, "oneway": false, "osmid": 640264293, "service": null, "tunnel": null, "u": 4491725462, "v": 4491725461}, "type": "Feature"}, {"bbox": [103.9120662, 1.3923194, 103.9127512, 1.3927087], "geometry": {"coordinates": [[103.9127512, 1.3925326], [103.9126293, 1.3923727], [103.9125836, 1.3923261], [103.912542, 1.3923194], [103.9125031, 1.3923422], [103.9120662, 1.3927087]], "type": "LineString"}, "id": "1704", "properties": {"access": null, "bridge": null, "highway": "service", "junction": null, "key": 0, "lanes": "2", "length": 102.709, "maxspeed": null, "name": null, "oneway": false, "osmid": [644865121, 707728836], "service": null, "tunnel": null, "u": 4491725461, "v": 6650955063}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+            var layer_control_a340b6848075497e946f4dbf5d0b12e3 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_36c6bef039064cfeb15f1d09fd37d75a,
+                },
+                overlays :  {
+                    "Walk Edge" : geo_json_7e0e78e04b224b14bc8ae012b9627b50,
+                },
+            };
+            L.control.layers(
+                layer_control_a340b6848075497e946f4dbf5d0b12e3.base_layers,
+                layer_control_a340b6848075497e946f4dbf5d0b12e3.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_607937c9f5d8479180be086f4660445e);
+        
+</script>
