@@ -17,7 +17,7 @@ start_coordinate = (1.402235, 103.905384)
 end_coordinate = (1.392949, 103.912034)
 
 # Initialise the map
-pm = fo.Map(location=centreCoordinate, zroutem_start=15, control_scale=True)
+pm = fo.Map(location=centreCoordinate, zoom_start=15, control_scale=True)
 fo.Marker([1.402235, 103.905384]).add_to(pm)
 fo.Marker([1.392949, 103.912034]).add_to(pm)
 
