@@ -10,14 +10,16 @@ punggol = gpd.read_file('geojson/polygon-punggol.geojson')
 polygon = punggol['geometry'].iloc[0]
 
 # Centre of Punggol
-centreCoordinate = (1.407937, 103.901702)
+centreCoordinate = (1.396978, 103.908901)
+#centreCoordinate = (1.407937, 103.901702)
+#
 
 # Random coordinates to try on before UI is up
 start_coordinate = (1.402235, 103.905384)
 end_coordinate = (1.392949, 103.912034)
 
 # Initialise the map
-pm = fo.Map(location=centreCoordinate, zoom_start=15, control_scale=True)
+pm = fo.Map(location=centreCoordinate, zoom_start=17, control_scale=True)
 fo.Marker([1.402235, 103.905384]).add_to(pm)
 fo.Marker([1.392949, 103.912034]).add_to(pm)
 
