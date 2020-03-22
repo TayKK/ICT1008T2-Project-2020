@@ -11,7 +11,7 @@ app.config['SECRET_KEY'] = 'fba483ff5f287007f4994b0b7ec9366c'
 
 @app.route('/', methods=['GET','POST'])
 def home():
-    nom = Nominatim(user_agent="ICT1008")
+    nom = Nominatim(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36")
     form = Locations()
 
     if form.validate_on_submit():
