@@ -101,8 +101,8 @@
 
 <body>
     <div class="sidenav">
-        <form>
             <!-- Transportation Selection By Radio Button -->
+            <!-- 
             <div class="form-check paddingAll">
                 <label class="my-1 mr-2" for="ddlTransportation">Mode of Transportation</label>
                 <select class="form-control" id="ddlTransportation">
@@ -112,28 +112,33 @@
                     <option value="3">Bus</option>
                 </select>
             </div>
+            -->
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                  <div class="form-group">
+                    {{ form.start_point.label(class="form-control-label") }}
+                    {{ form.start_point(class="form-control form-control-lg") }}
+                  </div>
+                  <div class="form-group">
+                    {{ form.end_point.label(class="form-control-label") }}
+                    {{ form.end_point(class="form-control form-control-lg") }}
+                  </div>
+                  <div class="form-group">
+                    {{ form.submit(class="btn btn-outline-info") }}
+                  </div>
+                </fieldset>
+              </form>
 
-            <label class="my-1 mr-2 paddingAll" for="userStart">Location</label>
-            <!-- Starting Point Selection by Text Input w Auto complete-->
-            <div class="form-group paddingAll">
-                <!--<label for="userStart" class="lb-lg">Starting Location: </label>-->
-                <input id="userStart" class="form-control form-control-lg" type="text" placeholder="Start Point">
-            </div>
-
-            <!-- Destination Point Selection by Text Input w Auto complete-->
-            <div class="form-group paddingAll">
-                <!--<label for="userEnd" class="lb-lg">Destination: </label>-->
-                <input id="userEnd" class="form-control form-control-lg" type="text" placeholder="Destination">
-            </div>
-
-            <!-- Output Text Area to get to Destination x
-            <div class="form-group paddingAll">
-                <label for="userSteps" class="lb-lg">Steps:</label>
-                <textarea id="userSteps" class="form-control" rows="10" readonly="readonly">Walk Down Bla Bla</textarea>
-            </div>-->
-            
-            <button type="submit" class="btn btn-info">Find my Way</button>
-        </form>
+            {% if start_lat %}
+                Start Point: 
+                Lat: {{ start_lat }}
+                Long: {{ start_long }}
+                <br>
+                End Point: 
+                Lat: {{ end_lat }}
+                Long: {{ end_long }}
+            {% endif %}
     </div>
 
     <!-- Page content -->
