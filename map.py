@@ -25,10 +25,18 @@ n, e = ox.graph_to_gdfs(G)
 roadGeoJson = fo.GeoJson(e, style_function=lambda x: style_roads, name="road")
 roadGeoJson.add_to(pm)
 
+
 # Read GeoJson file for bus stop and apply as a new folium layer
 busstop = gpd.read_file("geojson/busstop.geojson")
 busstopGeoJson = fo.GeoJson(busstop, name="busstop")
 busstopGeoJson.add_to(pm)
+
+
+mrt = gpd.read_file("geojson/MRT.geojson")
+mrtGeoJson = fo.GeoJson(mrt, name="mrt")
+mrtGeoJson.add_to(pm)
+
+
 
 # Read GeoJson file for HDB and apply as a new folium layer
 hdb = gpd.read_file("geojson/hdb.geojson")
