@@ -7,148 +7,149 @@ import json as js
 import networkx as nx
 import numpy as np
 import geopandas as gpd
-from pandas.io.json import json_normalize
+from pandas import json_normalize
 import json
-# mrt = pd.read_json("mrt.json")
-
-# for lrt in array:
-#     print(mrt[lrt])
-with open('./MRT.geojson') as f:
-    d = json.load(f)
-mrt = json_normalize(d['features'])
-
-# mrt = pd.read_json("MRT.geojson")
-# mrt =
-
-mrt = mrt["geometry.coordinates"].values
-
-# for station in mrt[0]:
-#     print(station)
+import os
+import shapely
 
 
+df_east = pd.read_csv('MRT/MRT-EAST.csv')
+df_east['geometry'] = df_east['geometry'].apply(shapely.wkt.loads)
+geo_df_east = gpd.GeoDataFrame(df_east, crs="EPSG:4326", geometry='geometry')
+
+df_west = pd.read_csv('MRT/MRT-WEST.csv')
+df_west['geometry'] = df_west['geometry'].apply(shapely.wkt.loads)
+geo_df_west = gpd.GeoDataFrame(df_west, crs="EPSG:4326", geometry='geometry')
 
 
-
+start_coordinate = (1.412545, 103.903250)
+end_coordinate = (1.401224, 103.916334)
+centreCoordinate = (1.407937, 103.901702)
+pm = fo.Map(location=centreCoordinate, zoom_start=15, control_scale=True)
+fo.Marker(start_coordinate, popup="start", icon=fo.Icon(
+    color='red', icon='info-sign')).add_to(pm)
+fo.Marker(end_coordinate, popup="end", icon=fo.Icon(
+    color='red', icon='info-sign')).add_to(pm)
 
 
 punggol = gpd.read_file('geojson/polygon-punggol.geojson')
 polygon = punggol['geometry'].iloc[0]
 
-centreCoordinate = (1.407937, 103.901702)
-
-df= pd.mrt_punggol = [('punggol', 1.4051810703851584, 103.90249013900757),
-('samkee', 1.4097076,103.904874),
-('coral edge',1.3939318,103.9125723),
-('Riviera', 1.394538,103.9161538),
-('punggol point', 1.4168814,103.9066298),
-('oasis', 1.4022823,103.9127329),
-('Merdirian', 1.4118877,103.9003304),
-('Kadaloor', 1.399601,103.9164448),
-('Cove', 1.3994603,103.9058059),
-('samudera', 1.4159537,103.9021398),
-('sooteck', 1.4053014,103.8972748),
-('sumang', 1.4085322,103.8985342),
-('damai', 1.4052320170304229,103.90855461359024)]
+mrt_station_response = ox.core.osm_net_download(
+    polygon, infrastructure='node["railway"="station"]')
+mrt_station_Graph = ox.core.create_graph(mrt_station_response, retain_all=True)
+mrt_station_Node, mrt_station_Edge = ox.graph_to_gdfs(mrt_station_Graph)
 
 
+mrt_west_stations = {1840734606: 'Sam Kee', 1840734600: 'Punggol Point', 1840734607: 'Samudera',
+                     1840734598: 'Nibong', 1840734610: 'Sumang', 1840734608: 'Soo Teck', 213085056: 'Punggol'}
+mrt_east_stations = {1840734592: 'Cove', 1840734597: 'Meridian', 1840734578: 'Coral Edge',
+                     1840734604: 'Riviera', 1840734594: 'Kadaloor', 1840734599: 'Oasis', 1840734593: 'Damai', 213085056: 'Punggol'}
 
+graph = {213085056: [1840734593, 1840734592, 1840734608, 1840734606],
+         1840734593: [213085056, 1840734599],
+         1840734599: [1840734593, 1840734594],
+         1840734594: [1840734599, 1840734604],
+         1840734604: [1840734594, 1840734578],
+         1840734578: [1840734604, 1840734597],
+         1840734597: [1840734578, 1840734592],
+         1840734592: [1840734597, 213085056],
+         1840734608: [213085056, 1840734610],
+         1840734610: [1840734608, 1840734598],
+         1840734598: [1840734610, 1840734607],
+         1840734607: [1840734598, 1840734600],
+         1840734600: [1840734607, 1840734606],
+         1840734606: [1840734600, 213085056]
+         }
 
-
-# start_coordinate = (1.39907,103.91092)
-# end_coordinate = (1.40289,103.90501)
-start_coordinate = (1.4053124590996222, 103.90225678682326)
-end_coordinate = (1.4022823,103.9127329)
-a= list (start_coordinate)
-visited=[]
-for station in mrt[1]:
-    if station[0] == a[1] and station[1] == a[0]:
-        visited.append (station)
-        print (visited)
-
-
-
-
-
-
-
-
-print (a[1])
-print (station[1])
-pm = fo.Map(location=centreCoordinate, zoom_start=15, control_scale=True)
-# fo.Marker([1.39907,103.91092]).add_to(pm)
-# fo.Marker([1.40289,103.90501]).add_to(pm)
-fo.Marker(start_coordinate).add_to(pm)#punggol
-#fo.Marker([1.4097076,103.904874]).add_to(pm) #samkee
-#fo.Marker([1.3939318,103.9125723]).add_to(pm) #coral edge
-#fo.Marker([1.394538,103.9161538]).add_to(pm) # Riviera
-#fo.Marker([1.4168814,103.9066298]).add_to(pm)#punggol point
-fo.Marker(end_coordinate).add_to(pm)#oasis
-#fo.Marker([1.4118877,103.9003304]).add_to(pm)#Nibong
-#fo.Marker([1.3969357,103.9088889]).add_to(pm) # Merdirian 
-#fo.Marker([1.399601,103.9164448]).add_to(pm)#Kadaloor
-#fo.Marker([1.3994603,103.9058059]).add_to(pm) #Cove
-#fo.Marker([1.4159537,103.9021398]).add_to(pm)#samudera
-#fo.Marker([1.4053014,103.8972748]).add_to(pm)#sooteck
-#fo.Marker([1.4085322,103.8985342]).add_to(pm)#sumang
-#fo.Marker([1.4052320170304229,103.90855461359024]).add_to(pm)#damai
-
-graph = {"Punggol": ["damai", "Cove", "Soo Teck", "Sam Kee"],
-          "damai": ["Punggol", "Oasis"],
-          "Oasis" : ["damai", "Kadaloor"],
-          "Kadaloor" : ["Oasis", "Riviera"],
-          "Riviera" : ["Kadaloor", "Coral Edge"],
-          "Coral Edge" : ["Riviera", "Meridian"],
-          "Meridian" : ["Coral Edge", "Cove"],
-          "Cove" : ["Meridian", "Punggol"],
-          "Soo Teck" : ["Punggol", "Sumang"],
-          "Sumang" : ["Soo Teck", "Nibong"],
-          "Nibong" : ["Sumang", "Samudera"],
-          "Samudera" : ["Nibong", "Punggol Point"],
-          "Punggol Point" : ["Samudera", "Teck Lee"],
-          "Teck Lee" : ["Punggol Point", "Sam Kee"],
-          "Sam Kee" : ["Teck Lee", "Punggol"]
-        }
-
+mrt_start_osmid = ox.geo_utils.get_nearest_node(
+    mrt_station_Graph, start_coordinate)
+mrt_end_osmid = ox.geo_utils.get_nearest_node(
+    mrt_station_Graph, end_coordinate)
 
 
 def bfs_shortest_path(graph, start, end):
 
     visited = []
     queue = [[start]]
- 
+
     if start == end:
-        return "Same Station"
- 
+        return 0
+
     while queue:
         path = queue.pop(0)
         node = path[-1]
         if node not in visited:
             neighbours = graph[node]
-         
+
             for neighbour in neighbours:
                 short_route = list(path)
                 short_route.append(neighbour)
                 queue.append(short_route)
-        
+
                 if neighbour == end:
                     return short_route
- 
+
             visited.append(node)
 
-    return "So sorry, but a connecting path doesn't exist :("
-
-#print (bfs_shortest_path(graph, 'Punggol', "Punggol Point"))
-#print (bfs_shortest_path(graph, 'Punggol', "Punggol"))
-#print (bfs_shortest_path(graph, 'Punggol', "Kadaloor"))
-print (bfs_shortest_path(graph, 'Coral Edge', "Punggol Point"))
-#print (bfs_shortest_path(graph, 'Cove', "whahahaha"))
+    return 0
 
 
+def mrt_station_display(osm_df, east, west, route):
+    for station in route:
+        if station in west:
+            current_coord_lat = float(
+                osm_df[osm_df['osmid'] == station]['y'].values[0])
+            current_coord_long = float(
+                osm_df[osm_df['osmid'] == station]['x'].values[0])
+            print(west[station])
+            fo.Marker([current_coord_lat, current_coord_long], popup=west[station], icon=fo.Icon(
+                color='blue', icon='info-sign')).add_to(pm)
+        else:
+            current_coord_lat = float(
+                osm_df[osm_df['osmid'] == station]['y'].values[0])
+            current_coord_long = float(
+                osm_df[osm_df['osmid'] == station]['x'].values[0])
+            fo.Marker([current_coord_lat, current_coord_long], popup=east[station], icon=fo.Icon(
+                color='blue', icon='info-sign')).add_to(pm)
+            print(east[station])
 
-fo.LayerControl().add_to(pm)
+
+def mrt_route_display(east, east_geo, west, west_geo, route, fo_map):
+    result_df = pd.DataFrame(columns=west_geo.columns)
+    for i in range(len(route) - 1):
+        current_station, next_station = route[i], route[i + 1]
+        if current_station in west and next_station in west:
+            if ((west_geo['u'] == current_station) & (west_geo['v'] == next_station)).any():
+                row = west_geo[(west_geo['u'] == current_station)
+                               & (west_geo['v'] == next_station)]
+            else:
+                row = west_geo[(west_geo['v'] == current_station)
+                               & (west_geo['u'] == next_station)]
+        else:
+            if ((east_geo['u'] == current_station) & (east_geo['v'] == next_station)).any():
+                row = east_geo[(east_geo['u'] == current_station)
+                               & (east_geo['v'] == next_station)]
+            else:
+                row = east_geo[(east_geo['v'] == current_station)
+                               & (east_geo['u'] == next_station)]
+        result_df = result_df.append(row)
+    result_geo_df = gpd.GeoDataFrame(
+        result_df, crs="EPSG:4326", geometry='geometry')
+    fo.GeoJson(result_geo_df, style_function=lambda x: {
+               "color": "blue", "weight": "3"}, name="MRT").add_to(fo_map)
+
+
+route = bfs_shortest_path(graph, mrt_start_osmid, mrt_end_osmid)
+
+if route != 0:
+    print(route)
+    mrt_station_display(mrt_station_Node, mrt_east_stations,
+                        mrt_west_stations, route)
+    mrt_route_display(mrt_east_stations, geo_df_east,
+                      mrt_west_stations, geo_df_west, route, pm)
+else:
+    print("MRT is not needed!")
+
+
 pm.save("mrt.html")
-
-
-
-
-
