@@ -303,7 +303,7 @@ def get_diffbus_route(bus_stop_ST_df, start_busCode, end_busCode, bus_stop_ST_co
                                 osm_busstop_coord[str(end_busCode)][1])
                         except:
                             pass
-                        if end_row == end_busCode or haversine(lat1_to_end, lon1_to_end, lat2_to_end, lon2_to_end) < 0.3 or haversine(lat1_to_start, lon1_to_start, lat2_to_start, lon2_to_start) < 0.3:
+                        if end_row == end_busCode or haversine(lat1_to_end, lon1_to_end, lat2_to_end, lon2_to_end) < 0.3 or haversine(lat1_to_start, lon1_to_start, lat2_to_start, lon2_to_start) < 0.1:
                             final_route.append(route)
                             return final_route
             except:
