@@ -1,8 +1,7 @@
 import osmnx as ox
 import folium as fo
 import geopandas as gpd
-# import heapq as hq
-from minHeap import Heap as hq
+import heapq
 import pandas as pd
 
 # Punggol Polygon
@@ -25,7 +24,7 @@ fo.Marker([1.392949, 103.912034]).add_to(pm)
 
 # Query route using osmnx (currently using "all" for trying, can change to "walk" or "drive" as needed)
 graph = ox.core.graph_from_polygon(
-    polygon, truncate_by_edge=True, network_type="all")
+    polygon, truncate_by_edge=True, network_type="walk")
 
 # Separate the graph into 2 files (nodes = nodes in the acquired graph, edges = edges in the acquired graph)
 nodes, edges = ox.graph_to_gdfs(graph)
@@ -38,18 +37,18 @@ end_node_id = ox.geo_utils.get_nearest_node(graph, end_coordinate)
 prev_Node = None
 curr_Node = first_node_id
 
-h = hq()
+heap = []
 path = {}
 route = []
 temp = 0
 
 # min-heap element's structure = [distance, previous osmID, current osmID]
-h.push([0, None, curr_Node])
+heapq.heappush(heap, [0, None, curr_Node])
 
 # Main Algo using min-heap (not A* yet)
 while (True):
     # Pop the list based on shortest distance
-    temp_list = h.pop()
+    temp_list = heapq.heappop(heap)
     # Set current node to current osmID
     curr_Node = temp_list[2]
     # Break condition once destination is reached
@@ -77,7 +76,7 @@ while (True):
         # For every edge, push it into min heap
         data_list = (getattr(row, "length")+temp,
                      getattr(row, "u"), getattr(row, "v"))
-        h.push(list(data_list))
+        heapq.heappush(heap, list(data_list))
 
 # Create another dataframe to print out the route
 df2 = pd.DataFrame(columns=edges.columns)
@@ -100,4 +99,4 @@ edgesLayer.add_to(pm)
 
 # Save the folium map as html
 fo.LayerControl().add_to(pm)
-pm.save("Algo.html")
+pm.save("walk.html")
