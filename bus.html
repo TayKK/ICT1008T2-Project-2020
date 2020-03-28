@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f70a97ce411649699f86ae881163015b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_f70a97ce411649699f86ae881163015b" ></div>
+        
+</body>
+<script>    
+    
+            var map_f70a97ce411649699f86ae881163015b = L.map(
+                "map_f70a97ce411649699f86ae881163015b",
+                {
+                    center: [1.40565, 103.90665000000001],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_f70a97ce411649699f86ae881163015b);
+
+            
+
+        
+    
+            var tile_layer_f6a0fee5d9374feea73c1713181c6766 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var marker_dfc639069fcc4aafb078a2ba5051a153 = L.marker(
+                [1.399366, 103.91189],
+                {}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var icon_4353e1668c3a4ec4a95c4de03de4e93f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_dfc639069fcc4aafb078a2ba5051a153.setIcon(icon_4353e1668c3a4ec4a95c4de03de4e93f);
+        
+    
+        var popup_8dbfa740a3ee492895e5b38ab7f6f797 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6ed492778f14332aa97c4b76e9d6df7 = $(`<div id="html_f6ed492778f14332aa97c4b76e9d6df7" style="width: 100.0%; height: 100.0%;">start</div>`)[0];
+            popup_8dbfa740a3ee492895e5b38ab7f6f797.setContent(html_f6ed492778f14332aa97c4b76e9d6df7);
+        
+
+        marker_dfc639069fcc4aafb078a2ba5051a153.bindPopup(popup_8dbfa740a3ee492895e5b38ab7f6f797)
+        ;
+
+        
+    
+    
+            var marker_06e3d910ce71469489d07017f08e63f7 = L.marker(
+                [1.404336, 103.902684],
+                {}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var icon_2df569f474234008b9edb71caacb0830 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_06e3d910ce71469489d07017f08e63f7.setIcon(icon_2df569f474234008b9edb71caacb0830);
+        
+    
+        var popup_26aaa6416d4e423ba61201abbb46f96e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_008cc13cf699437a8a7c7b338f6c787b = $(`<div id="html_008cc13cf699437a8a7c7b338f6c787b" style="width: 100.0%; height: 100.0%;">end</div>`)[0];
+            popup_26aaa6416d4e423ba61201abbb46f96e.setContent(html_008cc13cf699437a8a7c7b338f6c787b);
+        
+
+        marker_06e3d910ce71469489d07017f08e63f7.bindPopup(popup_26aaa6416d4e423ba61201abbb46f96e)
+        ;
+
+        
+    
+    
+            var marker_4a2f381a4dd0448ab2376fa0c5feade2 = L.marker(
+                [1.404107, 103.9025242],
+                {}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var icon_e2583f81373945dab00395145b5fa037 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4a2f381a4dd0448ab2376fa0c5feade2.setIcon(icon_e2583f81373945dab00395145b5fa037);
+        
+    
+        var popup_5ccdda45c8884ea1879fdf75deba8c13 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aff436a943004047b0b08a488be84b35 = $(`<div id="html_aff436a943004047b0b08a488be84b35" style="width: 100.0%; height: 100.0%;">[Bus:3, Code:65009] Punggol Temp Int</div>`)[0];
+            popup_5ccdda45c8884ea1879fdf75deba8c13.setContent(html_aff436a943004047b0b08a488be84b35);
+        
+
+        marker_4a2f381a4dd0448ab2376fa0c5feade2.bindPopup(popup_5ccdda45c8884ea1879fdf75deba8c13)
+        ;
+
+        
+    
+    
+            var marker_8164ddd0a4ef495688e63d9994b263bf = L.marker(
+                [1.4040774, 103.9048174],
+                {}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var icon_723c1ecd178b471a95224a470d8ab309 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8164ddd0a4ef495688e63d9994b263bf.setIcon(icon_723c1ecd178b471a95224a470d8ab309);
+        
+    
+        var popup_35cf5c3542454d3787a96a90ff80fe07 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d80ccbd378ba4302af72a456081f45e7 = $(`<div id="html_d80ccbd378ba4302af72a456081f45e7" style="width: 100.0%; height: 100.0%;">[Bus:3, Code:65221] BLK 303D</div>`)[0];
+            popup_35cf5c3542454d3787a96a90ff80fe07.setContent(html_d80ccbd378ba4302af72a456081f45e7);
+        
+
+        marker_8164ddd0a4ef495688e63d9994b263bf.bindPopup(popup_35cf5c3542454d3787a96a90ff80fe07)
+        ;
+
+        
+    
+    
+            var marker_e8c47a5e000e40e9a8f26f9d1cbc00f4 = L.marker(
+                [1.401923, 103.907859],
+                {}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var icon_3ab972c3bf324f5db114384edfe4483f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e8c47a5e000e40e9a8f26f9d1cbc00f4.setIcon(icon_3ab972c3bf324f5db114384edfe4483f);
+        
+    
+        var popup_f9422937d2304960ad0025fabffa5113 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e9aed684952340378750274e2223b6a1 = $(`<div id="html_e9aed684952340378750274e2223b6a1" style="width: 100.0%; height: 100.0%;">[Bus:3, Code:65281] Punggol Sec/Blk 601B</div>`)[0];
+            popup_f9422937d2304960ad0025fabffa5113.setContent(html_e9aed684952340378750274e2223b6a1);
+        
+
+        marker_e8c47a5e000e40e9a8f26f9d1cbc00f4.bindPopup(popup_f9422937d2304960ad0025fabffa5113)
+        ;
+
+        
+    
+    
+            var poly_line_5a84b82a46e34284af4bafa49f7e5903 = L.polyline(
+                [[1.404107, 103.9025242], [1.4040774, 103.9048174], [1.401923, 103.907859]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var marker_b6072930f58c40c1b18f43883dc14dc9 = L.marker(
+                [1.401923, 103.907859],
+                {}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var icon_8395d472ab0c47a08f63b223a4d106fe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b6072930f58c40c1b18f43883dc14dc9.setIcon(icon_8395d472ab0c47a08f63b223a4d106fe);
+        
+    
+        var popup_c01defeddcee4c71b8464be27bca0e57 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d979acc5164b480d830abff526340a41 = $(`<div id="html_d979acc5164b480d830abff526340a41" style="width: 100.0%; height: 100.0%;">[Bus:381, Code:65281] Punggol Sec/Blk 601B</div>`)[0];
+            popup_c01defeddcee4c71b8464be27bca0e57.setContent(html_d979acc5164b480d830abff526340a41);
+        
+
+        marker_b6072930f58c40c1b18f43883dc14dc9.bindPopup(popup_c01defeddcee4c71b8464be27bca0e57)
+        ;
+
+        
+    
+    
+            var marker_d2d4b7480b4548918079b296b409b069 = L.marker(
+                [1.3963978, 103.9098666],
+                {}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var icon_43bae51a89974c828dbdcc0e2a41c340 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d2d4b7480b4548918079b296b409b069.setIcon(icon_43bae51a89974c828dbdcc0e2a41c340);
+        
+    
+        var popup_0c284d1de4cc428db78c3a28551f6b96 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f824c9d134d74257a10d06ed5d195057 = $(`<div id="html_f824c9d134d74257a10d06ed5d195057" style="width: 100.0%; height: 100.0%;">[Bus:381, Code:65161] Meridian Stn Exit B</div>`)[0];
+            popup_0c284d1de4cc428db78c3a28551f6b96.setContent(html_f824c9d134d74257a10d06ed5d195057);
+        
+
+        marker_d2d4b7480b4548918079b296b409b069.bindPopup(popup_0c284d1de4cc428db78c3a28551f6b96)
+        ;
+
+        
+    
+    
+            var marker_a09c98a25a0f471fa2feba8c687616ad = L.marker(
+                [1.3944344, 103.9122461],
+                {}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var icon_30560ceab8474b40a42274ccfdcea4b0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a09c98a25a0f471fa2feba8c687616ad.setIcon(icon_30560ceab8474b40a42274ccfdcea4b0);
+        
+    
+        var popup_27165974736f418b9e250eb0825e0487 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9bc3a03fdbe24c52b05144f427b5650d = $(`<div id="html_9bc3a03fdbe24c52b05144f427b5650d" style="width: 100.0%; height: 100.0%;">[Bus:381, Code:65171] Coral Edge Stn Exit B</div>`)[0];
+            popup_27165974736f418b9e250eb0825e0487.setContent(html_9bc3a03fdbe24c52b05144f427b5650d);
+        
+
+        marker_a09c98a25a0f471fa2feba8c687616ad.bindPopup(popup_27165974736f418b9e250eb0825e0487)
+        ;
+
+        
+    
+    
+            var marker_191f1ae2a6c94cba9237903cb973389b = L.marker(
+                [1.39429, 103.915795],
+                {}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var icon_1789cef7c674448085476270d6f581ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_191f1ae2a6c94cba9237903cb973389b.setIcon(icon_1789cef7c674448085476270d6f581ca);
+        
+    
+        var popup_3bff23cb8d8a43a69410162b011c0782 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f4066457b565461f84951b723fe55cf1 = $(`<div id="html_f4066457b565461f84951b723fe55cf1" style="width: 100.0%; height: 100.0%;">[Bus:381, Code:65231] Riviera Stn Exit B</div>`)[0];
+            popup_3bff23cb8d8a43a69410162b011c0782.setContent(html_f4066457b565461f84951b723fe55cf1);
+        
+
+        marker_191f1ae2a6c94cba9237903cb973389b.bindPopup(popup_3bff23cb8d8a43a69410162b011c0782)
+        ;
+
+        
+    
+    
+            var poly_line_4bfaedbb1e324e1595c53fc764019877 = L.polyline(
+                [[1.401923, 103.907859], [1.3963978, 103.9098666], [1.3944344, 103.9122461], [1.39429, 103.915795]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var marker_e253f40ca94f46f38a76525f1e09811b = L.marker(
+                [1.39429, 103.915795],
+                {}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var icon_96dc716fe1354022b26ade9f3444256e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e253f40ca94f46f38a76525f1e09811b.setIcon(icon_96dc716fe1354022b26ade9f3444256e);
+        
+    
+        var popup_8a2ac5229c95404e99fa351858e09d79 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_71d65da27c4d43be90a95fbb7a69e69d = $(`<div id="html_71d65da27c4d43be90a95fbb7a69e69d" style="width: 100.0%; height: 100.0%;">[Bus:85, Code:65231] Riviera Stn Exit B</div>`)[0];
+            popup_8a2ac5229c95404e99fa351858e09d79.setContent(html_71d65da27c4d43be90a95fbb7a69e69d);
+        
+
+        marker_e253f40ca94f46f38a76525f1e09811b.bindPopup(popup_8a2ac5229c95404e99fa351858e09d79)
+        ;
+
+        
+    
+    
+            var marker_e6d6436dbec94160b73f3e4276f9e438 = L.marker(
+                [1.3993093, 103.9109875],
+                {}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+    
+            var icon_cf95963b0688410b95020a370d72c96f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e6d6436dbec94160b73f3e4276f9e438.setIcon(icon_cf95963b0688410b95020a370d72c96f);
+        
+    
+        var popup_4c71b8f99fd04ed0809d0fd6c2a882f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c482ea56b054aaf836e7a2dd534008e = $(`<div id="html_2c482ea56b054aaf836e7a2dd534008e" style="width: 100.0%; height: 100.0%;">[Bus:85, Code:65279] Bet Blks 187/188</div>`)[0];
+            popup_4c71b8f99fd04ed0809d0fd6c2a882f6.setContent(html_2c482ea56b054aaf836e7a2dd534008e);
+        
+
+        marker_e6d6436dbec94160b73f3e4276f9e438.bindPopup(popup_4c71b8f99fd04ed0809d0fd6c2a882f6)
+        ;
+
+        
+    
+    
+            var poly_line_348260bcb517456aa32c4c4721848276 = L.polyline(
+                [[1.39429, 103.915795], [1.3993093, 103.9109875]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_f70a97ce411649699f86ae881163015b);
+        
+</script>
