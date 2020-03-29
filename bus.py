@@ -12,19 +12,19 @@ import itertools
 import heapq
 from shapely.geometry import Point, LineString, Polygon
 
-
+#import the punggol map 
 punggol = gpd.read_file('geojson/polygon-punggol.geojson')
 polygon = punggol['geometry'].iloc[0]
-
+#Define the start coordinates of the map that is being displayed in the webpage
 centreCoordinate = (1.40565, 103.90665000000001)
 
 unique_osmid_list = list(range(1, 999999))
 random.shuffle(unique_osmid_list)
-
+# define the Start and end cordinates for the bus route 
 start_coord = (1.399366, 103.911890)
 end_coord = (1.404336, 103.902684)
 
-
+#Plot Icon of the start and end coordinates on the map and plot the map in folium. 
 pm = fo.Map(location=centreCoordinate, zoom_start=15, control_scale=True)
 fo.Marker(start_coord, popup="start", icon=fo.Icon(
     color='red', icon='info-sign')).add_to(pm)
@@ -376,7 +376,7 @@ def create_busCode_Adj(stop_df, osm_df, bus_dict):
 bus_stop_ST_Adj = create_busCode_Adj(
     bus_stop_ST_df, osm_node, bus_stop_ST_code)
 
-
+# implementation fo dijksta algorithm to find the shortest path. 
 def dijkstras(graph, start, end, bus_stop_dict, leastxfer=False):
     heapqueue = []
     seen = {}
@@ -435,7 +435,7 @@ def clean_bus_route(route, bus_code):
 
 route_display = clean_bus_route(route, bus_stop_ST_code)
 
-
+# get the all the codinates of the busstop and display the busstop nodes on the map
 def display_busstop(fo_map, key, value, stop_df, osm_df, prev_coord):
     if prev_coord is None:
         prev_coord = value[0]
@@ -467,7 +467,7 @@ def display_busstop(fo_map, key, value, stop_df, osm_df, prev_coord):
     prev_coord = value[len(value)-1]
     return prev_coord
 
-
+# print out the bus route on the map with the start and end point
 prev_coord = None
 for bus in route_display:
     print(bus, route_display[bus])
