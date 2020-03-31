@@ -44,13 +44,13 @@ mrt_station_response = ox.core.osm_net_download(
 mrt_station_Graph = ox.core.create_graph(mrt_station_response, retain_all=True)
 mrt_station_Node, mrt_station_Edge = ox.graph_to_gdfs(mrt_station_Graph)
 
-#Define the name and cordinates of the mrt station 
+#Define the name and osm id of the mrt station 
 mrt_west_stations = {1840734606: 'Sam Kee', 1840734600: 'Punggol Point', 1840734607: 'Samudera',
                      1840734598: 'Nibong', 1840734610: 'Sumang', 1840734608: 'Soo Teck', 213085056: 'Punggol'}
 mrt_east_stations = {1840734592: 'Cove', 1840734597: 'Meridian', 1840734578: 'Coral Edge',
                      1840734604: 'Riviera', 1840734594: 'Kadaloor', 1840734599: 'Oasis', 1840734593: 'Damai', 213085056: 'Punggol'}
 
-#Define Graph of the station with its latitude adn longtitude 
+#Define Graph of the station with its osm id
 graph = {213085056: [1840734593, 1840734592, 1840734608, 1840734606],
          1840734593: [213085056, 1840734599],
          1840734599: [1840734593, 1840734594],
