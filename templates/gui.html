@@ -7,89 +7,102 @@
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
-    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <script type="text/javascript" src="http://cdn.rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.min.js"></script>
+    <script type="text/javascript"
+        src="http://cdn.rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.min.js"></script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-    <script> 
-        var countries; 
-        const url = 'https://api.myjson.com/bins/9dlow'; 
+    <script>
+        var countries;
+        const url = 'https://api.myjson.com/bins/9dlow';
 
-            //Start Point Dropdown 
-            $.getJSON(url, function(data) {
-                countries = data; 
-                
-                const searchInput = document.querySelector('.search-input');
-                const suggestionsPanel = document.querySelector('.suggestions');
+        //Start Point Dropdown 
+        $.getJSON(url, function (data) {
+            countries = data;
 
-                searchInput.addEventListener('keyup', function() {
-                    const input = searchInput.value;
+            const searchInput = document.querySelector('.search-input');
+            const suggestionsPanel = document.querySelector('.suggestions');
+
+            searchInput.addEventListener('keyup', function () {
+                const input = searchInput.value;
+                suggestionsPanel.innerHTML = '';
+
+                const suggestions = countries.filter(function (country) {
+                    return country.address.toLowerCase().startsWith(input);
+                });
+
+                var count = 0;
+
+                suggestions.slice(-5).forEach(function (suggested) {
+                    const div = document.createElement('div');
+                    div.innerHTML = suggested.address;
+                    suggestionsPanel.appendChild(div);
+                    count++;
+                });
+
+                if (input === '') {
                     suggestionsPanel.innerHTML = '';
-            
-                    const suggestions = countries.filter(function(country) {
-                        return country.address.toLowerCase().startsWith(input);
-                    });
-
-                    suggestions.forEach(function(suggested) {
-                        const div = document.createElement('div');
-                        div.innerHTML = suggested.address;
-                        suggestionsPanel.appendChild(div);
-                    });
-
-                    if (input === '') {
-                        suggestionsPanel.innerHTML = '';  
-                    }
-                })
-            });
-
-            //End Point Dropdown 
-            $.getJSON(url, function(data) {
-                countries = data; 
-                
-                const searchInput = document.querySelector('.search-input1');
-                const suggestionsPanel = document.querySelector('.suggestions1');
-
-                searchInput.addEventListener('keyup', function() {
-                    const input = searchInput.value;
-                    suggestionsPanel.innerHTML = '';
-            
-                    const suggestions = countries.filter(function(country) {
-                        return country.address.toLowerCase().startsWith(input);
-                    });
-
-                    suggestions.forEach(function(suggested) {
-                        const div = document.createElement('div');
-                        div.innerHTML = suggested.address;
-                        suggestionsPanel.appendChild(div);
-                    });
-
-                    if (input === '') {
-                        suggestionsPanel.innerHTML = '';  
-                    }
-                })
-            });
-    </script> 
-
-    <script> 
-        $("#start_now").autocomplete({
-            minLength: 3
+                }
+            })
         });
-    </script> 
+
+        //End Point Dropdown 
+        $.getJSON(url, function (data) {
+            countries = data;
+
+            const searchInput = document.querySelector('.search-input1');
+            const suggestionsPanel = document.querySelector('.suggestions1');
+
+            searchInput.addEventListener('keyup', function () {
+                const input = searchInput.value;
+                suggestionsPanel.innerHTML = '';
+
+                const suggestions = countries.filter(function (country) {
+                    return country.address.toLowerCase().startsWith(input);
+                });
+
+                suggestions.slice(-5).forEach(function (suggested) {
+                    const div = document.createElement('div');
+                    div.innerHTML = suggested.address;
+                    suggestionsPanel.appendChild(div);
+                });
+
+                if (input === '') {
+                    suggestionsPanel.innerHTML = '';
+                }
+            })
+        });
+
+    </script>
 </head>
 
 
 <style>
-    html,body {background-color:#e8e8e8;width: 100%;height: 100%;margin: 0;padding: 0;}
-    #map {width: 1135px;height: 748px;}
+    html,
+    body {
+        background-color: #e8e8e8;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #map {
+        width: 1135px;
+        height: 748px;
+    }
 
     /* The sidebar menu */
     .sidenav {
@@ -114,63 +127,88 @@
         padding-bottom: 20px;
         overflow: auto;
     }
+
     /* The navigation menu links */
-    .sidenav a {padding: 6px 8px 6px 16px;text-decoration: none;font-size: 25px;color: #818181;display: block;}
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+    }
 
     /* When you mouse over the navigation links, change their color */
-    .sidenav a:hover {color: #f1f1f1;}
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
 
     /* Style page content */
-    .main {margin-left: 400px; /* Same as the width of the sidebar */ /*padding: 0px 10px;*/}
+    .main {
+        margin-left: 400px;
+        /* Same as the width of the sidebar */
+        /*padding: 0px 10px;*/
+    }
 
     /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {.sidenav {padding-top: 15px;}.sidenav a {font-size: 18px;}}
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
 
-    .paddingAll {padding: 5px 5px 5px 5px;}
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+
+    .paddingAll {
+        padding: 5px 5px 5px 5px;
+    }
 </style>
 
 <body>
     <div class="sidenav">
-            <!-- Transportation Selection By Radio Button -->
-            <!-- 
-            <div class="form-check paddingAll">
-                <label class="my-1 mr-2" for="ddlTransportation">Mode of Transportation</label>
-                <select class="form-control" id="ddlTransportation">
-                    <option selected disabled hidden>Select</option>
-                    <option value="1">Walking</option>
-                    <option value="2">MRT</option>
-                    <option value="3">Bus</option>
-                </select>
+        <!-- Transportation Selection By Radio Button -->
+        <div class="form-check paddingAll">
+            <label class="my-1 mr-2" for="radiotransport">Mode of Transportation</label>
+            <div class="radio">
+                <label><input type="radio" name="radiotransport">Walk</label>
             </div>
-            -->
-            <form method="POST" action="">
-                {{ form.hidden_tag() }}
-                <fieldset class="form-group">
-                  <div class="form-group">
+            <div class="radio">
+                <label><input type="radio" name="radiotransport">MRT</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="radiotransport">Bus</label>
+            </div>
+        </div>
+
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <div class="form-group">
                     {{ form.start_point.label(class="form-control-label") }}
                     {{ form.start_point(class="form-control form-control-lg search-input" ,id="start_now") }}
                     <div class="suggestions"></div>
-                  </div>
-                  <div class="form-group">
+                </div>
+                <div class="form-group">
                     {{ form.end_point.label(class="form-control-label") }}
                     {{ form.end_point(class="form-control form-control-lg search-input1") }}
                     <div class="suggestions1"></div>
-                  </div>
-                  <div class="form-group">
+                </div>
+                <div class="form-group">
                     {{ form.submit(class="btn btn-outline-info") }}
-                  </div>
-                </fieldset>
-              </form>
+                </div>
+            </fieldset>
+        </form>
 
-            {% if start_lat %}
-                Start Point: 
-                Lat: {{ start_lat }}
-                Long: {{ start_long }}
-                <br>
-                End Point: 
-                Lat: {{ end_lat }}
-                Long: {{ end_long }}
-            {% endif %}
+        {% if start_lat %}
+        Start Point:
+        Lat: {{ start_lat }}
+        Long: {{ start_long }}
+        <br>
+        End Point:
+        Lat: {{ end_lat }}
+        Long: {{ end_long }}
+        {% endif %}
     </div>
 
 
@@ -179,4 +217,5 @@
         <iframe id="map" src="http://127.0.0.1:5000/map"></iframe> <!-- src file has to be in the same folder-->
     </div>
 </body>
+
 </html>

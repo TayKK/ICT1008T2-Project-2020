@@ -25,6 +25,8 @@ def home():
     else:
         return render_template("gui.html", form=form)
 
+        
+
 
 @app.route('/map')
 def map():
