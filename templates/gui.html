@@ -1,4 +1,45 @@
 <!DOCTYPE html>
+<style>
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    height: 100%;
+}
+
+
+.sidenav {
+    width: 30%;
+    float: left;
+    padding: 2em;
+}
+
+.main {
+    float: right;
+    width: 70%;
+    height: 100%;
+}
+
+iframe#map {
+    /* min-width: 1000px;
+    min-height: 700px; */
+    width: 100%;
+    height: 100%;
+}
+
+
+</style>
+
+
 
 <head>
     <!-- Script dependencies -->
@@ -88,83 +129,6 @@
     </script>
 </head>
 
-
-<style>
-    html,
-    body {
-        background-color: #e8e8e8;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    #map {
-        width: 1135px;
-        height: 748px;
-    }
-
-    /* The sidebar menu */
-    .sidenav {
-        height: 100%;
-        /* Full-height: remove this if you want "auto" height */
-        width: 400px;
-        /* Set the width of the sidebar */
-        position: fixed;
-        /* Fixed Sidebar (stay in place on scroll) */
-        z-index: 1;
-        /* Stay on top */
-        top: 0;
-        /* Stay at the top */
-        left: 0;
-        background-color: #e8e8e8;
-        /* Black */
-        overflow-x: hidden;
-        /* Disable horizontal scroll */
-        padding-top: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 20px;
-        overflow: auto;
-    }
-
-    /* The navigation menu links */
-    .sidenav a {
-        padding: 6px 8px 6px 16px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-    }
-
-    /* When you mouse over the navigation links, change their color */
-    .sidenav a:hover {
-        color: #f1f1f1;
-    }
-
-    /* Style page content */
-    .main {
-        margin-left: 400px;
-        /* Same as the width of the sidebar */
-        /*padding: 0px 10px;*/
-    }
-
-    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
-        .sidenav {
-            padding-top: 15px;
-        }
-
-        .sidenav a {
-            font-size: 18px;
-        }
-    }
-
-    .paddingAll {
-        padding: 5px 5px 5px 5px;
-    }
-</style>
-
 <body>
     <div class="sidenav">
         <!-- Transportation Selection By Radio Button -->
@@ -180,7 +144,6 @@
                 <label><input type="radio" name="radiotransport">Bus</label>
             </div>
         </div>
-
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
@@ -199,7 +162,6 @@
                 </div>
             </fieldset>
         </form>
-
         {% if start_lat %}
         Start Point:
         Lat: {{ start_lat }}
@@ -210,11 +172,9 @@
         Long: {{ end_long }}
         {% endif %}
     </div>
-
-
     <!-- Page content -->
     <div class="main">
-        <iframe id="map" src="http://127.0.0.1:5000/map"></iframe> <!-- src file has to be in the same folder-->
+        <iframe id="map" src="http://127.0.0.1:5000/walk"></iframe> <!-- src file has to be in the same folder-->
     </div>
 </body>
 
