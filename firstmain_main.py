@@ -4,10 +4,8 @@ import pandas as pd
 from geopy.geocoders import Nominatim
 from Forms import Locations
 
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'fba483ff5f287007f4994b0b7ec9366c'
-
 
 @app.route('/', methods=['GET','POST'])
 def home():

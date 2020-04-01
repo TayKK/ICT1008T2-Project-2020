@@ -1,0 +1,18 @@
+# Important libraries for osmnx and geopandas import
+fiona
+rtree
+shapely
+gdal
+# Other required libraries
+json
+folium
+pandas
+geopandas
+networkx
+osmnx
+shapely
+math
+os
+random
+itertools
+heapq
