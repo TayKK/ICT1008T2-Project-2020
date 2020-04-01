@@ -133,6 +133,7 @@ def haversine(lat1, lon1, lat2, lon2):
     lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
     dlon = lon2 - lon1
     dlat = lat2 - lat1
+    # calculate the distance between 2 latitude and longtitude using haversin formula
     a = math.sin(dlat/2)**2 + math.cos(lat1) * \
         math.cos(lat2) * math.sin(dlon/2)**2
     c = 2 * math.asin(math.sqrt(a))
@@ -175,10 +176,12 @@ def bus_route_json_clean(data, name, polygon):
     Return Bus Service, Bus Service GeoPandas DataFrame
     """
     key_df = name.strip("R")
+    # get the busroute by using the unique osmid to check for the correct route
     df = gpd.GeoDataFrame(columns=['osmid', 'x', 'y', 'direction', 'geometry'])
     df.name = name
     df.crs = "EPSG:4326"
     df.set_geometry('geometry')
+    # traverse through the list of busroute data to look for the cordinated of the bussstop and the route
     for i in range(len(data)):
         datajson = data[i]
         for coord in range(len(datajson)):
@@ -204,6 +207,7 @@ def bus_stop_json_clean(data, name, polygon, bus_stop_ST_code):
     df.name = name
     df.crs = "EPSG:4326"
     df.set_geometry('geometry')
+    # traverse through the data dict 
     for i in range(len(data)):
         datajson = data[str(i+1)]
         for busstop in range(len(datajson)):
@@ -212,6 +216,7 @@ def bus_stop_json_clean(data, name, polygon, bus_stop_ST_code):
             stopname = str(datajson[busstop]["Description"])
             bus = int(datajson[busstop]['BusStopCode'])
             geometry = Point(x, y)
+            # check if the bus stop is in the punggol area, by checking back with the dictionary of busroute and busstop osmid
             if geometry.within(polygon):
                 data_df = gpd.GeoDataFrame({'osmid': random.sample(unique_osmid_list, 1), 'x': x, 'y': y,
                                             'direction': i+1, 'geometry': [geometry], 'busCode': bus, 'description': stopname})
@@ -232,6 +237,8 @@ def create_busCode_Adj(stop_df, osm_df, bus_dict):
     X & Y Coordinates are retrieved from OSMNX data as it is more accurate, on error, coordinates from json file is retrieved instead
     Returns a Dictionary of Relations (Graph)
     """
+    
+    # define a dictionary
     adj_dict = {}
     for key in stop_df:
         current_df = (stop_df[key])
@@ -434,6 +441,8 @@ def display_busroute(fo_map, key, value, stop_df, osm_df, driveG, drive_df, busG
             current_busstop_osmid, driveG, busG)
         next_busroute_osmid = get_nearestedge_node(
             next_busstop_osmid, driveG, busG)
+        
+          
         current_busroute_next_busroute_list = nx.shortest_path(
             driveG, source=current_busroute_osmid, target=next_busroute_osmid)
         for j in range(len(current_busroute_next_busroute_list)-1):
@@ -503,7 +512,7 @@ print("Bus route loaded successfully")
 bus_stop_ST_df = {}
 bus_stop_ST_g = {}
 bus_stop_ST_code = {}
-
+# read in the Json file to get the  busstop  osmid and the osmid for the location 
 with os.scandir('BUS/STOP') as data_stop:
     for data_stop_json in data_stop:
         try:
@@ -520,7 +529,7 @@ with os.scandir('BUS/STOP') as data_stop:
                 "Reading Bus Stop Json File Error", data_stop_filename)
 print("Bus stop loaded successfully")
 
-# Code starts
+# Code the  start and end cordinates adn using osm  to look for the nearest  node  to take the  bus.
 
 busstop_start_osm = ox.geo_utils.get_nearest_node(busstop_Graph, start_coord)
 busstop_end_osm = ox.geo_utils.get_nearest_node(busstop_Graph, end_coord)
@@ -532,13 +541,15 @@ end_busstop = int(osm_node[osm_node['osmid'] ==
 
 bus_stop_ST_Adj = create_busCode_Adj(
     bus_stop_ST_df, osm_node, bus_stop_ST_code)
-
+# call dijkstras to search for the shortest bus  route  for the user
 route = dijkstras(bus_stop_ST_Adj, start_busstop, end_busstop,
                   bus_stop_ST_code, leastxfer=False)
 
 route_display = clean_bus_route(route, bus_stop_ST_code)
 
 prev_coord = None
+
+# display the  busstop route and the nodes that the bus will go to 
 for bus in route_display:
     prev_coord = display_busstop(
         pm, bus, route_display[bus], bus_stop_ST_df[str(bus)], osm_node, prev_coord)
@@ -546,5 +557,5 @@ for bus in route_display:
         bus)], osm_node, driveGraph, drive_Edge, busstop_Graph)
     print(bus, route_display[bus])
 
-
+#save the  output to  bus.html
 pm.save("bus.html")
