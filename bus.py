@@ -246,6 +246,7 @@ def create_busCode_Adj(stop_df, osm_df, bus_dict):
             current_busCode, next_busCode = current_df.loc[i]['busCode'], current_df.loc[i+1]['busCode']
             if current_busCode not in adj_dict:
                 try:
+                    #check from OSMX and see if there is any ajacent nodes to the current nodes
                     current_busCode_lat = osm_df[osm_df["asset_ref"] == str(
                         current_busCode)]['y'].values[0]
                     current_busCode_lon = osm_df[osm_df["asset_ref"] == str(
@@ -255,6 +256,8 @@ def create_busCode_Adj(stop_df, osm_df, bus_dict):
                     next_busCode_lon = osm_df[osm_df["asset_ref"] == str(
                         next_busCode)]['x'].values[0]
                 except:
+                    
+                    #check from panddasDataframe and see if there is any ajacent nodes to the current nodes
                     current_busCode_lat = current_df[current_df["busCode"]
                                                      == current_busCode]['y'].values[0]
                     current_busCode_lon = current_df[current_df["busCode"]
@@ -263,6 +266,7 @@ def create_busCode_Adj(stop_df, osm_df, bus_dict):
                                                   == next_busCode]['y'].values[0]
                     next_busCode_lon = current_df[current_df["busCode"]
                                                   == next_busCode]['x'].values[0]
+                #calculate the distance between nodes using the haversine finction
                 distance = haversine(
                     current_busCode_lat, current_busCode_lon, next_busCode_lat, next_busCode_lon)
                 current_buscode_buslist = bus_dict[current_busCode]
@@ -275,6 +279,7 @@ def create_busCode_Adj(stop_df, osm_df, bus_dict):
                             (next_busCode, busService): distance}
             else:
                 try:
+                    #check from OSMX and see if there is any ajacent nodes to the current nodes
                     neightbour_dict = adj_dict[current_busCode]
                     current_busCode_lat = osm_df[osm_df["asset_ref"] == str(
                         current_busCode)]['y'].values[0]
@@ -285,6 +290,7 @@ def create_busCode_Adj(stop_df, osm_df, bus_dict):
                     next_busCode_lon = osm_df[osm_df["asset_ref"] == str(
                         next_busCode)]['x'].values[0]
                 except:
+                    #check from panddasDataframe and see if there is any ajacent nodes to the current nodes
                     current_busCode_lat = current_df[current_df["busCode"]
                                                      == current_busCode]['y'].values[0]
                     current_busCode_lon = current_df[current_df["busCode"]
@@ -293,6 +299,7 @@ def create_busCode_Adj(stop_df, osm_df, bus_dict):
                                                   == next_busCode]['y'].values[0]
                     next_busCode_lon = current_df[current_df["busCode"]
                                                   == next_busCode]['x'].values[0]
+                     #calculate the distance between nodes using the haversine finction
                 distance = haversine(
                     current_busCode_lat, current_busCode_lon, next_busCode_lat, next_busCode_lon)
                 current_buscode_buslist = bus_dict[current_busCode]
@@ -375,6 +382,7 @@ def get_nearestedge_node(osm_id, rG, bG):
     get the nearest edge on the road,
     return the node of either end which is nearer to bus stop
     """
+    #with the use of osmid get the nearest node to the start and end coordinates
     temp_y = bG.nodes.get(osm_id).get('y')
     temp_x = bG.nodes.get(osm_id).get('x')
     temp_nearest_edge = ox.get_nearest_edge(rG, (temp_y, temp_x))
@@ -382,10 +390,12 @@ def get_nearestedge_node(osm_id, rG, bG):
     temp_2 = temp_nearest_edge[0].coords[1]
     temp1_x = temp_1[0]
     temp1_y = temp_1[1]
+    # calculate the distance by calling the haversine function with the haversine formula
     temp_1_distance = haversine(temp1_y, temp1_x, temp_y, temp_x)
 
     temp2_x = temp_2[0]
     temp2_y = temp_2[1]
+     # calculate the distance by calling the haversine function with the haversine formula
     temp_2_distance = haversine(temp2_y, temp2_x, temp_y, temp_x)
     if temp_1_distance < temp_2_distance:
         return temp_nearest_edge[1]
@@ -404,18 +414,25 @@ def display_busstop(fo_map, key, value, stop_df, osm_df, prev_coord):
         if prev_coord not in value:
             value.insert(0, prev_coord)
     bus_route_display_list = []
+    
+   #travese through the lsit for bus_code and get the coordinates deom OSMX or geopandas
     for bus_code in value:
         try:
             try:
+                #try get from OSMNX
                 y = float(osm_df[osm_df['asset_ref'] ==
                                  str(bus_code)]['x'].values[0])
                 x = float(osm_df[osm_df['asset_ref'] ==
                                  str(bus_code)]['y'].values[0])
             except:
+                #try get from PandasDataFrame
                 y = float(stop_df[stop_df['busCode']
                                   == bus_code]['x'].values[0])
                 x = float(stop_df[stop_df['busCode']
                                   == bus_code]['y'].values[0])
+            # add the busstop description and the route to the map.
+            # print the bus route in green 
+            # print out the list of route and busstop by using longtitude/latitude or OSM ID 
             description = str(
                 stop_df[stop_df['busCode'] == bus_code]['description'].values[0])
             fo.Marker([x, y], popup="[Bus:"+str(key)+", Code:"+str(bus_code)+"]\n" +
@@ -442,7 +459,7 @@ def display_busroute(fo_map, key, value, stop_df, osm_df, driveG, drive_df, busG
         next_busroute_osmid = get_nearestedge_node(
             next_busstop_osmid, driveG, busG)
         
-          
+          # add node and the path if it is the shortest path calculated using dijksta algorithm
         current_busroute_next_busroute_list = nx.shortest_path(
             driveG, source=current_busroute_osmid, target=next_busroute_osmid)
         for j in range(len(current_busroute_next_busroute_list)-1):
@@ -450,6 +467,7 @@ def display_busroute(fo_map, key, value, stop_df, osm_df, driveG, drive_df, busG
                 j], current_busroute_next_busroute_list[j+1]
             temp_df = temp_df.append(drive_df[(drive_df["u"] == current_busroute_id) & (
                 drive_df["v"] == next_busroute_id)])
+            # out put the bus nodes and bus route in green on the map
     temp_gdf = gpd.GeoDataFrame(temp_df, crs="EPSG:4326", geometry='geometry')
     fo.GeoJson(temp_gdf, style_function=lambda x: {
                "color": "green", "weight": "3"}, name="BUS").add_to(fo_map)
@@ -467,7 +485,7 @@ random.shuffle(unique_osmid_list)
 start_coord = (1.404130, 103.909584)
 end_coord = (1.397352, 103.909050)
 
-
+# display the map that is zoomed in to the area of punggol
 pm = fo.Map(location=centreCoordinate, zoom_start=15, control_scale=True)
 fo.Marker(start_coord, popup="start", icon=fo.Icon(
     color='red', icon='info-sign')).add_to(pm)
@@ -480,6 +498,7 @@ driveGraph = ox.core.graph_from_polygon(
 drive_Node, drive_Edge = ox.graph_to_gdfs(driveGraph)
 
 busstop_Query = '[out:json];(node["highway"="bus_stop"](1.3891,103.8872,1.4222,103.9261);>;);out;'
+# creating a graph with nodes and the cost of the route that is in the polygon. 
 responsejson_Busstop = ox.overpass_request(
     data={'data': busstop_Query}, timeout=180)
 busstop_Graph = create_graph(responsejson_Busstop)
