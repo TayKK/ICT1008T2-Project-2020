@@ -22,7 +22,7 @@
 - Shapely
 - Fiona
 
-# Please note some of the libraries below mmay require GDAL, Rtree Shapely and Fiona to be installed first.
+# Please note some of the libraries below may require GDAL, Rtree Shapely and Fiona to be installed first.
 - Json
 - Folium
 - Numpy
