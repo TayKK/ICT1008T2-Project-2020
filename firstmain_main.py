@@ -4,10 +4,8 @@ import pandas as pd
 from geopy.geocoders import Nominatim
 from Forms import Locations
 
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'fba483ff5f287007f4994b0b7ec9366c'
-
 
 @app.route('/', methods=['GET','POST'])
 def home():
@@ -24,9 +22,6 @@ def home():
         return render_template("gui.html", start_lat=start_lat, start_long=start_long, end_lat=end_lat, end_long=end_long, form=form)
     else:
         return render_template("gui.html", form=form)
-
-        
-
 
 @app.route('/map')
 def map():
