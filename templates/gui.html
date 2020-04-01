@@ -16,11 +16,27 @@ body {
     height: 100%;
 }
 
+div h1{
+    margin-bottom: 100px;
+}
 
 .sidenav {
     width: 30%;
     float: left;
     padding: 2em;
+}
+.suggestions, .suggestions1{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+
+.space{
+    position: relative;
 }
 
 .main {
@@ -131,8 +147,11 @@ iframe#map {
 
 <body>
     <div class="sidenav">
+        <div>
+            <h1>ICT-1008 Punggol Map</h1>
+        </div>
         <!-- Transportation Selection By Radio Button -->
-        <div class="form-check paddingAll">
+        <div class="form-check paddingAll space">
             <label class="my-1 mr-2" for="radiotransport">Mode of Transportation</label>
             <div class="radio">
                 <label><input type="radio" name="radiotransport">Walk</label>
@@ -147,22 +166,22 @@ iframe#map {
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <div class="form-group">
+                <div class="form-group space">
                     {{ form.start_point.label(class="form-control-label") }}
-                    {{ form.start_point(class="form-control form-control-lg search-input" ,id="start_now") }}
+                    {{ form.start_point(class="form-control form-control-lg search-input" ,id="start_now", autocomplete="off") }}
                     <div class="suggestions"></div>
                 </div>
-                <div class="form-group">
+                <div class="form-group space" >
                     {{ form.end_point.label(class="form-control-label") }}
-                    {{ form.end_point(class="form-control form-control-lg search-input1") }}
+                    {{ form.end_point(class="form-control form-control-lg search-input1", autocomplete="off") }}
                     <div class="suggestions1"></div>
                 </div>
                 <div class="form-group">
-                    {{ form.submit(class="btn btn-outline-info") }}
+                    {{ form.submit(class="btn btn-success") }}
                 </div>
             </fieldset>
         </form>
-        {% if start_lat %}
+        <!-- {% if start_lat %}
         Start Point:
         Lat: {{ start_lat }}
         Long: {{ start_long }}
@@ -170,7 +189,7 @@ iframe#map {
         End Point:
         Lat: {{ end_lat }}
         Long: {{ end_long }}
-        {% endif %}
+        {% endif %} -->
     </div>
     <!-- Page content -->
     <div class="main">
