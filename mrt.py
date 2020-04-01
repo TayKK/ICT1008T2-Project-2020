@@ -44,7 +44,7 @@ mrt_station_response = ox.core.osm_net_download(
 mrt_station_Graph = ox.core.create_graph(mrt_station_response, retain_all=True)
 mrt_station_Node, mrt_station_Edge = ox.graph_to_gdfs(mrt_station_Graph)
 
-#Define the name and osm id of the mrt station 
+#Define the name and osm id of the mrt station west and East Loop  
 mrt_west_stations = {1840734606: 'Sam Kee', 1840734600: 'Punggol Point', 1840734607: 'Samudera',
                      1840734598: 'Nibong', 1840734610: 'Sumang', 1840734608: 'Soo Teck', 213085056: 'Punggol'}
 mrt_east_stations = {1840734592: 'Cove', 1840734597: 'Meridian', 1840734578: 'Coral Edge',
@@ -102,20 +102,24 @@ def bfs_shortest_path(graph, start, end):
 # Displaying the station information and mark all the station in the route 
 def mrt_station_display(osm_df, east, west, route):
     for station in route:
+        # with the use of OSMID to get the latitude and longtitude of the west LTR line
         if station in west:
             current_coord_lat = float(
                 osm_df[osm_df['osmid'] == station]['y'].values[0])
             current_coord_long = float(
                 osm_df[osm_df['osmid'] == station]['x'].values[0])
             print(west[station])
+             #plot the path of the MRt on the map with blue lines
             fo.Marker([current_coord_lat, current_coord_long], popup=west[station], icon=fo.Icon(
                 color='blue', icon='info-sign')).add_to(pm)
         else:
-            #if staion not in the west loop it will search the value from the east loop 
+            #if staion not in the west loop it will search the value from the east loop
+            # with the use of OSMID to get the latitude and longtitude of the west LTR line
             current_coord_lat = float(
                 osm_df[osm_df['osmid'] == station]['y'].values[0])
             current_coord_long = float(
                 osm_df[osm_df['osmid'] == station]['x'].values[0])
+            #plot the path of the MRt on the map with blue lines 
             fo.Marker([current_coord_lat, current_coord_long], popup=east[station], icon=fo.Icon(
                 color='blue', icon='info-sign')).add_to(pm)
             print(east[station])
@@ -155,8 +159,9 @@ if route != 0:
                         mrt_west_stations, route)
     mrt_route_display(mrt_east_stations, geo_df_east,
                       mrt_west_stations, geo_df_west, route, pm)
+    # if start station is the same as the end station, print MRT not needed
 else:
     print("MRT is not needed!")
 
-
+#save the output to a Html file 
 pm.save("mrt.html")
