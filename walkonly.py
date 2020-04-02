@@ -7,24 +7,20 @@ import pandas as pd
 # Punggol Polygon
 punggol = gpd.read_file('geojson/polygon-punggol.geojson')
 polygon = punggol['geometry'].iloc[0]
+
 # Centre of Punggol
 centreCoordinate = (1.396978, 103.908901)
+#centreCoordinate = (1.407937, 103.901702)
+#
 
-## Change these variables before running
-start_x = 1.3123
-start_y = 103.123
-
-end_x = 1.332
-end_y = 103.011
-
-
-start_coordinate = (start_x, start_y)
-end_coordinate = (end_x, end_y)
+# Random coordinates to try on before UI is up
+start_coordinate = (1.402235, 103.905384)
+end_coordinate = (1.392949, 103.912034)
 
 # Initialise the map
 pm = fo.Map(location=centreCoordinate, zoom_start=17, control_scale=True)
-# fo.Marker([self.start_x, self.start_y]).add_to(pm)
-# fo.Marker([self.end_x, self.end_y]).add_to(pm)
+fo.Marker([1.402235, 103.905384]).add_to(pm)
+fo.Marker([1.392949, 103.912034]).add_to(pm)
 
 # Query route using osmnx (currently using "all" for trying, can change to "walk" or "drive" as needed)
 graph = ox.core.graph_from_polygon(
@@ -78,7 +74,7 @@ while (True):
     filteredDF = edges[edges['u'] == curr_Node]
     for row in filteredDF.itertuples(index=True, name='Pandas'):
         # For every edge, push it into min heap
-        data_list = (getattr(row, "length") + temp,
+        data_list = (getattr(row, "length")+temp,
                      getattr(row, "u"), getattr(row, "v"))
         heapq.heappush(heap, list(data_list))
 
@@ -103,6 +99,4 @@ edgesLayer.add_to(pm)
 
 # Save the folium map as html
 fo.LayerControl().add_to(pm)
-
 pm.save("walkonly.html")
-
