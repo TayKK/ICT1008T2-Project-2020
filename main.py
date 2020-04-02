@@ -7,6 +7,7 @@ import geopandas as gpd
 import heapq
 import pandas as pd
 import math
+import sys
 
 def haversine(lat1, lon1, lat2, lon2):
     """
@@ -35,16 +36,24 @@ centreCoordinate = (1.396978, 103.908901)
 # Creation of Punggol map with folium
 
 
+
+
 # Random coordinates to try on before UI is up
 # (x1, y1) =  start coordinate
-x1 = 1.4052585
-y1 = 103.9023302
+# x1 = 1.4052585
+# y1 = 103.9023302
+x1 = float(sys.argv[1])
+y1 = float(sys.argv[2])
 
 # (x2,y2) = end coordinate
-x2 = 1.392949
-y2 = 103.912034
+# x2 = 1.392949
+# y2 = 103.912034
+x2 = float(sys.argv[3])
+y2 = float(sys.argv[4])
+
 start_coordinate = (x1, y1)
 end_coordinate = (x2, y2)
+
 
 distance = haversine(x1, y1, x2, y2)
 
@@ -80,7 +89,7 @@ if start_coordinate in mrts:
         mrtpm.add_child(walk.walkAlgo(mrt.getLastx(),mrt.getLasty(), x2, y2))
         fo.Marker([mrt.getLastx(), mrt.getLasty()]).add_to(mrtpm)
         fo.Marker([x2, y2]).add_to(mrtpm)
-        mrtpm.save("MW.html")
+        mrtpm.save("./templates/transport.html")
     else:
         # MWBW # buspm = bus.busAlgo(mrt.getLast(x),mrt.getlasty(), x2, y2)
         # Reaches this else if distance between Terminal LRT Station and End Coord is > 200m apart
@@ -105,7 +114,7 @@ if start_coordinate in mrts:
         # Add marker for Start-End for this map
         fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(mrtpm)
         fo.Marker([x2, y2]).add_to(mrtpm)
-        mrtpm.save("MWBW.html")
+        mrtpm.save("./templates/transport.html")
 else:
     dist = haversine(x1,x2,y1,y2)
     if dist > 200:
@@ -120,12 +129,12 @@ else:
         fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(buspm)
         fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(buspm)
         fo.Marker([x2, y2]).add_to(buspm)
-        buspm.save("WBW.html")
+        buspm.save("./templates/transport.html")
     else:
         # W
         # If distance is < 200, user can just walk over to his/her destination
         walkpm = walk.walkAlgo(x1, x2, y1, y2)
         fo.Marker([x1, y1]).add_to(walkpm)
         fo.Marker([x2, y2]).add_to(walkpm)
-        walkpm.save("W.html")
+        walkpm.save("./templates/transport.html")
 

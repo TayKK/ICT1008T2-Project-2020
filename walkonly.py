@@ -3,6 +3,7 @@ import folium as fo
 import geopandas as gpd
 import heapq
 import pandas as pd
+import sys
 
 # Punggol Polygon
 punggol = gpd.read_file('geojson/polygon-punggol.geojson')
@@ -13,14 +14,22 @@ centreCoordinate = (1.396978, 103.908901)
 #centreCoordinate = (1.407937, 103.901702)
 #
 
+start_lat = float(sys.argv[1])
+start_long = float(sys.argv[2])
+end_lat = float(sys.argv[3])
+end_long = float(sys.argv[4])
+
 # Random coordinates to try on before UI is up
-start_coordinate = (1.402235, 103.905384)
-end_coordinate = (1.392949, 103.912034)
+# start_coordinate 1.402235 103.905384 
+# end_coordinate 1.392949 103.912034
+
+start_coordinate = (start_lat, start_long)
+end_coordinate = (end_lat, end_long)
 
 # Initialise the map
 pm = fo.Map(location=centreCoordinate, zoom_start=17, control_scale=True)
-fo.Marker([1.402235, 103.905384]).add_to(pm)
-fo.Marker([1.392949, 103.912034]).add_to(pm)
+fo.Marker([start_lat, start_long]).add_to(pm)
+fo.Marker([end_lat, end_long]).add_to(pm)
 
 # Query route using osmnx (currently using "all" for trying, can change to "walk" or "drive" as needed)
 graph = ox.core.graph_from_polygon(
@@ -99,4 +108,4 @@ edgesLayer.add_to(pm)
 
 # Save the folium map as html
 fo.LayerControl().add_to(pm)
-pm.save("walkonly.html")
+pm.save("./templates/walkonly.html")

@@ -51,6 +51,8 @@ iframe#map {
     margin-top: -1px;
     margin-bottom: 50px;
 }
+
+#active { background-color: #17a2b8; }
 </style>
 
 <head>
@@ -78,6 +80,53 @@ iframe#map {
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
     <script>
+        $(function() {
+        // function to show and hide map walk, transport
+        $('input[type="radio"]').click(function(){
+            var inputValue = $(this).attr("value");
+            var targetBox = $("." + inputValue);
+            $(".box").not(targetBox).hide();
+            $(targetBox).show();
+        });
+
+        
+        // function to automatically select value
+        $("#start_now").bind('keyup keypress', function() {
+            $('div.suggestions').show();
+        });
+        $('div.suggestions').hover(function(){
+            $('html,body').css('cursor','pointer');
+                $(this).children('div').click(function(){
+                    $('#start_now').val(this.innerHTML);
+                    $('div.suggestions').hide();
+                });
+                $(this).children('div').hover(function(){
+                    $('#start_now').val(this.innerHTML);
+                    $(this).attr('id', 'active');
+                }, function() {
+                    $(this).removeAttr('id', 'active');
+                });
+        });
+
+
+        $("#end_point").bind('keyup keypress', function() {
+            $('div.suggestions1').show();
+        });
+        $('div.suggestions1').hover(function(){
+            $('html,body').css('cursor','pointer');
+                $(this).children('div').click(function(){
+                    $('#end_point').val(this.innerHTML);
+                    $('div.suggestions1').hide();
+                });
+                $(this).children('div').hover(function(){
+                    $('#end_point').val(this.innerHTML);
+                    $(this).attr('id', 'active');
+                }, function() {
+                    $(this).removeAttr('id', 'active');
+                });
+
+        });
+
         var countries;
         const url = 'https://api.myjson.com/bins/nrgqw';
 
@@ -138,6 +187,7 @@ iframe#map {
             })
         });
 
+    });
     </script>
 </head>
 
@@ -151,13 +201,10 @@ iframe#map {
         <div class="form-check paddingAll space">
             <label class="my-1 mr-2" for="radiotransport">Mode of Transportation</label>
             <div class="radio">
-                <label><input type="radio" name="radiotransport">Walk</label>
+                <label><input type="radio" name="radiotransport" value="walk" checked>Walk</label>
             </div>
             <div class="radio">
-                <label><input type="radio" name="radiotransport">MRT</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="radiotransport">Bus</label>
+                <label><input type="radio" name="radiotransport" value="transport">Public Transport</label>
             </div>
         </div>
         <form method="POST" action="">
@@ -190,7 +237,8 @@ iframe#map {
     </div>
     <!-- Page content -->
     <div class="main">
-        <iframe id="map" src="http://127.0.0.1:5000/walk"></iframe> <!-- src file has to be in the same folder-->
+        <iframe id="map" class="transport box" src="http://127.0.0.1:5000/transport"></iframe> <!-- src file has to be in the same folder-->
+        <iframe id="map" class="walk box" src="http://127.0.0.1:5000/walk"></iframe>
     </div>
 </body>
 

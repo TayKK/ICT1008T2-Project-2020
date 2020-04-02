@@ -19,15 +19,21 @@ def home():
         n = nom.geocode(form.end_point.data, "Singapore")
         end_lat = n.latitude
         end_long = n.longitude
-        command = "python walk.py " + str(start_lat) + " " + str(start_long) + " " + str(end_lat) + " " + str(end_long)
-        os.system(command)
+        walk_command = "python walkonly.py " + str(start_lat) + " " + str(start_long) + " " + str(end_lat) + " " + str(end_long)
+        transport_command = "python main.py " + str(start_lat) + " " + str(start_long) + " " + str(end_lat) + " " + str(end_long)
+        os.system(walk_command)
+        os.system(transport_command)
         return render_template("gui.html", start_lat=start_lat, start_long=start_long, end_lat=end_lat, end_long=end_long, form=form)
     else:
         return render_template("gui.html", form=form)
 
 @app.route('/walk')
-def map():
-    return render_template("walk.html", title="walk")
+def walking_map():
+    return render_template("walkonly.html", title="walk")
+
+@app.route('/transport')
+def transport_map():
+    return render_template("transport.html", title="transport")
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)

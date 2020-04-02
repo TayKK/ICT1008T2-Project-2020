@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6902a7bdbde747268a01f6ffc140b5dc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_6902a7bdbde747268a01f6ffc140b5dc" ></div>
+        
+</body>
+<script>    
+    
+            var map_6902a7bdbde747268a01f6ffc140b5dc = L.map(
+                "map_6902a7bdbde747268a01f6ffc140b5dc",
+                {
+                    center: [1.396978, 103.908901],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 17,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_6902a7bdbde747268a01f6ffc140b5dc);
+
+            
+
+        
+    
+            var tile_layer_6d7e843993534698bf0227af52803dc3 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6902a7bdbde747268a01f6ffc140b5dc);
+        
+    
+            var marker_02819210247b4de48e2c7c1ca6bdfb61 = L.marker(
+                [1.40276245, 103.89737330237949],
+                {}
+            ).addTo(map_6902a7bdbde747268a01f6ffc140b5dc);
+        
+    
+            var marker_9bc3d572360a488182d2866bd121c671 = L.marker(
+                [1.40102065, 103.89719539997664],
+                {}
+            ).addTo(map_6902a7bdbde747268a01f6ffc140b5dc);
+        
+    
+        function geo_json_a14a122cfc07433697b65c62e7706b65_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#FF0000", "weight": "3"};
+            }
+        }
+        function geo_json_a14a122cfc07433697b65c62e7706b65_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_6902a7bdbde747268a01f6ffc140b5dc.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_a14a122cfc07433697b65c62e7706b65 = L.geoJson(null, {
+                onEachFeature: geo_json_a14a122cfc07433697b65c62e7706b65_onEachFeature,
+            
+                style: geo_json_a14a122cfc07433697b65c62e7706b65_styler,
+        });
+        function geo_json_a14a122cfc07433697b65c62e7706b65_add (data) {
+            geo_json_a14a122cfc07433697b65c62e7706b65.addData(data)
+                .addTo(map_6902a7bdbde747268a01f6ffc140b5dc);
+        }
+            geo_json_a14a122cfc07433697b65c62e7706b65_add({"bbox": [103.8973564, 1.4013778, 103.8981883, 1.4031587], "features": [{"bbox": [103.8973564, 1.4028912, 103.8981883, 1.4031587], "geometry": {"coordinates": [[103.8973564, 1.4031587], [103.89775, 1.4030329], [103.8981883, 1.4028912]], "type": "LineString"}, "id": "799", "properties": {"access": null, "bridge": null, "highway": "residential", "junction": null, "key": 0, "lanes": ["3", "2"], "length": 97.142, "maxspeed": "40", "name": "Punggol Field", "oneway": false, "osmid": [534632374, 620530727], "service": null, "tunnel": null, "u": 4598842390, "v": 5256406654}, "type": "Feature"}, {"bbox": [103.8981047, 1.4026404, 103.8981883, 1.4028912], "geometry": {"coordinates": [[103.8981883, 1.4028912], [103.8981047, 1.4026404]], "type": "LineString"}, "id": "1363", "properties": {"access": "no", "bridge": null, "highway": "service", "junction": null, "key": 0, "lanes": null, "length": 29.395, "maxspeed": null, "name": null, "oneway": false, "osmid": 543754984, "service": "driveway", "tunnel": null, "u": 5256406654, "v": 5256406653}, "type": "Feature"}, {"bbox": [103.8978097, 1.401466, 103.8981758, 1.4026404], "geometry": {"coordinates": [[103.8981047, 1.4026404], [103.8981514, 1.4026249], [103.8981678, 1.4026056], [103.8981758, 1.4025761], [103.8978097, 1.401466]], "type": "LineString"}, "id": "1361", "properties": {"access": null, "bridge": null, "highway": "service", "junction": null, "key": 0, "lanes": null, "length": 141.65800000000002, "maxspeed": null, "name": null, "oneway": false, "osmid": 543754983, "service": "driveway", "tunnel": null, "u": 5256406653, "v": 5256406649}, "type": "Feature"}, {"bbox": [103.8976863, 1.401466, 103.8978097, 1.4015008], "geometry": {"coordinates": [[103.8978097, 1.401466], [103.8976863, 1.4015008]], "type": "LineString"}, "id": "1353", "properties": {"access": null, "bridge": null, "highway": "service", "junction": null, "key": 0, "lanes": null, "length": 14.253, "maxspeed": null, "name": null, "oneway": false, "osmid": 543754977, "service": "driveway", "tunnel": null, "u": 5256406649, "v": 5256406628}, "type": "Feature"}, {"bbox": [103.8976138, 1.4013778, 103.8976863, 1.4015008], "geometry": {"coordinates": [[103.8976863, 1.4015008], [103.8976138, 1.4013778]], "type": "LineString"}, "id": "1324", "properties": {"access": null, "bridge": null, "highway": "service", "junction": null, "key": 0, "lanes": null, "length": 15.875, "maxspeed": null, "name": null, "oneway": false, "osmid": 543754979, "service": "driveway", "tunnel": null, "u": 5256406628, "v": 5256406627}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+            var layer_control_9a3f6b4f84444f73bd60e19f23e91644 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_6d7e843993534698bf0227af52803dc3,
+                },
+                overlays :  {
+                    "Walk Edge" : geo_json_a14a122cfc07433697b65c62e7706b65,
+                },
+            };
+            L.control.layers(
+                layer_control_9a3f6b4f84444f73bd60e19f23e91644.base_layers,
+                layer_control_9a3f6b4f84444f73bd60e19f23e91644.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_6902a7bdbde747268a01f6ffc140b5dc);
+        
+</script>
