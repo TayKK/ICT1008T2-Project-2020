@@ -190,16 +190,3 @@ class Mrt:
         return self.lastx
     def getLasty(self):
         return self.lasty
-
-
-
-
-#mrt = Mrt()
-
-#x1 = 1.412545
-#y1 = 103.903250
-#x2 = 1.401224
-#y2 = 103.916334
-
-# mrt.MrtAlgo(x1, y1, x2, y2)
-# print(mrt.getLastx(),mrt.getLasty())

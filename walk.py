@@ -12,14 +12,6 @@ centreCoordinate = (1.396978, 103.908901)
 #centreCoordinate = (1.407937, 103.901702)
 
 
-# Random coordinates to try on before UI is up
-# (x1, y1) =  start coordinate
-x1 = 1.402235
-y1 = 103.905384
-# (x2,y2) = end coordinate
-x2 = 1.392949
-y2 = 103.912034
-
 class Walk:
     def __init__(self):
         start_x = None
