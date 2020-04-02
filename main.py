@@ -37,8 +37,9 @@ centreCoordinate = (1.396978, 103.908901)
 
 # Random coordinates to try on before UI is up
 # (x1, y1) =  start coordinate
-x1 = 1.402235
-y1 = 103.905384
+x1 = 1.4052585
+y1 = 103.9023302
+
 # (x2,y2) = end coordinate
 x2 = 1.392949
 y2 = 103.912034
@@ -53,58 +54,73 @@ fo.Marker([x1, y1]).add_to(pm)
 fo.Marker([x2, y2]).add_to(pm)
 fo.LayerControl().add_to(pm)
 
-mrts = ['1.4052585,103.9023302', '1.4053014,103.8972748',
-        '1.4085322,103.8985342', '1.4118877,103.9003304',
-        '1.4159537,103.9021398', '1.4168814,103.9066298',
-        '1.4097076,103.904874', '1.4052523,103.9085982',
-        '1.4022823,103.9127329', '1.399601,103.9164448',
-        '1.394538,103.9161538', '1.3939318,103.9125723',
-        '1.3969357,103.9088889', '1.3994603,103.9058059']
+mrts = [(1.4052585,103.9023302), (1.4053014,103.8972748),
+        (1.4085322,103.8985342), (1.4118877,103.9003304),
+        (1.4159537,103.9021398), (1.4168814,103.9066298),
+        (1.4097076,103.904874), (1.4052523,103.9085982),
+        (1.4022823,103.9127329), (1.399601,103.9164448),
+        (1.394538,103.9161538), (1.3939318,103.9125723),
+        (1.3969357,103.9088889), (1.3994603,103.9058059)]
 
 # mrt algo
 mrt = Mrt()
 walk = Walk()
 bus = Bus()
+# If start point is MRT
+
 
 if start_coordinate in mrts:
-    mrtpm = mrt.MrtAlgo(x1,y1,x2,y2)
-    # fo.TileLayer('Rail').add_to(pm)
 
-    # mrtpm.add_to(pm)
-    mlastx = mrt.getLastx()
-    mlasty = mrt.getLasty()
-    #[ find nearest bus service with mrt's end coordinate ]
-    #if got bus:
-    buspm = bus.busAlgo(mlastx,mlasty, x2,y2)
-    if (bus.getRoute()):
-        blastx = bus.getLastx()
-        blasty = bus.getLasty()
-        fo.TileLayer('Bus').add_to(pm)
-        walkpm = walk.walkAlgo(blastx,blasty, x2, y2)
-        # walkpm.add_to(pm)
-        # fo.LayerControl().add_to(pm)
-    # Walk(bus stop end coordinate, end_coordinate)
+    mrtpm = mrt.MrtAlgo(x1,y1,x2,y2)
+    fo.Marker([x1, y1]).add_to(mrtpm)
+    fo.Marker([mrt.getLastx(), mrt.getLasty()]).add_to(mrtpm)
+    dist = haversine(mrt.getLastx(),mrt.getLasty(), x2, y2)
+    if dist < 200:
+        # If distance is less than 200m, user will walk to destination
+        # MW # walkpm = walk.walkAlgo(mrt.getLastx(),mrt.getLasty(), x2, y2)
+        mrtpm.add_child(walk.walkAlgo(mrt.getLastx(),mrt.getLasty(), x2, y2))
+        fo.Marker([mrt.getLastx(), mrt.getLasty()]).add_to(mrtpm)
+        fo.Marker([x2, y2]).add_to(mrtpm)
+        mrtpm.save("MW.html")
     else:
-        blastx = bus.getLastx()
-        blasty = bus.getLasty()
-        walkpm = walk.walkAlgo(blastx,blasty, x2, y2)
-        # walkpm.add_to(pm)
-        # fo.TileLayer('Walk').add_to(pm)
+        # MWBW # buspm = bus.busAlgo(mrt.getLast(x),mrt.getlasty(), x2, y2)
+        # Reaches this else if distance between Terminal LRT Station and End Coord is > 200m apart
+        # Bus to nearest bus stop to End Point
+        mrtpm.add_child(bus.busAlgo(mrt.getLastx(), mrt.getLasty(), x2, y2))
+
+        # Add marker for Start-End for this map
+        fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(mrtpm)
+        fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(mrtpm)
+
+        # Walk from Terminal LRT to Bus Stop
+        # walkpm = walk.walkAlgo(mrt.getLastx(), mrt.getLasty(), bus.getFirstx(), bus.getFirsty())
+        mrtpm.add_child(walk.walkAlgo(mrt.getLastx(), mrt.getLasty(), bus.getLastx(), bus.getLasty()))
+
+        # Add marker for Start-End for this map
+        fo.Marker([mrt.getLastx(), mrt.getLasty()]).add_to(mrtpm)
+        fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(mrtpm)
+
+
+        # Finally walk from bus stop to end point
+        # walkpm2 = walk.walkAlgo(bus.getLastx(),bus.getLasty(), x2, y2)
+        mrtpm.add_child(walk.walkAlgo(bus.getLastx(), bus.getLasty(), x2, y2))
+
+        # Add marker for Start-End for this map
+        fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(mrtpm)
+        fo.Marker([x2, y2]).add_to(mrtpm)
+        mrtpm.save("MWBW.html")
 else:
-    buspm = bus.busAlgo(x1,y1,x2,y2)
+    # WBW
+    buspm = bus.busAlgo(x1, y1, x2, y2)
+    buspm.add_child(walk.walkAlgo(x1, y1, bus.getFirstx(), bus.getFirsty()))
+    buspm.add_child(walk.walkAlgo(bus.getLastx(), bus.getLasty(), x2, y2))
     fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(buspm)
     fo.Marker([x2, y2]).add_to(buspm)
-    buspm.save("2.html")
-
-    walkpm1 = walk.walkAlgo(x1,y1,bus.getFirstx(),bus.getFirsty())
-    fo.Marker([x1, y1]).add_to(walkpm1)
-    fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(walkpm1)
-    walkpm1.save("1.html")
-
-    walkpm2 = walk.walkAlgo(bus.getLastx(), bus.getLasty(), x2, y2)
-    fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(walkpm2)
-    fo.Marker([x2, y2]).add_to(walkpm2)
-    walkpm2.save("3.html")
+    fo.Marker([x1, y1]).add_to(buspm)
+    fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(buspm)
+    fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(buspm)
+    fo.Marker([x2, y2]).add_to(buspm)
+    buspm.save("WBW.html")
 
     # pm.save("test123.html")
     #walkpm.save("walktest.html")

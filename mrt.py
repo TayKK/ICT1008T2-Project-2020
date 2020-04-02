@@ -178,16 +178,11 @@ class Mrt:
             # if start station is the same as the end station, print MRT not needed
         else:
             print("MRT is not needed!")
-
-        #save the output to a Html file
-        # pm.save("mrt.html")
-        return pm
-        # OSM id of last station
-        # print("test: "+str(route[-1]))
+        # OSMID of Station
         osmid = int(route[-1])
         self.lasty = mrt_station_Node[mrt_station_Node["osmid"]==osmid]['x'].values[0]
         self.lastx =  mrt_station_Node[mrt_station_Node["osmid"] == osmid]['y'].values[0]
-
+        return pm
         # self.last = (lastlong, lastlat)
         # self.last = int(route[-1])
 
