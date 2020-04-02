@@ -70,7 +70,6 @@ bus = Bus()
 
 
 if start_coordinate in mrts:
-
     mrtpm = mrt.MrtAlgo(x1,y1,x2,y2)
     fo.Marker([x1, y1]).add_to(mrtpm)
     fo.Marker([mrt.getLastx(), mrt.getLasty()]).add_to(mrtpm)
@@ -93,7 +92,6 @@ if start_coordinate in mrts:
         fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(mrtpm)
 
         # Walk from Terminal LRT to Bus Stop
-        # walkpm = walk.walkAlgo(mrt.getLastx(), mrt.getLasty(), bus.getFirstx(), bus.getFirsty())
         mrtpm.add_child(walk.walkAlgo(mrt.getLastx(), mrt.getLasty(), bus.getLastx(), bus.getLasty()))
 
         # Add marker for Start-End for this map
@@ -102,7 +100,6 @@ if start_coordinate in mrts:
 
 
         # Finally walk from bus stop to end point
-        # walkpm2 = walk.walkAlgo(bus.getLastx(),bus.getLasty(), x2, y2)
         mrtpm.add_child(walk.walkAlgo(bus.getLastx(), bus.getLasty(), x2, y2))
 
         # Add marker for Start-End for this map
@@ -110,23 +107,25 @@ if start_coordinate in mrts:
         fo.Marker([x2, y2]).add_to(mrtpm)
         mrtpm.save("MWBW.html")
 else:
-    # WBW
-    buspm = bus.busAlgo(x1, y1, x2, y2)
-    buspm.add_child(walk.walkAlgo(x1, y1, bus.getFirstx(), bus.getFirsty()))
-    buspm.add_child(walk.walkAlgo(bus.getLastx(), bus.getLasty(), x2, y2))
-    fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(buspm)
-    fo.Marker([x2, y2]).add_to(buspm)
-    fo.Marker([x1, y1]).add_to(buspm)
-    fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(buspm)
-    fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(buspm)
-    fo.Marker([x2, y2]).add_to(buspm)
-    buspm.save("WBW.html")
+    dist = haversine(x1,x2,y1,y2)
+    if dist > 200:
+        # WBW
+        # If distance greater than 200, user will take Bus first before walking to his/her destination
+        buspm = bus.busAlgo(x1, y1, x2, y2)
+        buspm.add_child(walk.walkAlgo(x1, y1, bus.getFirstx(), bus.getFirsty()))
+        buspm.add_child(walk.walkAlgo(bus.getLastx(), bus.getLasty(), x2, y2))
+        fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(buspm)
+        fo.Marker([x2, y2]).add_to(buspm)
+        fo.Marker([x1, y1]).add_to(buspm)
+        fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(buspm)
+        fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(buspm)
+        fo.Marker([x2, y2]).add_to(buspm)
+        buspm.save("WBW.html")
+    else:
+        # W
+        # If distance is < 200, user can just walk over to his/her destination
+        walkpm = walk.walkAlgo(x1, x2, y1, y2)
+        fo.Marker([x1, y1]).add_to(walkpm)
+        fo.Marker([x2, y2]).add_to(walkpm)
+        walkpm.save("W.html")
 
-    # pm.save("test123.html")
-    #walkpm.save("walktest.html")
-    #buspm.add_to(pm)
-    #pm.save("test123.html")
-
-
-
-# pm.save("test111.html")
