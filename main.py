@@ -9,6 +9,7 @@ import pandas as pd
 import math
 import sys
 
+
 def haversine(lat1, lon1, lat2, lon2):
     """
     Calculate the great circle distance between two points
@@ -26,6 +27,7 @@ def haversine(lat1, lon1, lat2, lon2):
     m = 6371 * c
     return m*1000
 
+
 # Load every json/csv into a graph
 # Punggol Polygon
 punggol = gpd.read_file('geojson/polygon-punggol.geojson')
@@ -34,8 +36,6 @@ polygon = punggol['geometry'].iloc[0]
 centreCoordinate = (1.396978, 103.908901)
 
 # Creation of Punggol map with folium
-
-
 
 
 # Random coordinates to try on before UI is up
@@ -58,17 +58,18 @@ end_coordinate = (x2, y2)
 distance = haversine(x1, y1, x2, y2)
 # At the start only
 # Map Creation and Start/End Coordinate plotting
-pm = fo.Map(location=centreCoordinate, zoom_start=17, control_scale=True, tiles='OpenStreetMap')
+pm = fo.Map(location=centreCoordinate, zoom_start=17,
+            control_scale=True, tiles='OpenStreetMap')
 pm.save("./templates/clean.html")
 
 
-mrts = [(1.4052585,103.9023302), (1.4053014,103.8972748),
-        (1.4085322,103.8985342), (1.4118877,103.9003304),
-        (1.4159537,103.9021398), (1.4168814,103.9066298),
-        (1.4097076,103.904874), (1.4052523,103.9085982),
-        (1.4022823,103.9127329), (1.399601,103.9164448),
-        (1.394538,103.9161538), (1.3939318,103.9125723),
-        (1.3969357,103.9088889), (1.3994603,103.9058059)]
+mrts = [(1.4052585, 103.9023302), (1.4053014, 103.8972748),
+        (1.4085322, 103.8985342), (1.4118877, 103.9003304),
+        (1.4159537, 103.9021398), (1.4168814, 103.9066298),
+        (1.4097076, 103.904874), (1.4052523, 103.9085982),
+        (1.4022823, 103.9127329), (1.399601, 103.9164448),
+        (1.394538, 103.9161538), (1.3939318, 103.9125723),
+        (1.3969357, 103.9088889), (1.3994603, 103.9058059)]
 
 # mrt algo
 mrt = Mrt()
@@ -77,17 +78,19 @@ bus = Bus()
 
 # If start point is MRT
 if start_coordinate in mrts:
-    mrtpm = mrt.MrtAlgo(x1,y1,x2,y2)
-    fo.Marker([x1, y1], popup="start", icon=fo.Icon(color='red',icon='info-sign')).add_to(mrtpm)
+    mrtpm = mrt.MrtAlgo(x1, y1, x2, y2)
+    fo.Marker([x1, y1], popup="start", icon=fo.Icon(
+        color='red', icon='info-sign')).add_to(mrtpm)
 
     fo.Marker([mrt.getLastx(), mrt.getLasty()]).add_to(mrtpm)
-    dist = haversine(mrt.getLastx(),mrt.getLasty(), x2, y2)
-    if dist < 400:
+    dist = haversine(mrt.getLastx(), mrt.getLasty(), x2, y2)
+    if dist < 200:
         # If distance is less than 400m, user will walk to destination
         # MW
-        mrtpm.add_child(walk.walkAlgo(mrt.getLastx(),mrt.getLasty(), x2, y2))
+        mrtpm.add_child(walk.walkAlgo(mrt.getLastx(), mrt.getLasty(), x2, y2))
         fo.Marker([mrt.getLastx(), mrt.getLasty()]).add_to(mrtpm)
-        fo.Marker([x2, y2], popup="start", icon=fo.Icon(color='red', icon='info-sign')).add_to(mrtpm)
+        fo.Marker([x2, y2], popup="end", icon=fo.Icon(
+            color='red', icon='info-sign')).add_to(mrtpm)
         mrtpm.save("./templates/transport.html")
     else:
         # MWBW
@@ -97,43 +100,80 @@ if start_coordinate in mrts:
         mrtpm.add_child(bus.busAlgo(mrt.getLastx(), mrt.getLasty(), x2, y2))
 
         # Add marker for Start-End for this map
-        fo.Marker([bus.getFirstx(), bus.getFirsty()], popup="First Bus Stop", icon=fo.Icon(color='green', icon="info-sign")).add_to(mrtpm)
-        fo.Marker([bus.getLastx(), bus.getLasty()], popup="Last Bus Stop", icon=fo.Icon(color='green', icon="info-sign")).add_to(mrtpm)
+        fo.Marker([bus.getFirstx(), bus.getFirsty()], popup="First Bus Stop",
+                  icon=fo.Icon(color='green', icon="info-sign")).add_to(mrtpm)
+        fo.Marker([bus.getLastx(), bus.getLasty()], popup="Last Bus Stop",
+                  icon=fo.Icon(color='green', icon="info-sign")).add_to(mrtpm)
 
         # Walk from Terminal LRT to Bus Stop
         # mrtpm.add_child(walk.walkAlgo(mrt.getLastx(), mrt.getLasty(), bus.getFirstx(), bus.getFirsty()))
 
         # Add marker for Start-End for this map
-        fo.Marker([mrt.getLastx(), mrt.getLasty()], popup="Last Train Station", icon=fo.Icon(color='purple', icon='info-sign')).add_to(mrtpm)
+        fo.Marker([mrt.getLastx(), mrt.getLasty()], popup="Last Train Station",
+                  icon=fo.Icon(color='purple', icon='info-sign')).add_to(mrtpm)
         # fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(mrtpm)
 
-
         # Finally walk from bus stop to end point
-        mrtpm.add_child(walk.walkAlgo(bus.getLastx(), bus.getLasty(), x2, y2))
+        try:
+            mrtpm.add_child(walk.walkAlgo(
+                bus.getLastx(), bus.getLasty(), x2, y2))
+        except:
+            pass
 
         # Add marker for Start-End for this map
         # fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(mrtpm)
-        fo.Marker([x2, y2], popup="End", icon=fo.Icon(color='red', icon='info-sign')).add_to(mrtpm)
+        fo.Marker([x2, y2], popup="End", icon=fo.Icon(
+            color='red', icon='info-sign')).add_to(mrtpm)
         mrtpm.save("./templates/transport.html")
 else:
-    dist = haversine(x1,x2,y1,y2)
-    if dist > 400:
+    dist = haversine(x1, x2, y1, y2)
+    # WMW
+    # If distance greater than 600, user will take MRT first before walking to his/her destination
+    if dist > 600:
+        mrtpm = mrt.MrtAlgo(x1, y1, x2, y2)
+        mrtpm.add_child(walk.walkAlgo(
+            x1, y1, mrt.getFirstx(), mrt.getFirsty()))
+        try:
+            mrtpm.add_child(walk.walkAlgo(
+                mrt.getLastx(), mrt.getLasty(), x2, y2))
+        except:
+            pass
+        fo.Marker([mrt.getFirstx(), mrt.getFirsty()]).add_to(mrtpm)
+        fo.Marker([x2, y2]).add_to(mrtpm)
+        fo.Marker([x1, y1]).add_to(mrtpm)
+        fo.Marker([mrt.getFirstx(), mrt.getFirsty()]).add_to(mrtpm)
+        fo.Marker([mrt.getLastx(), mrt.getLasty()]).add_to(mrtpm)
+        fo.Marker([x2, y2], popup="End", icon=fo.Icon(
+            color='red', icon='info-sign')).add_to(mrtpm)
+        mrtpm.save("./templates/transport.html")
+    elif dist > 400:
         # WBW
         # If distance greater than 400, user will take Bus first before walking to his/her destination
         buspm = bus.busAlgo(x1, y1, x2, y2)
-        buspm.add_child(walk.walkAlgo(x1, y1, bus.getFirstx(), bus.getFirsty()))
-        buspm.add_child(walk.walkAlgo(bus.getLastx(), bus.getLasty(), x2, y2))
+        try:
+            buspm.add_child(walk.walkAlgo(
+                x1, y1, bus.getFirstx(), bus.getFirsty()))
+        except:
+            pass
+        try:
+            buspm.add_child(walk.walkAlgo(
+                bus.getLastx(), bus.getLasty(), x2, y2))
+        except:
+            pass
         fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(buspm)
         fo.Marker([x2, y2]).add_to(buspm)
         fo.Marker([x1, y1]).add_to(buspm)
         fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(buspm)
         fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(buspm)
-        fo.Marker([x2, y2], popup="End", icon=fo.Icon(color='red', icon='info-sign')).add_to(mrtpm)
+        fo.Marker([x2, y2], popup="End", icon=fo.Icon(
+            color='red', icon='info-sign')).add_to(buspm)
         buspm.save("./templates/transport.html")
     else:
         # W
         # If distance is < 400, user can just walk over to his/her destination
         walkpm = walk.walkAlgo(x1, x2, y1, y2)
-        fo.Marker([x1, y1], popup="start", icon=fo.Icon(color='red', icon='info-sign')).add_to(mrtpm)
-        fo.Marker([x1, y1], popup="End", icon=fo.Icon(color='red', icon='info-sign')).add_to(mrtpm)
+        fo.Marker([x1, y1], popup="start", icon=fo.Icon(
+            color='red', icon='info-sign')).add_to(mrtpm)
+        fo.Marker([x1, y1], popup="End", icon=fo.Icon(
+            color='red', icon='info-sign')).add_to(mrtpm)
         walkpm.save("./templates/transport.html")

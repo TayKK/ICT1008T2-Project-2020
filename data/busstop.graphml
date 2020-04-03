@@ -1,0 +1,852 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d8" for="node" attr.name="asset_ref" attr.type="string"/>
+<key id="d7" for="node" attr.name="name" attr.type="string"/>
+<key id="d6" for="node" attr.name="route_ref" attr.type="string"/>
+<key id="d5" for="node" attr.name="highway" attr.type="string"/>
+<key id="d4" for="node" attr.name="osmid" attr.type="string"/>
+<key id="d3" for="node" attr.name="x" attr.type="string"/>
+<key id="d2" for="node" attr.name="y" attr.type="string"/>
+<key id="d1" for="graph" attr.name="crs" attr.type="string"/>
+<key id="d0" for="graph" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">unnamed</data>
+<data key="d1">+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</data>
+<node id="410464074">
+  <data key="d2">1.3995595</data>
+  <data key="d3">103.9082822</data>
+  <data key="d4">410464074</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">136</data>
+  <data key="d7">Blk 178</data>
+  <data key="d8">65249</data>
+</node>
+<node id="410464088">
+  <data key="d2">1.3990941</data>
+  <data key="d3">103.9076522</data>
+  <data key="d4">410464088</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">136</data>
+  <data key="d7">Blk 196C</data>
+  <data key="d8">65241</data>
+</node>
+<node id="410472369">
+  <data key="d2">1.3993093</data>
+  <data key="d3">103.9109875</data>
+  <data key="d4">410472369</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;6N;83;85</data>
+  <data key="d7">Between Blks 187/188</data>
+  <data key="d8">65279</data>
+</node>
+<node id="410472372">
+  <data key="d2">1.4032091</data>
+  <data key="d3">103.9055521</data>
+  <data key="d4">410472372</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;6N;34;83;84;85;136;386</data>
+  <data key="d7">Blk 298</data>
+  <data key="d8">65229</data>
+</node>
+<node id="410472373">
+  <data key="d2">1.3999807</data>
+  <data key="d3">103.9106464</data>
+  <data key="d4">410472373</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;83;85</data>
+  <data key="d7">Opposite Blk 188</data>
+  <data key="d8">65271</data>
+</node>
+<node id="410472374">
+  <data key="d2">1.401732</data>
+  <data key="d3">103.907635</data>
+  <data key="d4">410472374</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;6N;83;85;136;386</data>
+  <data key="d7">Edgefield Primary School</data>
+  <data key="d8">65289</data>
+</node>
+<node id="410472375">
+  <data key="d2">1.3971462</data>
+  <data key="d3">103.9146038</data>
+  <data key="d4">410472375</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;83;85</data>
+  <data key="d7">Blk 649</data>
+  <data key="d8">65261</data>
+</node>
+<node id="410472376">
+  <data key="d2">1.4040774</data>
+  <data key="d3">103.9048174</data>
+  <data key="d4">410472376</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;34;34A;83;84;85;136;386</data>
+  <data key="d7">Blk 303D</data>
+  <data key="d8">65221</data>
+</node>
+<node id="410472377">
+  <data key="d2">1.401923</data>
+  <data key="d3">103.907859</data>
+  <data key="d4">410472377</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;83;85;136;386</data>
+  <data key="d7">Punggol Secondary School</data>
+  <data key="d8">65281</data>
+</node>
+<node id="410472378">
+  <data key="d2">1.3964771</data>
+  <data key="d3">103.9149239</data>
+  <data key="d4">410472378</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;6N;83;386</data>
+  <data key="d7">Blk 162B</data>
+  <data key="d8">65269</data>
+</node>
+<node id="410472379">
+  <data key="d2">1.39429</data>
+  <data key="d3">103.915795</data>
+  <data key="d4">410472379</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;6N;50;83;85;386</data>
+  <data key="d7">Riviera Stn Exit B</data>
+  <data key="d8">65231</data>
+</node>
+<node id="410472380">
+  <data key="d2">1.3942075</data>
+  <data key="d3">103.916123</data>
+  <data key="d4">410472380</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;50;83;85</data>
+  <data key="d7">Riviera Stn Exit A</data>
+  <data key="d8">65239</data>
+</node>
+<node id="410472381">
+  <data key="d2">1.4008806</data>
+  <data key="d3">103.9035672</data>
+  <data key="d4">410472381</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">6N;62;62A;82</data>
+  <data key="d7">Opposite Blk 201A</data>
+  <data key="d8">65201</data>
+</node>
+<node id="410472382">
+  <data key="d2">1.3990411</data>
+  <data key="d3">103.9061631</data>
+  <data key="d4">410472382</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;62;83;136</data>
+  <data key="d7">Cove Stn Exit A</data>
+  <data key="d8">65159</data>
+</node>
+<node id="410472383">
+  <data key="d2">1.3958293</data>
+  <data key="d3">103.910029</data>
+  <data key="d4">410472383</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;62;83</data>
+  <data key="d7">Meridian Stn Exit A</data>
+  <data key="d8">65169</data>
+</node>
+<node id="410472387">
+  <data key="d2">1.3991335</data>
+  <data key="d3">103.9065501</data>
+  <data key="d4">410472387</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;6N;62;62A;83;136</data>
+  <data key="d7">Cove Stn Exit B</data>
+  <data key="d8">65151</data>
+</node>
+<node id="410472392">
+  <data key="d2">1.3942822</data>
+  <data key="d3">103.9118997</data>
+  <data key="d4">410472392</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;62;83</data>
+  <data key="d7">Coral Edge Stn Exit A</data>
+  <data key="d8">65179</data>
+</node>
+<node id="410472393">
+  <data key="d2">1.3944344</data>
+  <data key="d3">103.9122461</data>
+  <data key="d4">410472393</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;6N;62;62A;83;386</data>
+  <data key="d7">Coral Edge Stn Exit B</data>
+  <data key="d8">65171</data>
+</node>
+<node id="410472394">
+  <data key="d2">1.3963978</data>
+  <data key="d3">103.9098666</data>
+  <data key="d4">410472394</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;6N;62;62A;83</data>
+  <data key="d7">Meridian Stn Exit B</data>
+  <data key="d8">65161</data>
+</node>
+<node id="410472395">
+  <data key="d2">1.4003315</data>
+  <data key="d3">103.9038676</data>
+  <data key="d4">410472395</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">62;82</data>
+  <data key="d7">After Punggol Road</data>
+  <data key="d8">65209</data>
+</node>
+<node id="410472396">
+  <data key="d2">1.4033115</data>
+  <data key="d3">103.9033256</data>
+  <data key="d4">410472396</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">6N</data>
+  <data key="d7">After Punggol Central</data>
+  <data key="d8">65219</data>
+</node>
+<node id="410472397">
+  <data key="d2">1.4024963</data>
+  <data key="d3">103.9024931</data>
+  <data key="d4">410472397</data>
+  <data key="d5">bus_stop</data>
+  <data key="d7">After Punggol Field</data>
+  <data key="d8">65211</data>
+</node>
+<node id="410472402">
+  <data key="d2">1.3984929</data>
+  <data key="d3">103.9041539</data>
+  <data key="d4">410472402</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;6N;34;82;83;136</data>
+  <data key="d7">Opposite Blk 103A</data>
+  <data key="d8">65071</data>
+</node>
+<node id="410472408">
+  <data key="d2">1.4183947</data>
+  <data key="d3">103.9080477</data>
+  <data key="d4">410472408</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">84</data>
+  <data key="d7">After Northshore Crescent</data>
+  <data key="d8">65689</data>
+</node>
+<node id="410472409">
+  <data key="d2">1.4202783</data>
+  <data key="d3">103.9104584</data>
+  <data key="d4">410472409</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">84</data>
+  <data key="d7">Punggol Road End</data>
+  <data key="d8">65139</data>
+</node>
+<node id="410472414">
+  <data key="d2">1.4009585</data>
+  <data key="d3">103.9052968</data>
+  <data key="d4">410472414</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">34</data>
+  <data key="d7">Opposite Blk 199C</data>
+  <data key="d8">65081</data>
+</node>
+<node id="410472422">
+  <data key="d2">1.4079321</data>
+  <data key="d3">103.9087263</data>
+  <data key="d4">410472422</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">84</data>
+  <data key="d7">After Punggol Drive</data>
+  <data key="d8">65101</data>
+</node>
+<node id="410472469">
+  <data key="d2">1.3988936</data>
+  <data key="d3">103.9047796</data>
+  <data key="d4">410472469</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;34;34A;82;83;136</data>
+  <data key="d7">Blk 102C</data>
+  <data key="d8">65079</data>
+</node>
+<node id="410472478">
+  <data key="d2">1.4040152</data>
+  <data key="d3">103.9065771</data>
+  <data key="d4">410472478</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">84</data>
+  <data key="d7">Blk 301A</data>
+  <data key="d8">65091</data>
+</node>
+<node id="410472511">
+  <data key="d2">1.4076358</data>
+  <data key="d3">103.9088633</data>
+  <data key="d4">410472511</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">84</data>
+  <data key="d7">Before Punggol Drive</data>
+  <data key="d8">65109</data>
+</node>
+<node id="410472575">
+  <data key="d2">1.4013487</data>
+  <data key="d3">103.9058481</data>
+  <data key="d4">410472575</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">34;34A</data>
+  <data key="d7">Opposite Blk 296</data>
+  <data key="d8">65089</data>
+</node>
+<node id="1847853709">
+  <data key="d2">1.404107</data>
+  <data key="d3">103.9025242</data>
+  <data key="d4">1847853709</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;34;34A;43;43M;50;62;62A;82;83;84;85;117;118;119;136;382G;382W;386</data>
+  <data key="d7">Punggol Temporary Interchange</data>
+  <data key="d8">65009</data>
+</node>
+<node id="1849631331">
+  <data key="d2">1.4053356</data>
+  <data key="d3">103.8974167</data>
+  <data key="d4">1849631331</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">43;43M;117;118</data>
+  <data key="d7">Soo Teck Station Exit B</data>
+  <data key="d8">65141</data>
+</node>
+<node id="1849631343">
+  <data key="d2">1.4052507</data>
+  <data key="d3">103.89706</data>
+  <data key="d4">1849631343</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">43;43M;117;118</data>
+  <data key="d7">Soo Teck Station Exit A</data>
+  <data key="d8">65149</data>
+</node>
+<node id="1855320985">
+  <data key="d2">1.404533</data>
+  <data key="d3">103.9071851</data>
+  <data key="d4">1855320985</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">84</data>
+  <data key="d7">Blk 604A</data>
+  <data key="d8">65099</data>
+</node>
+<node id="2077636382">
+  <data key="d2">1.4055431</data>
+  <data key="d3">103.9043482</data>
+  <data key="d4">2077636382</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">50;382W</data>
+  <data key="d7">Opposite Punggol View Primary School</data>
+  <data key="d8">65359</data>
+</node>
+<node id="2077636384">
+  <data key="d2">1.4059238</data>
+  <data key="d3">103.9048756</data>
+  <data key="d4">2077636384</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">50;382G</data>
+  <data key="d7">Punggol View Primary School</data>
+  <data key="d8">65351</data>
+</node>
+<node id="2085845866">
+  <data key="d2">1.4031893</data>
+  <data key="d3">103.8981118</data>
+  <data key="d4">2085845866</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">119;382W</data>
+  <data key="d7">Blk 268C</data>
+  <data key="d8">65339</data>
+</node>
+<node id="2085845871">
+  <data key="d2">1.4022889</data>
+  <data key="d3">103.9006432</data>
+  <data key="d4">2085845871</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">119;382W</data>
+  <data key="d7">Blk 272C</data>
+  <data key="d8">65349</data>
+</node>
+<node id="2085845879">
+  <data key="d2">1.4026665</data>
+  <data key="d3">103.8986331</data>
+  <data key="d4">2085845879</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">119;382G</data>
+  <data key="d7">Opposite Blk 268D</data>
+  <data key="d8">65331</data>
+</node>
+<node id="2085845884">
+  <data key="d2">1.4017647</data>
+  <data key="d3">103.900933</data>
+  <data key="d4">2085845884</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">119;382G</data>
+  <data key="d7">Opposite Blk 272C</data>
+  <data key="d8">65341</data>
+</node>
+<node id="2110621964">
+  <data key="d2">1.3968139</data>
+  <data key="d3">103.91755</data>
+  <data key="d4">2110621964</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">50</data>
+  <data key="d7">Atf Punggol Central</data>
+  <data key="d8">65181</data>
+</node>
+<node id="2110621969">
+  <data key="d2">1.396827</data>
+  <data key="d3">103.91793</data>
+  <data key="d4">2110621969</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">50</data>
+  <data key="d7">Before Punggol Central</data>
+  <data key="d8">65189</data>
+</node>
+<node id="2110621974">
+  <data key="d2">1.4045163</data>
+  <data key="d3">103.909287</data>
+  <data key="d4">2110621974</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">50</data>
+  <data key="d7">Damai Stn Exit B</data>
+  <data key="d8">65301</data>
+</node>
+<node id="2110621985">
+  <data key="d2">1.3993112</data>
+  <data key="d3">103.9166662</data>
+  <data key="d4">2110621985</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">50</data>
+  <data key="d7">Kadaloor Stn Exit B</data>
+  <data key="d8">65321</data>
+</node>
+<node id="2110621991">
+  <data key="d2">1.3999112</data>
+  <data key="d3">103.9162493</data>
+  <data key="d4">2110621991</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">50</data>
+  <data key="d7">Kadaloor Stn Exit A</data>
+  <data key="d8">65329</data>
+</node>
+<node id="2110621997">
+  <data key="d2">1.4021461</data>
+  <data key="d3">103.9127005</data>
+  <data key="d4">2110621997</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">50;386</data>
+  <data key="d7">Oasis Station Exit B/Block 617D</data>
+  <data key="d8">65311</data>
+</node>
+<node id="2110622011">
+  <data key="d2">1.402466</data>
+  <data key="d3">103.9127387</data>
+  <data key="d4">2110622011</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">50;386</data>
+  <data key="d7">Oasis Station Exit A</data>
+  <data key="d8">65319</data>
+</node>
+<node id="2110622025">
+  <data key="d2">1.404944</data>
+  <data key="d3">103.909134</data>
+  <data key="d4">2110622025</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">50</data>
+  <data key="d7">Damai Stn Exit A</data>
+  <data key="d8">65309</data>
+</node>
+<node id="3316956185">
+  <data key="d2">1.4058029</data>
+  <data key="d3">103.9126284</data>
+  <data key="d4">3316956185</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">386</data>
+  <data key="d7">Blk 670A</data>
+  <data key="d8">65399</data>
+</node>
+<node id="3316956186">
+  <data key="d2">1.4059501</data>
+  <data key="d3">103.9124459</data>
+  <data key="d4">3316956186</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">386</data>
+  <data key="d7">Blk 672A</data>
+  <data key="d8">65391</data>
+</node>
+<node id="3316956194">
+  <data key="d2">1.4022258</data>
+  <data key="d3">103.9101159</data>
+  <data key="d4">3316956194</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">386</data>
+  <data key="d7">Opposite Punggol Secondary School</data>
+  <data key="d8">65389</data>
+</node>
+<node id="3316956195">
+  <data key="d2">1.4021363</data>
+  <data key="d3">103.9097855</data>
+  <data key="d4">3316956195</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">386</data>
+  <data key="d7">Punggol Secondary School</data>
+  <data key="d8">65381</data>
+</node>
+<node id="3553028926">
+  <data key="d2">1.3959978</data>
+  <data key="d3">103.9055001</data>
+  <data key="d4">3553028926</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">3;27;34;34A;39;88;89;109;118;168;858;969</data>
+  <data key="d7">After Punggol Road</data>
+  <data key="d8">65199</data>
+</node>
+<node id="3737148763">
+  <data key="d2">1.4024184</data>
+  <data key="d3">103.8967454</data>
+  <data key="d4">3737148763</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">43;43M;117;118;119</data>
+  <data key="d7">Twin Waterfalls</data>
+  <data key="d8">65431</data>
+</node>
+<node id="3737158812">
+  <data key="d2">1.4017197</data>
+  <data key="d3">103.8963115</data>
+  <data key="d4">3737158812</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">43;43M;117;118;119</data>
+  <data key="d7">After Tampines Expressway</data>
+  <data key="d8">65439</data>
+</node>
+<node id="3865151058">
+  <data key="d2">1.406245</data>
+  <data key="d3">103.899574</data>
+  <data key="d4">3865151058</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">43;43M;117;118</data>
+  <data key="d7">Before Blk 264</data>
+  <data key="d8">65409</data>
+</node>
+<node id="3865151063">
+  <data key="d2">1.3967443</data>
+  <data key="d3">103.9120865</data>
+  <data key="d4">3865151063</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">386</data>
+  <data key="d7">Greendale Primary School</data>
+  <data key="d8">65429</data>
+</node>
+<node id="3865151064">
+  <data key="d2">1.3994654</data>
+  <data key="d3">103.9138187</data>
+  <data key="d4">3865151064</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">386</data>
+  <data key="d7">Horizon Primary School</data>
+  <data key="d8">65411</data>
+</node>
+<node id="3865151068">
+  <data key="d2">1.4065689</data>
+  <data key="d3">103.89871</data>
+  <data key="d4">3865151068</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">43;43M;117;118</data>
+  <data key="d7">Opposite Blk 264A</data>
+  <data key="d8">65401</data>
+</node>
+<node id="3865151071">
+  <data key="d2">1.3994396</data>
+  <data key="d3">103.9139912</data>
+  <data key="d4">3865151071</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">386</data>
+  <data key="d7">Opposite Horizon Primary School</data>
+  <data key="d8">65419</data>
+</node>
+<node id="3905787876">
+  <data key="d2">1.4045728</data>
+  <data key="d3">103.8948119</data>
+  <data key="d4">3905787876</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382G</data>
+  <data key="d7">Opposite Blk 259 Carpark</data>
+  <data key="d8">65491</data>
+</node>
+<node id="3905787877">
+  <data key="d2">1.404596</data>
+  <data key="d3">103.8950751</data>
+  <data key="d4">3905787877</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">Blk 259 Carpark</data>
+  <data key="d8">65499</data>
+</node>
+<node id="3905787878">
+  <data key="d2">1.4081914</data>
+  <data key="d3">103.8957547</data>
+  <data key="d4">3905787878</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382G</data>
+  <data key="d7">Opposite Blk 315B</data>
+  <data key="d8">65441</data>
+</node>
+<node id="3905787879">
+  <data key="d2">1.4080168</data>
+  <data key="d3">103.8959875</data>
+  <data key="d4">3905787879</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">Blk 315B</data>
+  <data key="d8">65449</data>
+</node>
+<node id="3905803180">
+  <data key="d2">1.4107318</data>
+  <data key="d3">103.8975557</data>
+  <data key="d4">3905803180</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382G</data>
+  <data key="d7">Blk 322 Carpark</data>
+  <data key="d8">65451</data>
+</node>
+<node id="3905803181">
+  <data key="d2">1.4105725</data>
+  <data key="d3">103.8977409</data>
+  <data key="d4">3905803181</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">Opposite Blk 322 Carpark</data>
+  <data key="d8">65459</data>
+</node>
+<node id="3905803182">
+  <data key="d2">1.4098921</data>
+  <data key="d3">103.9013404</data>
+  <data key="d4">3905803182</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382G</data>
+  <data key="d7">Blk 312 Carpark</data>
+  <data key="d8">65461</data>
+</node>
+<node id="3905803183">
+  <data key="d2">1.4098515</data>
+  <data key="d3">103.9009786</data>
+  <data key="d4">3905803183</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">Blk 310B</data>
+  <data key="d8">65469</data>
+</node>
+<node id="3905803184">
+  <data key="d2">1.4088787</data>
+  <data key="d3">103.9062063</data>
+  <data key="d4">3905803184</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382G</data>
+  <data key="d7">Before Punggol Drive</data>
+  <data key="d8">65481</data>
+</node>
+<node id="3905803185">
+  <data key="d2">1.408261</data>
+  <data key="d3">103.9056944</data>
+  <data key="d4">3905803185</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">After Punggol Drive</data>
+  <data key="d8">65489</data>
+</node>
+<node id="4426007103">
+  <data key="d2">1.3914883</data>
+  <data key="d3">103.9142797</data>
+  <data key="d4">4426007103</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">50;62;62A;85</data>
+  <data key="d7">After Punggol Field</data>
+  <data key="d8">65529</data>
+</node>
+<node id="4426007123">
+  <data key="d2">1.4029162</data>
+  <data key="d3">103.9161895</data>
+  <data key="d4">4426007123</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">386</data>
+  <data key="d7">Blk 682A</data>
+  <data key="d8">65371</data>
+</node>
+<node id="4426007435">
+  <data key="d2">1.3903418</data>
+  <data key="d3">103.9128944</data>
+  <data key="d4">4426007435</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">50;62;85</data>
+  <data key="d7">Waterwoods</data>
+  <data key="d8">65521</data>
+</node>
+<node id="4664801534">
+  <data key="d2">1.4035039</data>
+  <data key="d3">103.8910307</data>
+  <data key="d4">4664801534</data>
+  <data key="d5">bus_stop</data>
+  <data key="d7">After Sumang Lane</data>
+</node>
+<node id="4664809496">
+  <data key="d2">1.402367</data>
+  <data key="d3">103.8935666</data>
+  <data key="d4">4664809496</data>
+  <data key="d5">bus_stop</data>
+  <data key="d7">Block 226A</data>
+  <data key="d8">65531</data>
+</node>
+<node id="4664810382">
+  <data key="d2">1.4022195</data>
+  <data key="d3">103.893714</data>
+  <data key="d4">4664810382</data>
+  <data key="d5">bus_stop</data>
+  <data key="d7">Block 224A Bus Stop</data>
+</node>
+<node id="4664811415">
+  <data key="d2">1.4035469</data>
+  <data key="d3">103.8912351</data>
+  <data key="d4">4664811415</data>
+  <data key="d5">bus_stop</data>
+  <data key="d7">Before Sumang Lane</data>
+  <data key="d8">65541</data>
+</node>
+<node id="4664814182">
+  <data key="d2">1.4040841</data>
+  <data key="d3">103.8924934</data>
+  <data key="d4">4664814182</data>
+  <data key="d5">bus_stop</data>
+  <data key="d7">Opposite Blk 227A</data>
+</node>
+<node id="4664814528">
+  <data key="d2">1.4037635</data>
+  <data key="d3">103.8934202</data>
+  <data key="d4">4664814528</data>
+  <data key="d5">bus_stop</data>
+  <data key="d7">Blk 227A</data>
+  <data key="d8">65551</data>
+</node>
+<node id="4711162708">
+  <data key="d2">1.3987222</data>
+  <data key="d3">103.9189826</data>
+  <data key="d4">4711162708</data>
+  <data key="d5">bus_stop</data>
+  <data key="d7">Waterway Pri Sch</data>
+</node>
+<node id="4711162709">
+  <data key="d2">1.3986203</data>
+  <data key="d3">103.9192026</data>
+  <data key="d4">4711162709</data>
+  <data key="d5">bus_stop</data>
+  <data key="d7">Opp Waterway Pri Sch</data>
+</node>
+<node id="4928930141">
+  <data key="d2">1.4051328</data>
+  <data key="d3">103.9027777</data>
+  <data key="d4">4928930141</data>
+  <data key="d5">bus_stop</data>
+  <data key="d7">Punggol Stn</data>
+  <data key="d8">65251</data>
+</node>
+<node id="5860554889">
+  <data key="d2">1.4114906</data>
+  <data key="d3">103.8999711</data>
+  <data key="d4">5860554889</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">Nibong Stn Exit A</data>
+  <data key="d8">65619</data>
+</node>
+<node id="5860554890">
+  <data key="d2">1.4113545</data>
+  <data key="d3">103.9003431</data>
+  <data key="d4">5860554890</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">Nibong Stn Exit B</data>
+  <data key="d8">65611</data>
+</node>
+<node id="5860554891">
+  <data key="d2">1.4158105</data>
+  <data key="d3">103.9018815</data>
+  <data key="d4">5860554891</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">Samudera Stn Exit A</data>
+  <data key="d8">65629</data>
+</node>
+<node id="5860554892">
+  <data key="d2">1.4159298</data>
+  <data key="d3">103.9024253</data>
+  <data key="d4">5860554892</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">Samudera Stn Exit B</data>
+  <data key="d8">65621</data>
+</node>
+<node id="5860554893">
+  <data key="d2">1.4174695</data>
+  <data key="d3">103.9055751</data>
+  <data key="d4">5860554893</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">Bef Punggol Pt Stn</data>
+  <data key="d8">65639</data>
+</node>
+<node id="5860554894">
+  <data key="d2">1.4172094</data>
+  <data key="d3">103.9055107</data>
+  <data key="d4">5860554894</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">Aft Punggol Pt Stn</data>
+  <data key="d8">65631</data>
+</node>
+<node id="6780513249">
+  <data key="d2">1.4035623</data>
+  <data key="d3">103.8959034</data>
+  <data key="d4">6780513249</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">Blk 258A</data>
+  <data key="d8">65499</data>
+</node>
+<node id="6780513250">
+  <data key="d2">1.4034253</data>
+  <data key="d3">103.8955797</data>
+  <data key="d4">6780513250</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382W</data>
+  <data key="d7">Blk 218</data>
+  <data key="d8">65571</data>
+</node>
+<node id="7270951323">
+  <data key="d2">1.4182297</data>
+  <data key="d3">103.9080268</data>
+  <data key="d4">7270951323</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">84</data>
+  <data key="d7">Before Northshore Crescent</data>
+  <data key="d8">65681</data>
+</node>
+<node id="7276194081">
+  <data key="d2">1.4113084</data>
+  <data key="d3">103.8986762</data>
+  <data key="d4">7276194081</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382G</data>
+  <data key="d7">Punggol Cove Pr Sch</data>
+  <data key="d8">65671</data>
+</node>
+<node id="7276194082">
+  <data key="d2">1.4109443</data>
+  <data key="d3">103.8990257</data>
+  <data key="d4">7276194082</data>
+  <data key="d5">bus_stop</data>
+  <data key="d6">382G</data>
+  <data key="d7">Opp Punggol Cove Pr Sch</data>
+  <data key="d8">65679</data>
+</node>
+<node id="7314770844">
+  <data key="d2">1.4054627</data>
+  <data key="d3">103.9015984</data>
+  <data key="d4">7314770844</data>
+  <data key="d5">bus_stop</data>
+  <data key="d7">Punggol Stn/Int</data>
+  <data key="d8">65259</data>
+</node>
+</graph></graphml>

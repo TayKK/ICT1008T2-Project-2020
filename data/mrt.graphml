@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d5" for="node" attr.name="ref" attr.type="string"/>
+<key id="d4" for="node" attr.name="osmid" attr.type="string"/>
+<key id="d3" for="node" attr.name="x" attr.type="string"/>
+<key id="d2" for="node" attr.name="y" attr.type="string"/>
+<key id="d1" for="graph" attr.name="crs" attr.type="string"/>
+<key id="d0" for="graph" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">unnamed</data>
+<data key="d1">+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</data>
+<node id="213085056">
+  <data key="d2">1.4052585</data>
+  <data key="d3">103.9023302</data>
+  <data key="d4">213085056</data>
+  <data key="d5">NE17;PTC</data>
+</node>
+<node id="1840734578">
+  <data key="d2">1.3939318</data>
+  <data key="d3">103.9125723</data>
+  <data key="d4">1840734578</data>
+  <data key="d5">PE3</data>
+</node>
+<node id="1840734592">
+  <data key="d2">1.3994603</data>
+  <data key="d3">103.9058059</data>
+  <data key="d4">1840734592</data>
+  <data key="d5">PE1</data>
+</node>
+<node id="1840734593">
+  <data key="d2">1.4052523</data>
+  <data key="d3">103.9085982</data>
+  <data key="d4">1840734593</data>
+  <data key="d5">PE7</data>
+</node>
+<node id="1840734594">
+  <data key="d2">1.399601</data>
+  <data key="d3">103.9164448</data>
+  <data key="d4">1840734594</data>
+  <data key="d5">PE5</data>
+</node>
+<node id="1840734597">
+  <data key="d2">1.3969357</data>
+  <data key="d3">103.9088889</data>
+  <data key="d4">1840734597</data>
+  <data key="d5">PE2</data>
+</node>
+<node id="1840734598">
+  <data key="d2">1.4118877</data>
+  <data key="d3">103.9003304</data>
+  <data key="d4">1840734598</data>
+  <data key="d5">PW5</data>
+</node>
+<node id="1840734599">
+  <data key="d2">1.4022823</data>
+  <data key="d3">103.9127329</data>
+  <data key="d4">1840734599</data>
+  <data key="d5">PE6</data>
+</node>
+<node id="1840734600">
+  <data key="d2">1.4168814</data>
+  <data key="d3">103.9066298</data>
+  <data key="d4">1840734600</data>
+  <data key="d5">PW3</data>
+</node>
+<node id="1840734604">
+  <data key="d2">1.394538</data>
+  <data key="d3">103.9161538</data>
+  <data key="d4">1840734604</data>
+  <data key="d5">PE4</data>
+</node>
+<node id="1840734606">
+  <data key="d2">1.4097076</data>
+  <data key="d3">103.904874</data>
+  <data key="d4">1840734606</data>
+  <data key="d5">PW1</data>
+</node>
+<node id="1840734607">
+  <data key="d2">1.4159537</data>
+  <data key="d3">103.9021398</data>
+  <data key="d4">1840734607</data>
+  <data key="d5">PW4</data>
+</node>
+<node id="1840734608">
+  <data key="d2">1.4053014</data>
+  <data key="d3">103.8972748</data>
+  <data key="d4">1840734608</data>
+  <data key="d5">PW7</data>
+</node>
+<node id="1840734610">
+  <data key="d2">1.4085322</data>
+  <data key="d3">103.8985342</data>
+  <data key="d4">1840734610</data>
+  <data key="d5">PW6</data>
+</node>
+</graph></graphml>

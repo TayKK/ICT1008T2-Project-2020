@@ -20,7 +20,7 @@ end_lat = float(sys.argv[3])
 end_long = float(sys.argv[4])
 
 # Random coordinates to try on before UI is up
-# start_coordinate 1.402235 103.905384 
+# start_coordinate 1.402235 103.905384
 # end_coordinate 1.392949 103.912034
 
 start_coordinate = (start_lat, start_long)
@@ -29,12 +29,15 @@ end_coordinate = (end_lat, end_long)
 # Initialise the map
 pm = fo.Map(location=centreCoordinate, zoom_start=17, control_scale=True)
 
-fo.Marker([start_lat, start_long], popup="start", icon=fo.Icon(color='red', icon='info-sign')).add_to(pm)
-fo.Marker([end_lat, end_long], popup="start", icon=fo.Icon(color='red', icon='info-sign')).add_to(pm)
+fo.Marker([start_lat, start_long], popup="start",
+          icon=fo.Icon(color='red', icon='info-sign')).add_to(pm)
+fo.Marker([end_lat, end_long], popup="end", icon=fo.Icon(
+    color='red', icon='info-sign')).add_to(pm)
 
 # Query route using osmnx (currently using "all" for trying, can change to "walk" or "drive" as needed)
-graph = ox.core.graph_from_polygon(
-    polygon, truncate_by_edge=True, network_type="walk")
+# graph = ox.core.graph_from_polygon(
+#     polygon, truncate_by_edge=True, network_type="walk")
+graph = ox.save_load.load_graphml("walk.graphml")
 
 # Separate the graph into 2 files (nodes = nodes in the acquired graph, edges = edges in the acquired graph)
 nodes, edges = ox.graph_to_gdfs(graph)

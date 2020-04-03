@@ -12,6 +12,7 @@ import itertools
 import heapq
 from shapely.geometry import Point, LineString, Polygon
 
+
 class Bus:
     def __init__(self):
         start_x = None
@@ -26,7 +27,7 @@ class Bus:
         firsty = None
         layer = None
 
-    def get_node(self,element):
+    def get_node(self, element):
         """
         Edited Original OSMNX function to include singapore bus stop code
         Convert an OSM node element into the format for a networkx node.
@@ -49,7 +50,6 @@ class Bus:
                 if useful_tag in element['tags']:
                     node[useful_tag] = element['tags'][useful_tag]
         return node
-
 
     def parse_osm_nodes_paths(self, osm_data):
         """
@@ -76,7 +76,6 @@ class Bus:
                 paths[key] = ox.get_path(element)
 
         return nodes, paths
-
 
     def create_graph(self, response_jsons, name='unnamed', retain_all=True, bidirectional=False):
         """
@@ -137,7 +136,6 @@ class Bus:
 
         return G
 
-
     def haversine(self, lat1, lon1, lat2, lon2):
         """
         General formula to calculate the great circle distance between two points
@@ -152,7 +150,6 @@ class Bus:
         c = 2 * math.asin(math.sqrt(a))
         m = 6371 * c * 1000
         return m
-
 
     def node_to_graph(self, gdf_nodes):
         """
@@ -178,11 +175,11 @@ class Bus:
             # only add this attribute to nodes which have a non-null value for it
             attribute_values = {
                 k: v for k, v in attributes[attribute_name].items() if pd.notnull(v)}
-            nx.set_node_attributes(G, name=attribute_name, values=attribute_values)
+            nx.set_node_attributes(
+                G, name=attribute_name, values=attribute_values)
         return G
 
-
-    def bus_route_json_clean(self,data, name, polygon):
+    def bus_route_json_clean(self, data, name, polygon):
         """
         Read bus route json file,
         Append the row which is within the Punggol Polygon into current Bus Service Pandas DataFrame
@@ -190,7 +187,8 @@ class Bus:
         """
         key_df = name.strip("R")
         # get the busroute by using the unique osmid to check for the correct route
-        df = gpd.GeoDataFrame(columns=['osmid', 'x', 'y', 'direction', 'geometry'])
+        df = gpd.GeoDataFrame(
+            columns=['osmid', 'x', 'y', 'direction', 'geometry'])
         df.name = name
         df.crs = "EPSG:4326"
         df.set_geometry('geometry')
@@ -207,8 +205,7 @@ class Bus:
                     df = df.append(data_df, ignore_index=True)
         return key_df, df
 
-
-    def bus_stop_json_clean(self,data, name, polygon, bus_stop_ST_code):
+    def bus_stop_json_clean(self, data, name, polygon, bus_stop_ST_code):
         """
         Read bus stop json file,
         Append the row which is within the Punggol Polygon into current Bus Service Pandas DataFrame
@@ -244,7 +241,6 @@ class Bus:
                             bus_stop_ST_code[bus] = temp
         return key_df, df, bus_stop_ST_code
 
-
     def create_busCode_Adj(self, stop_df, osm_df, bus_dict):
         """
         Create a Bus Stop Adjacency Dictionary for each relations between each bus stops
@@ -257,7 +253,8 @@ class Bus:
         for key in stop_df:
             current_df = (stop_df[key])
             for i in range(current_df.index.stop - 1):
-                current_busCode, next_busCode = current_df.loc[i]['busCode'], current_df.loc[i + 1]['busCode']
+                current_busCode, next_busCode = current_df.loc[i][
+                    'busCode'], current_df.loc[i + 1]['busCode']
                 if current_busCode not in adj_dict:
                     try:
                         # check from OSMX and see if there is any ajacent nodes to the current nodes
@@ -322,12 +319,12 @@ class Bus:
                         set(current_buscode_buslist) & set(next_buscode_buslist))
                     if distance != 0:
                         for busService in common_buslist:
-                            neightbour_dict[(next_busCode, busService)] = distance
+                            neightbour_dict[(
+                                next_busCode, busService)] = distance
 
         return adj_dict
 
-
-    def dijkstras(self,graph, start, end, bus_stop_dict, leastxfer=False):
+    def dijkstras(self, graph, start, end, bus_stop_dict, leastxfer=False):
         """
         Main Algorithm for bus search
         Using bus stop adjacency list, find the shortest distance travelled through bus codes using dijkstra
@@ -342,7 +339,7 @@ class Bus:
         while True:
             temp_list = heapq.heappop(heapqueue)
             temp_distance, temp_prev, temp_curr, temp_bus = temp_list[
-                                                                0], temp_list[1], temp_list[2], temp_list[3]
+                0], temp_list[1], temp_list[2], temp_list[3]
             if temp_curr == end:
                 final_route.append([temp_curr, temp_bus])
                 bus_code = [temp_prev, temp_bus]
@@ -369,7 +366,6 @@ class Bus:
                 pass
         return final_route
 
-
     def clean_bus_route(self, route, bus_code):
         """
         Convert a final route from dijkstra to dictionary for plotting of route on display
@@ -387,7 +383,6 @@ class Bus:
             else:
                 busService = route[i][1]
         return route_dict
-
 
     def get_nearestedge_node(self, osm_id, rG, bG):
         """
@@ -415,7 +410,6 @@ class Bus:
             return temp_nearest_edge[1]
         else:
             return temp_nearest_edge[2]
-
 
     def display_busstop(self, fo_map, key, value, stop_df, osm_df, prev_coord):
         """
@@ -457,7 +451,6 @@ class Bus:
         prev_coord = value[len(value) - 1]
         return prev_coord
 
-
     def display_busroute(self, fo_map, key, value, stop_df, osm_df, driveG, drive_df, busG):
         """
         Get Coordinates from OSMNX Data and plot bus stop route based on start and end bus stop
@@ -478,16 +471,18 @@ class Bus:
                 driveG, source=current_busroute_osmid, target=next_busroute_osmid)
             for j in range(len(current_busroute_next_busroute_list) - 1):
                 current_busroute_id, next_busroute_id = current_busroute_next_busroute_list[
-                                                            j], current_busroute_next_busroute_list[j + 1]
+                    j], current_busroute_next_busroute_list[j + 1]
                 temp_df = temp_df.append(drive_df[(drive_df["u"] == current_busroute_id) & (
-                        drive_df["v"] == next_busroute_id)])
+                    drive_df["v"] == next_busroute_id)])
                 # out put the bus nodes and bus route in green on the map
-        temp_gdf = gpd.GeoDataFrame(temp_df, crs="EPSG:4326", geometry='geometry')
-        busLayer = fo.GeoJson(temp_gdf, style_function=lambda x: {"color": "green", "weight": "3"}, name="BUS")
+        temp_gdf = gpd.GeoDataFrame(
+            temp_df, crs="EPSG:4326", geometry='geometry')
+        busLayer = fo.GeoJson(temp_gdf, style_function=lambda x: {
+                              "color": "green", "weight": "3"}, name="BUS")
         busLayer.add_to(fo_map)
         self.layer = busLayer
 
-    def busAlgo(self,x1,y1,x2,y2):
+    def busAlgo(self, x1, y1, x2, y2):
         # Common startup
         punggol = gpd.read_file('geojson/polygon-punggol.geojson')
         polygon = punggol['geometry'].iloc[0]
@@ -501,25 +496,25 @@ class Bus:
         end_coord = (x2, y2)
 
         # display the map that is zoomed in to the area of punggol
-        pm = fo.Map(location=centreCoordinate, zoom_start=15, control_scale=True)
+        pm = fo.Map(location=centreCoordinate,
+                    zoom_start=15, control_scale=True)
         fo.Marker(start_coord, popup="start", icon=fo.Icon(
             color='red', icon='info-sign')).add_to(pm)
         fo.Marker(end_coord, popup="end", icon=fo.Icon(
             color='red', icon='info-sign')).add_to(pm)
 
         # Query
-        driveGraph = ox.core.graph_from_polygon(
-            polygon, truncate_by_edge=True, retain_all=True, network_type="drive")
+        driveGraph = ox.save_load.load_graphml("drive.graphml")
         drive_Node, drive_Edge = ox.graph_to_gdfs(driveGraph)
 
-        busstop_Query = '[out:json];(node["highway"="bus_stop"](1.3891,103.8872,1.4222,103.9261);>;);out;'
-        # creating a graph with nodes and the cost of the route that is in the polygon.
-        responsejson_Busstop = ox.overpass_request(
-            data={'data': busstop_Query}, timeout=180)
-        busstop_Graph = self.create_graph(responsejson_Busstop)
-        busstop_Graph = ox.truncate_graph_polygon(
-            busstop_Graph, polygon, truncate_by_edge=True, retain_all=True)
-
+        # busstop_Query = '[out:json];(node["highway"="bus_stop"](1.3891,103.8872,1.4222,103.9261);>;);out;'
+        # # creating a graph with nodes and the cost of the route that is in the polygon.
+        # responsejson_Busstop = ox.overpass_request(
+        #     data={'data': busstop_Query}, timeout=180)
+        # busstop_Graph = self.create_graph(responsejson_Busstop)
+        # busstop_Graph = ox.truncate_graph_polygon(
+        #     busstop_Graph, polygon, truncate_by_edge=True, retain_all=True)
+        busstop_Graph = ox.save_load.load_graphml("busstop.graphml")
         osm_node, notused = ox.graph_to_gdfs(busstop_Graph)
 
         # Local files
@@ -565,8 +560,10 @@ class Bus:
 
         # Code the  start and end cordinates adn using osm  to look for the nearest  node  to take the  bus.
 
-        busstop_start_osm = ox.geo_utils.get_nearest_node(busstop_Graph, start_coord)
-        busstop_end_osm = ox.geo_utils.get_nearest_node(busstop_Graph, end_coord)
+        busstop_start_osm = ox.geo_utils.get_nearest_node(
+            busstop_Graph, start_coord)
+        busstop_end_osm = ox.geo_utils.get_nearest_node(
+            busstop_Graph, end_coord)
 
         start_busstop = int(osm_node[osm_node['osmid'] ==
                                      busstop_end_osm]["asset_ref"].values[0])
@@ -577,7 +574,7 @@ class Bus:
             bus_stop_ST_df, osm_node, bus_stop_ST_code)
         # call dijkstras to search for the shortest bus  route  for the user
         route = self.dijkstras(bus_stop_ST_Adj, start_busstop, end_busstop,
-                          bus_stop_ST_code, leastxfer=False)
+                               bus_stop_ST_code, leastxfer=False)
         # print(route)
         self.route_display = self.clean_bus_route(route, bus_stop_ST_code)
 
@@ -593,13 +590,17 @@ class Bus:
             # getting the first bus stop
             firstBusStop = self.route_display[bus][-1]
 
-            self.firstx = osm_node[osm_node["asset_ref"] == str(firstBusStop)]['y'].values[0]
-            self.firsty = osm_node[osm_node["asset_ref"] == str(firstBusStop)]['x'].values[0]
+            self.firstx = osm_node[osm_node["asset_ref"]
+                                   == str(firstBusStop)]['y'].values[0]
+            self.firsty = osm_node[osm_node["asset_ref"]
+                                   == str(firstBusStop)]['x'].values[0]
         # getting the last bus stop
         busSvc = next(iter(self.route_display))
         actualLast = self.route_display[busSvc][0]
-        self.lastx = osm_node[osm_node["asset_ref"] == str(actualLast)]['y'].values[0]
-        self.lasty = osm_node[osm_node["asset_ref"] == str(actualLast)]['x'].values[0]
+        self.lastx = osm_node[osm_node["asset_ref"]
+                              == str(actualLast)]['y'].values[0]
+        self.lasty = osm_node[osm_node["asset_ref"]
+                              == str(actualLast)]['x'].values[0]
 
         return self.layer
 
@@ -608,12 +609,16 @@ class Bus:
             return 0
         else:
             return 1
+
     def getLastx(self):
         return self.lastx
+
     def getLasty(self):
         return self.lasty
+
     def getFirstx(self):
         return self.firstx
+
     def getFirsty(self):
         return self.firsty
 #

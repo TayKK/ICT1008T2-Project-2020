@@ -30,13 +30,16 @@ class Walk:
         end_coordinate = (self.end_x, self.end_y)
 
         # Initialise the map
-        pm = fo.Map(location=centreCoordinate, zoom_start=17, control_scale=True)
+        pm = fo.Map(location=centreCoordinate,
+                    zoom_start=17, control_scale=True)
         # fo.Marker([self.start_x, self.start_y]).add_to(pm)
         # fo.Marker([self.end_x, self.end_y]).add_to(pm)
 
         # Query route using osmnx (currently using "all" for trying, can change to "walk" or "drive" as needed)
-        graph = ox.core.graph_from_polygon(
-            polygon, truncate_by_edge=True, network_type="walk")
+        # graph = ox.core.graph_from_polygon(
+        #     polygon, truncate_by_edge=True, network_type="walk")
+
+        graph = ox.save_load.load_graphml("walk.graphml")
 
         # Separate the graph into 2 files (nodes = nodes in the acquired graph, edges = edges in the acquired graph)
         nodes, edges = ox.graph_to_gdfs(graph)
@@ -115,8 +118,8 @@ class Walk:
         # pm.save("walk.html")
 
 # walk = Walk()
-#start 1.402235, 103.905384
-#end 1.392949, 103.912034
+# start 1.402235, 103.905384
+# end 1.392949, 103.912034
 # x1 = 1.402235
 # y1 = 103.905384
 # x2 = 1.392949
