@@ -13,7 +13,10 @@ import heapq
 from shapely.geometry import Point, LineString, Polygon
 
 
+
 class Bus:
+    featuregroup = fo.FeatureGroup(name="Bus Stop Markers")
+
     def __init__(self):
         start_x = None
         start_y = None
@@ -25,7 +28,7 @@ class Bus:
         lasty = None
         firstx = None
         firsty = None
-        fg = fo.FeatureGroup()
+        featuregroup = None
 
     def get_node(self, element):
         """
@@ -422,7 +425,7 @@ class Bus:
             if prev_coord not in value:
                 value.insert(0, prev_coord)
         bus_route_display_list = []
-        feature_group = fo.FeatureGroup(name='Bus Stop Markers')
+
         # travese through the lsit for bus_code and get the coordinates deom OSMX or geopandas
         for bus_code in value:
             try:
@@ -445,7 +448,7 @@ class Bus:
                 description = str(
                     stop_df[stop_df['busCode'] == bus_code]['description'].values[0])
 
-                feature_group.add_child(fo.Marker([x, y], popup="[Bus:" + str(key) + ", Code:" + str(bus_code) + "]\n" +
+                self.featuregroup.add_child(fo.Marker([x, y], popup="[Bus:" + str(key) + ", Code:" + str(bus_code) + "]\n" +
                                         description, icon=fo.Icon(color='green', icon='flag')))
 
                 fo.Marker([x, y], popup="[Bus:" + str(key) + ", Code:" + str(bus_code) + "]\n" +
@@ -454,7 +457,7 @@ class Bus:
             except:
                 pass
         prev_coord = value[len(value) - 1]
-        self.fg = feature_group
+        # self.fg = feature_group
         return prev_coord
 
     def display_busroute(self, fo_map, key, value, stop_df, osm_df, driveG, drive_df, busG):
@@ -630,7 +633,7 @@ class Bus:
         return self.firsty
 
     def getFg(self):
-        return self.fg
+        return self.featuregroup
 #
 # bus = Bus()
 # x1 = 1.404130
