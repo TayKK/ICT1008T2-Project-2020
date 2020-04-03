@@ -13,7 +13,10 @@ def home():
     nom = Nominatim(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36")
     form = Locations()
 
+    count = 0 # to check times refreshed 
+
     if form.validate_on_submit():
+        count += 1
         #get start lat and long from location name using geocoder
         n = nom.geocode(form.start_point.data, "Singapore")
         start_lat = n.latitude
@@ -34,9 +37,9 @@ def home():
         for p in procs:
             p.wait()
 
-        return render_template("gui.html", start_lat=start_lat, start_long=start_long, end_lat=end_lat, end_long=end_long, form=form)
+        return render_template("gui.html", start_lat=start_lat, start_long=start_long, end_lat=end_lat, end_long=end_long, form=form, count=count)
     else:
-        return render_template("gui.html", form=form)
+        return render_template("gui.html", form=form, count=count)
 
 @app.route('/walk')
 def walking_map():
