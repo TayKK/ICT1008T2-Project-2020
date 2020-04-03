@@ -56,12 +56,11 @@ end_coordinate = (x2, y2)
 
 
 distance = haversine(x1, y1, x2, y2)
-
+# At the start only
 # Map Creation and Start/End Coordinate plotting
 pm = fo.Map(location=centreCoordinate, zoom_start=17, control_scale=True, tiles='OpenStreetMap')
-fo.Marker([x1, y1]).add_to(pm)
-fo.Marker([x2, y2]).add_to(pm)
-fo.LayerControl().add_to(pm)
+pm.save("./templates/clean.html")
+
 
 mrts = [(1.4052585,103.9023302), (1.4053014,103.8972748),
         (1.4085322,103.8985342), (1.4118877,103.9003304),
@@ -133,8 +132,7 @@ else:
     else:
         # W
         # If distance is < 200, user can just walk over to his/her destination
-        walkpm = walk.walkAlgo(x1, x2, y1, y2)
-        fo.Marker([x1, y1]).add_to(walkpm)
-        fo.Marker([x2, y2]).add_to(walkpm)
-        walkpm.save("./templates/transport.html")
-
+        # walkpm = walk.walkAlgo(x1, x2, y1, y2)
+        # fo.Marker([x1, y1]).add_to(walkpm)
+        # fo.Marker([x2, y2]).add_to(walkpm)
+        # walkpm.save("./templates/transport.html")
