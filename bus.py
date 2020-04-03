@@ -495,8 +495,8 @@ class Bus:
         self.unique_osmid_list = list(range(1, 999999))
         random.shuffle(self.unique_osmid_list)
 
-        start_coord = (1.404130, 103.909584)
-        end_coord = (1.397352, 103.909050)
+        start_coord = (x1, y1)
+        end_coord = (x2, y2)
 
         # display the map that is zoomed in to the area of punggol
         pm = fo.Map(location=centreCoordinate, zoom_start=15, control_scale=True)
