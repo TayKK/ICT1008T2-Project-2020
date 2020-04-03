@@ -171,6 +171,7 @@ class Mrt:
         route = bfs_shortest_path(graph, mrt_start_osmid, mrt_end_osmid)
 
         # if the mrt station start and end at the same staion show user that MRT is not needed
+        print("\nMRT Taken:")
         if route != 0:
             print(route)
             mrt_station_display(mrt_station_Node, mrt_east_stations,
@@ -193,7 +194,7 @@ class Mrt:
             print("MRT is not needed!")
             self.lasty = self.start_y
             self.lastx = self.start_x
-
+        print("\n")
         return pm
         # self.last = (lastlong, lastlat)
         # self.last = int(route[-1])

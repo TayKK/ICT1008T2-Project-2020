@@ -586,7 +586,9 @@ class Bus:
                 pm, bus, self.route_display[bus], bus_stop_ST_df[str(bus)], osm_node, prev_coord)
             self.display_busroute(pm, bus, self.route_display[bus], bus_stop_ST_df[str(
                 bus)], osm_node, driveGraph, drive_Edge, busstop_Graph)
+            print("\nBus Taken:")
             print(bus, self.route_display[bus])
+            print("\n")
             # getting the first bus stop
             firstBusStop = self.route_display[bus][-1]
 

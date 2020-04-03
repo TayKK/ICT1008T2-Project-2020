@@ -87,7 +87,11 @@ if start_coordinate in mrts:
     if dist < 200:
         # If distance is less than 400m, user will walk to destination
         # MW
-        mrtpm.add_child(walk.walkAlgo(mrt.getLastx(), mrt.getLasty(), x2, y2))
+        try:
+            mrtpm.add_child(walk.walkAlgo(
+                mrt.getLastx(), mrt.getLasty(), x2, y2))
+        except:
+            pass
         fo.Marker([mrt.getLastx(), mrt.getLasty()]).add_to(mrtpm)
         fo.Marker([x2, y2], popup="end", icon=fo.Icon(
             color='red', icon='info-sign')).add_to(mrtpm)
