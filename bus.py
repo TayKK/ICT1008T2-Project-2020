@@ -25,7 +25,7 @@ class Bus:
         lasty = None
         firstx = None
         firsty = None
-        layer = None
+        fg = None
 
     def get_node(self, element):
         """
@@ -441,8 +441,16 @@ class Bus:
                 # add the busstop description and the route to the map.
                 # print the bus route in green
                 # print out the list of route and busstop by using longtitude/latitude or OSM ID
+
                 description = str(
                     stop_df[stop_df['busCode'] == bus_code]['description'].values[0])
+
+                feature_group = fo.FeatureGroup(name='Bus Stop Markers')
+
+                feature_group.add_child(fo.Marker([x, y], popup="[Bus:" + str(key) + ", Code:" + str(bus_code) + "]\n" +
+                                        description, icon=fo.Icon(color='green', icon='flag')))
+
+                self.fg = feature_group
                 fo.Marker([x, y], popup="[Bus:" + str(key) + ", Code:" + str(bus_code) + "]\n" +
                                         description, icon=fo.Icon(color='green', icon='flag')).add_to(fo_map)
                 bus_route_display_list.append(tuple([x, y]))
@@ -456,6 +464,7 @@ class Bus:
         Get Coordinates from OSMNX Data and plot bus stop route based on start and end bus stop
         """
         temp_df = pd.DataFrame(columns=drive_df.columns)
+
         for i in range(len(value) - 1):
             current_busstop_osmid = osm_df[osm_df['asset_ref'] == str(
                 value[i])]['osmid'].values[0]
@@ -471,16 +480,15 @@ class Bus:
                 driveG, source=current_busroute_osmid, target=next_busroute_osmid)
             for j in range(len(current_busroute_next_busroute_list) - 1):
                 current_busroute_id, next_busroute_id = current_busroute_next_busroute_list[
-                    j], current_busroute_next_busroute_list[j + 1]
+                                                            j], current_busroute_next_busroute_list[j + 1]
                 temp_df = temp_df.append(drive_df[(drive_df["u"] == current_busroute_id) & (
-                    drive_df["v"] == next_busroute_id)])
+                        drive_df["v"] == next_busroute_id)])
+
                 # out put the bus nodes and bus route in green on the map
-        temp_gdf = gpd.GeoDataFrame(
-            temp_df, crs="EPSG:4326", geometry='geometry')
-        busLayer = fo.GeoJson(temp_gdf, style_function=lambda x: {
-                              "color": "green", "weight": "3"}, name="BUS")
+        temp_gdf = gpd.GeoDataFrame(temp_df, crs="EPSG:4326", geometry='geometry')
+        busLayer = fo.GeoJson(temp_gdf, style_function=lambda x: {"color": "green", "weight": "3"}, name="BUS")
         busLayer.add_to(fo_map)
-        self.layer = busLayer
+        return temp_df
 
     def busAlgo(self, x1, y1, x2, y2):
         # Common startup
@@ -581,30 +589,29 @@ class Bus:
         prev_coord = None
 
         # display the  busstop route and the nodes that the bus will go to
+        df = []
         for bus in self.route_display:
             prev_coord = self.display_busstop(
                 pm, bus, self.route_display[bus], bus_stop_ST_df[str(bus)], osm_node, prev_coord)
-            self.display_busroute(pm, bus, self.route_display[bus], bus_stop_ST_df[str(
-                bus)], osm_node, driveGraph, drive_Edge, busstop_Graph)
-            print("\nBus Taken:")
+            df.append(self.display_busroute(pm, bus, self.route_display[bus], bus_stop_ST_df[str(
+                bus)], osm_node, driveGraph, drive_Edge, busstop_Graph))
+            print("\nBus taken:")
             print(bus, self.route_display[bus])
             print("\n")
             # getting the first bus stop
             firstBusStop = self.route_display[bus][-1]
 
-            self.firstx = osm_node[osm_node["asset_ref"]
-                                   == str(firstBusStop)]['y'].values[0]
-            self.firsty = osm_node[osm_node["asset_ref"]
-                                   == str(firstBusStop)]['x'].values[0]
+            self.firstx = osm_node[osm_node["asset_ref"] == str(firstBusStop)]['y'].values[0]
+            self.firsty = osm_node[osm_node["asset_ref"] == str(firstBusStop)]['x'].values[0]
         # getting the last bus stop
         busSvc = next(iter(self.route_display))
         actualLast = self.route_display[busSvc][0]
-        self.lastx = osm_node[osm_node["asset_ref"]
-                              == str(actualLast)]['y'].values[0]
-        self.lasty = osm_node[osm_node["asset_ref"]
-                              == str(actualLast)]['x'].values[0]
-
-        return self.layer
+        self.lastx = osm_node[osm_node["asset_ref"] == str(actualLast)]['y'].values[0]
+        self.lasty = osm_node[osm_node["asset_ref"] == str(actualLast)]['x'].values[0]
+        results = pd.concat(df)
+        all_gdf = gpd.GeoDataFrame(results, crs="EPSG:4326", geometry='geometry')
+        layer = fo.GeoJson(all_gdf, style_function=lambda x: {"color": "green", "weight": "3"}, name="BUS")
+        return layer
 
     def getRoute(self):
         if self.route_display is None:
@@ -623,6 +630,9 @@ class Bus:
 
     def getFirsty(self):
         return self.firsty
+
+    def getFg(self):
+        return self.fg
 #
 # bus = Bus()
 # x1 = 1.404130

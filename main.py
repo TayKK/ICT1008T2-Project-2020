@@ -79,17 +79,17 @@ bus = Bus()
 # If start point is MRT
 if start_coordinate in mrts:
     mrtpm = mrt.MrtAlgo(x1, y1, x2, y2)
+
     fo.Marker([x1, y1], popup="start", icon=fo.Icon(
         color='red', icon='info-sign')).add_to(mrtpm)
 
     fo.Marker([mrt.getLastx(), mrt.getLasty()]).add_to(mrtpm)
     dist = haversine(mrt.getLastx(), mrt.getLasty(), x2, y2)
-    if dist < 200:
+    if dist < 400:
         # If distance is less than 400m, user will walk to destination
         # MW
         try:
-            mrtpm.add_child(walk.walkAlgo(
-                mrt.getLastx(), mrt.getLasty(), x2, y2))
+            mrtpm.add_child(walk.walkAlgo(mrt.getLastx(), mrt.getLasty(), x2, y2))
         except:
             pass
         fo.Marker([mrt.getLastx(), mrt.getLasty()]).add_to(mrtpm)
@@ -103,11 +103,13 @@ if start_coordinate in mrts:
         # mrtpm.add_child(bus.busAlgo(mrt.getLastx(), mrt.getLasty(), x2, y2))
         mrtpm.add_child(bus.busAlgo(mrt.getLastx(), mrt.getLasty(), x2, y2))
 
+
         # Add marker for Start-End for this map
         fo.Marker([bus.getFirstx(), bus.getFirsty()], popup="First Bus Stop",
                   icon=fo.Icon(color='green', icon="info-sign")).add_to(mrtpm)
         fo.Marker([bus.getLastx(), bus.getLasty()], popup="Last Bus Stop",
                   icon=fo.Icon(color='green', icon="info-sign")).add_to(mrtpm)
+        mrtpm.add_child(bus.getFg())
 
         # Walk from Terminal LRT to Bus Stop
         # mrtpm.add_child(walk.walkAlgo(mrt.getLastx(), mrt.getLasty(), bus.getFirstx(), bus.getFirsty()))
@@ -169,6 +171,7 @@ else:
         fo.Marker([x1, y1]).add_to(buspm)
         fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(buspm)
         fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(buspm)
+        mrtpm.add_child(bus.getFg())
         fo.Marker([x2, y2], popup="End", icon=fo.Icon(
             color='red', icon='info-sign')).add_to(buspm)
         buspm.save("./templates/transport.html")
