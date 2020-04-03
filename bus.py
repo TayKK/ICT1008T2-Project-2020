@@ -24,6 +24,7 @@ class Bus:
         lasty = None
         firstx = None
         firsty = None
+        layer = None
 
     def get_node(self,element):
         """
@@ -484,6 +485,7 @@ class Bus:
         temp_gdf = gpd.GeoDataFrame(temp_df, crs="EPSG:4326", geometry='geometry')
         busLayer = fo.GeoJson(temp_gdf, style_function=lambda x: {"color": "green", "weight": "3"}, name="BUS")
         busLayer.add_to(fo_map)
+        self.layer = busLayer
 
     def busAlgo(self,x1,y1,x2,y2):
         # Common startup
@@ -599,10 +601,7 @@ class Bus:
         self.lastx = osm_node[osm_node["asset_ref"] == str(actualLast)]['y'].values[0]
         self.lasty = osm_node[osm_node["asset_ref"] == str(actualLast)]['x'].values[0]
 
-
-        # save the  output to  bus.html
-        # pm.save("bus.html")
-        return pm
+        return self.layer
 
     def getRoute(self):
         if self.route_display is None:
@@ -623,4 +622,5 @@ class Bus:
 # y1 = 103.909584
 # x2 = 1.397352
 # y2 = 103.909050
-# bus.busAlgo(x1,y1,x2,y2)
+# buspm = bus.busAlgo(x1,y1,x2,y2)
+# buspm.save("bus.html")

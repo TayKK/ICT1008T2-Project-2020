@@ -28,8 +28,9 @@ end_coordinate = (end_lat, end_long)
 
 # Initialise the map
 pm = fo.Map(location=centreCoordinate, zoom_start=17, control_scale=True)
-fo.Marker([start_lat, start_long]).add_to(pm)
-fo.Marker([end_lat, end_long]).add_to(pm)
+
+fo.Marker([start_lat, start_long], popup="start", icon=fo.Icon(color='red', icon='info-sign')).add_to(pm)
+fo.Marker([end_lat, end_long], popup="start", icon=fo.Icon(color='red', icon='info-sign')).add_to(pm)
 
 # Query route using osmnx (currently using "all" for trying, can change to "walk" or "drive" as needed)
 graph = ox.core.graph_from_polygon(
