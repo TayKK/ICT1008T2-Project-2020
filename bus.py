@@ -25,7 +25,7 @@ class Bus:
         lasty = None
         firstx = None
         firsty = None
-        fg = None
+        fg = fo.FeatureGroup()
 
     def get_node(self, element):
         """
@@ -422,7 +422,7 @@ class Bus:
             if prev_coord not in value:
                 value.insert(0, prev_coord)
         bus_route_display_list = []
-
+        feature_group = fo.FeatureGroup(name='Bus Stop Markers')
         # travese through the lsit for bus_code and get the coordinates deom OSMX or geopandas
         for bus_code in value:
             try:
@@ -445,18 +445,16 @@ class Bus:
                 description = str(
                     stop_df[stop_df['busCode'] == bus_code]['description'].values[0])
 
-                feature_group = fo.FeatureGroup(name='Bus Stop Markers')
-
                 feature_group.add_child(fo.Marker([x, y], popup="[Bus:" + str(key) + ", Code:" + str(bus_code) + "]\n" +
                                         description, icon=fo.Icon(color='green', icon='flag')))
 
-                self.fg = feature_group
                 fo.Marker([x, y], popup="[Bus:" + str(key) + ", Code:" + str(bus_code) + "]\n" +
                                         description, icon=fo.Icon(color='green', icon='flag')).add_to(fo_map)
                 bus_route_display_list.append(tuple([x, y]))
             except:
                 pass
         prev_coord = value[len(value) - 1]
+        self.fg = feature_group
         return prev_coord
 
     def display_busroute(self, fo_map, key, value, stop_df, osm_df, driveG, drive_df, busG):

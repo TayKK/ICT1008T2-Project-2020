@@ -130,12 +130,13 @@ if start_coordinate in mrts:
         # fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(mrtpm)
         fo.Marker([x2, y2], popup="End", icon=fo.Icon(
             color='red', icon='info-sign')).add_to(mrtpm)
+        fo.LayerControl().add_to(mrtpm)
         mrtpm.save("./templates/transport.html")
 else:
     dist = haversine(x1, x2, y1, y2)
     # WMW
-    # If distance greater than 600, user will take MRT first before walking to his/her destination
-    if dist > 600:
+    # If distance greater than 400, user will take MRT first before walking to his/her destination
+    if dist > 400:
         mrtpm = mrt.MrtAlgo(x1, y1, x2, y2)
         mrtpm.add_child(walk.walkAlgo(
             x1, y1, mrt.getFirstx(), mrt.getFirsty()))
@@ -151,6 +152,7 @@ else:
         fo.Marker([mrt.getLastx(), mrt.getLasty()]).add_to(mrtpm)
         fo.Marker([x2, y2], popup="End", icon=fo.Icon(
             color='red', icon='info-sign')).add_to(mrtpm)
+        fo.LayerControl().add_to(mrtpm)
         mrtpm.save("./templates/transport.html")
     elif dist > 400:
         # WBW
@@ -172,8 +174,10 @@ else:
         fo.Marker([bus.getFirstx(), bus.getFirsty()]).add_to(buspm)
         fo.Marker([bus.getLastx(), bus.getLasty()]).add_to(buspm)
         mrtpm.add_child(bus.getFg())
+
         fo.Marker([x2, y2], popup="End", icon=fo.Icon(
             color='red', icon='info-sign')).add_to(buspm)
+        fo.LayerControl().add_to(mrtpm)
         buspm.save("./templates/transport.html")
     else:
         # W
@@ -183,4 +187,5 @@ else:
             color='red', icon='info-sign')).add_to(mrtpm)
         fo.Marker([x1, y1], popup="End", icon=fo.Icon(
             color='red', icon='info-sign')).add_to(mrtpm)
+        fo.LayerControl().add_to(mrtpm)
         walkpm.save("./templates/transport.html")
