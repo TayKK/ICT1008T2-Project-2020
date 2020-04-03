@@ -198,6 +198,7 @@ iframe#map {
             <h1>ICT1008 Project</h1>
             <h1 class="m">Punggol Map</h1>
         </div>
+        {% if refresh_count > 0 %}
         <!-- Transportation Selection By Radio Button -->
         <div class="form-check paddingAll space">
             <label class="my-1 mr-2" for="radiotransport">Mode of Transportation</label>
@@ -208,6 +209,7 @@ iframe#map {
                 <label><input type="radio" name="radiotransport" value="transport">Public Transport</label>
             </div>
         </div>
+        {% endif %}
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
@@ -238,8 +240,12 @@ iframe#map {
     </div>
     <!-- Page content -->
     <div class="main">
-        <iframe id="map" class="transport box" src="http://127.0.0.1:5000/transport"></iframe> <!-- src file has to be in the same folder-->
-        <iframe id="map" class="walk box" src="http://127.0.0.1:5000/walk"></iframe>
+        {% if refresh_count > 0 %}
+            <iframe id="map" class="transport box" src="http://127.0.0.1:5000/transport"></iframe> <!-- src file has to be in the same folder-->
+            <iframe id="map" class="walk box" src="http://127.0.0.1:5000/walk"></iframe>
+        {% else %}
+            <iframe id="map" class="clean_map box" src="http://127.0.0.1:5000/clean"></iframe>
+        {% endif %}
     </div>
 </body>
 
