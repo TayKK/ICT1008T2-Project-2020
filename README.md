@@ -2,12 +2,12 @@
 # ICT1008T2-Project-2020
 ***********************************************************************************************************************************************************
 
-- MUHAMMAD SADIQ BIN EMANAN       1902618
-- POH XIANG BIN                   1902121
-- SAFARAZ BIN SARAZLI             1902176
-- TAY KAI KENG                    1902198
-- TAY YONG HO CLEMENT             1902637
-- WESLEY SIM QIAN DONG            1902119
+- MUHAMMAD SADIQ BIN EMANAN
+- POH XIANG BIN
+- SAFARAZ BIN SARAZLI
+- TAY KAI KENG
+- TAY YONG HO CLEMENT
+- WESLEY SIM QIAN DONG
 
 
 ***********************************************************************************************************************************************************
