@@ -3,6 +3,7 @@ from flask import Flask, render_template, url_for, json, request,current_app as 
 import pandas as pd
 from geopy.geocoders import Nominatim
 from Forms import Locations
+from subprocess import Popen
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'fba483ff5f287007f4994b0b7ec9366c'
@@ -13,16 +14,26 @@ def home():
     form = Locations()
 
     if form.validate_on_submit():
+        #get start lat and long from location name using geocoder
         n = nom.geocode(form.start_point.data, "Singapore")
         start_lat = n.latitude
         start_long = n.longitude
+
+        #get end lat and long from location name using geocoder
         n = nom.geocode(form.end_point.data, "Singapore")
         end_lat = n.latitude
         end_long = n.longitude
+
+        #define shell commands to run python code generating maps 
         walk_command = "python walkonly.py " + str(start_lat) + " " + str(start_long) + " " + str(end_lat) + " " + str(end_long)
         transport_command = "python main.py " + str(start_lat) + " " + str(start_long) + " " + str(end_lat) + " " + str(end_long)
-        os.system(walk_command)
-        os.system(transport_command)
+
+        #run shell commands
+        commands = [walk_command, transport_command]
+        procs = [ Popen(i) for i in commands ]
+        for p in procs:
+            p.wait()
+
         return render_template("gui.html", start_lat=start_lat, start_long=start_long, end_lat=end_lat, end_long=end_long, form=form)
     else:
         return render_template("gui.html", form=form)
@@ -37,4 +48,3 @@ def transport_map():
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)
-

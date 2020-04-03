@@ -81,6 +81,7 @@ iframe#map {
 
     <script>
         $(function() {
+        $(".transport").hide();
         // function to show and hide map walk, transport
         $('input[type="radio"]').click(function(){
             var inputValue = $(this).attr("value");
@@ -89,7 +90,6 @@ iframe#map {
             $(targetBox).show();
         });
 
-        
         // function to automatically select value
         $("#start_now").bind('keyup keypress', function() {
             $('div.suggestions').show();
